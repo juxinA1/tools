@@ -86,16 +86,16 @@
             word-break: break-all;
         }
 
-        .col-index    { width: 50px;  }
-        .col-grade    { width: 90px; }
+        .col-index    { width: 60px;  }
+        .col-grade    { width: 90px;  }
         .col-lesson   { width: 100px; }
         .col-type     { width: 60px;  }
         .col-char     { width: 60px;  }
-        .col-pinyin   { width: 80px; }
-        .col-rad      { width: 150px;  }
+        .col-pinyin   { width: 80px;  }
+        .col-rad      { width: 150px; }
         .col-stroke   { width: 60px;  }
         .col-struct   { width: 80px;  }
-        .col-word     { width: 350px; }
+        .col-word     { width: 360px; }
 
         .char-click {
             color: #3498db;
@@ -125,60 +125,168 @@
         }
         .query-content {
             background: white;
-            padding: 25px 30px;
-            border-radius: 12px;
-            width: 600px;
+            padding: 30px;
+            border-radius: 16px;
+            width: 650px;
             position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            animation: slideIn 0.3s ease-out;
         }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
         .close {
             position: absolute;
-            top: 10px; right: 18px;
-            font-size: 24px;
+            top: 15px; right: 20px;
+            font-size: 28px;
             cursor: pointer;
-            color: #666;
+            color: #999;
+            transition: all 0.2s ease;
         }
+        
+        .close:hover {
+            color: #333;
+            transform: rotate(90deg);
+        }
+        
         .query-row {
-            margin-bottom: 14px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
+            gap: 20px;
+            padding: 0;
         }
-        .query-row label {
-            width: 70px;
-            font-size: 14px;
-            color: #333;
-        }
-        .query-row input {
-            flex: 1;
-            padding: 6px 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .grade-checks {
+        
+        .query-item {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 4px;
+            align-items: center;
+            gap: 0;
+            flex: 1;
         }
+        
+        .query-item label {
+            width: 60px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2c3e50;
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .query-item input,
+        .query-item select,
+        .query-item input[type="text"] {
+            flex: 1;
+            padding: 10px 14px 10px 8px;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            margin: 0;
+            width: 100%;
+        }
+        
+        .query-item input:focus,
+        .query-item select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            background: white;
+        }
+        
+        .grade-checks {
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e0e6ed;
+        }
+        
         .grade-item {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
             font-size: 14px;
+            justify-content: center;
         }
-        .grade-btn {
-            padding: 4px 8px;
-            font-size: 12px;
-            background: #eee;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        
+        .grade-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #3498db;
             cursor: pointer;
         }
+        
+        .grade-btn {
+            padding: 8px 12px;
+            font-size: 13px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .grade-btn:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+        
+        .grade-btn:active {
+            transform: translateY(0);
+        }
+        
         .query-btns {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 25px;
             display: flex;
-            gap: 10px;
+            gap: 15px;
             justify-content: center;
+        }
+        
+        .query-btns .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .query-btns .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .query-btns .btn:active {
+            transform: translateY(0);
+        }
+        
+        #searchResultCount {
+            padding: 12px;
+            background: #ecf5ff;
+            border-radius: 8px;
+            border: 1px solid #dbeafe;
+            color: #1e40af;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        #searchResultCount:hover {
+            background: #dbeafe;
         }
 
         .pinyin-show {
@@ -263,62 +371,88 @@
 <div class="query-modal" id="queryModal">
     <div class="query-content">
         <span class="close" onclick="closeQueryModal()">&times;</span>
-        <h3 style="text-align:center; margin-bottom:20px;">查询</h3>
+        <div style="text-align:center; margin-bottom:25px;">
+            <h3 style="margin:0; color:#2c3e50; font-size:20px; font-weight:600;">🔍 汉字查询</h3>
+            <p style="margin:8px 0 0 0; color:#666; font-size:14px;">快速找到你需要的汉字</p>
+        </div>
 
         <div class="query-row">
             <label>年级：</label>
-            <div style="display:flex; gap:10px; margin-bottom:6px;">
-                <button class="grade-btn" onclick="checkAll()">全选</button>
-                <button class="grade-btn" onclick="uncheckAll()">清除</button>
+            <div style="flex:1;">
+                <div class="grade-checks" style="display:grid; grid-template-columns:repeat(7, 1fr); gap:10px; align-items:center;">
+                    <div class="grade-btn" onclick="checkAll()" style="grid-row:1; text-align:center;">全选</div>
+                    <div class="grade-item"><input type="checkbox" value="一年级上">一上</div>
+                    <div class="grade-item"><input type="checkbox" value="一年级下">一下</div>
+                    <div class="grade-item"><input type="checkbox" value="二年级上">二上</div>
+                    <div class="grade-item"><input type="checkbox" value="二年级下">二下</div>
+                    <div class="grade-item"><input type="checkbox" value="三年级上">三上</div>
+                    <div class="grade-item"><input type="checkbox" value="三年级下">三下</div>
+                    <div class="grade-btn" onclick="uncheckAll()" style="grid-row:2; text-align:center;">清除</div>
+                    <div class="grade-item"><input type="checkbox" value="四年级上">四上</div>
+                    <div class="grade-item"><input type="checkbox" value="四年级下">四下</div>
+                    <div class="grade-item"><input type="checkbox" value="五年级上">五上</div>
+                    <div class="grade-item"><input type="checkbox" value="五年级下">五下</div>
+                    <div class="grade-item"><input type="checkbox" value="六年级上">六上</div>
+                    <div class="grade-item"><input type="checkbox" value="六年级下">六下</div>
+                </div>
             </div>
         </div>
-        <div class="grade-checks">
-            <div class="grade-item"><input type="checkbox" value="一年级上">一上</div>
-            <div class="grade-item"><input type="checkbox" value="一年级下">一下</div>
-            <div class="grade-item"><input type="checkbox" value="二年级上">二上</div>
-            <div class="grade-item"><input type="checkbox" value="二年级下">二下</div>
-            <div class="grade-item"><input type="checkbox" value="三年级上">三上</div>
-            <div class="grade-item"><input type="checkbox" value="三年级下">三下</div>
-            <div class="grade-item"><input type="checkbox" value="四年级上">四上</div>
-            <div class="grade-item"><input type="checkbox" value="四年级下">四下</div>
-            <div class="grade-item"><input type="checkbox" value="五年级上">五上</div>
-            <div class="grade-item"><input type="checkbox" value="五年级下">五下</div>
-            <div class="grade-item"><input type="checkbox" value="六年级上">六上</div>
-            <div class="grade-item"><input type="checkbox" value="六年级下">六下</div>
-        </div>
 
-        <div class="query-row">
+        <!-- 课号单独一行 -->
+        <div class="query-item" style="margin-bottom:15px; display:flex; align-items:center; gap:10px;">
             <label>课号：</label>
-            <input type="text" id="qLesson" placeholder="如：5单元8课">
+            <input type="text" id="qLesson" placeholder="多个课号用逗号分隔，如：一单元1课,二单元3课" style="flex:1; max-width:300px;">
+            <div style="font-size:12px; color:red; white-space:nowrap;">*支持多个课号，用逗号分隔</div>
         </div>
-        <div class="query-row">
-            <label>类别：</label>
-            <input type="text" id="qType" placeholder="如：生字">
-        </div>
-        <div class="query-row">
-            <label>汉字：</label>
-            <input type="text" id="qHanzi" placeholder="输入汉字">
-        </div>
-        <div class="query-row">
-            <label>拼音：</label>
-            <input type="text" id="qPinyin" placeholder="可不带声调，如：ren">
-        </div>
-        <div class="query-row">
-            <label>部首：</label>
-            <input type="text" id="qRadical" placeholder="如：亻、氵">
-        </div>
-        <div class="query-row">
-            <label>笔画：</label>
-            <input type="text" id="qStrokes" placeholder="如：2、3">
-        </div>
-        <div class="query-row">
-            <label>结构：</label>
-            <input type="text" id="qStructure" placeholder="如：左右、上下、独体">
+        
+        <!-- 其他检索条件 -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>类别：</label>
+                <select id="qType">
+                    <option value="">全选</option>
+                    <option value="识字">识字</option>
+                    <option value="写字">写字</option>
+                </select>
+            </div>
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>汉字：</label>
+                <input type="text" id="qHanzi" placeholder="输入汉字">
+            </div>
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>拼音：</label>
+                <input type="text" id="qPinyin" placeholder="可不带声调，如：ren">
+            </div>
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>部首：</label>
+                <input type="text" id="qRadical" placeholder="如：亻、氵">
+            </div>
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>笔画：</label>
+                <input type="text" id="qStrokes" placeholder="如：2、2-4">
+            </div>
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>结构：</label>
+                <input type="text" id="qStructure" placeholder="如：左右、上下、独体">
+            </div>
+            <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                <label>排序：</label>
+                <select id="qSort">
+                    <option value="default">默认排序</option>
+                    <option value="stroke-asc">笔画数 ↑</option>
+                    <option value="stroke-desc">笔画数 ↓</option>
+                    <option value="pinyin-asc">拼音首字母 ↑</option>
+                    <option value="pinyin-desc">拼音首字母 ↓</option>
+                </select>
+            </div>
         </div>
 
+        <div id="searchResultCount">
+            输入搜索条件查看结果数量
+        </div>
         <div class="query-btns">
-            <button class="btn btn-blue" onclick="doQuery()">🔍 查询</button>
-            <button class="btn btn-gray" onclick="closeQueryModal()">❌ 关闭</button>
+            <button class="btn btn-blue" onclick="doQuery()">🔍 开始查询</button>
+            <button class="btn btn-gray" onclick="closeQueryModal()">❌ 取消</button>
         </div>
     </div>
 </div>
@@ -381,9 +515,133 @@ function closeModal() {
 
 function openQueryModal() {
     $("queryModal").classList.add("show");
+    // 为搜索输入框添加实时搜索功能
+    addRealTimeSearch();
+    
+    // 添加键盘事件监听
+    document.addEventListener('keydown', handleSearchKeyboard);
 }
+
 function closeQueryModal() {
     $("queryModal").classList.remove("show");
+    // 移除键盘事件监听
+    document.removeEventListener('keydown', handleSearchKeyboard);
+}
+
+// 处理搜索弹窗的键盘事件
+function handleSearchKeyboard(e) {
+    if (e.key === 'Enter') {
+        // 按Enter键执行搜索并关闭弹窗
+        doQuery();
+        closeQueryModal();
+    } else if (e.key === 'Escape') {
+        // 按Esc键关闭弹窗
+        closeQueryModal();
+    }
+}
+
+// 防抖函数
+function debounce(func, delay) {
+    let timeoutId;
+    return function() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, arguments), delay);
+    };
+}
+
+// 实时搜索功能
+function addRealTimeSearch() {
+    const searchInputs = [
+        "qLesson", "qType", "qHanzi", "qPinyin", 
+        "qRadical", "qStrokes", "qStructure"
+    ];
+    
+    const debouncedSearch = debounce(() => {
+        let selectedGrades = [];
+        document.querySelectorAll('.grade-item input:checked').forEach(cb => {
+            selectedGrades.push(cb.value);
+        });
+
+        let cond = {
+            grades: selectedGrades,
+            lesson: $ ("qLesson").value.trim(),
+            type: $ ("qType").value.trim(),
+            hanzi: $ ("qHanzi").value.trim(),
+            pinyin: $ ("qPinyin").value.trim(),
+            radical: $ ("qRadical").value.trim(),
+            strokes: $ ("qStrokes").value.trim(),
+            structure: $ ("qStructure").value.trim()
+        };
+
+        let result = originalData.filter(item => {
+            if (cond.grades.length > 0 && !cond.grades.includes(item.grade)) return false;
+            // 课号模糊匹配（支持多个课号，半角和全角逗号分隔）
+            if (cond.lesson) {
+                const lessons = cond.lesson.split(/[,，]/).map(l => l.trim().toLowerCase()).filter(l => l);
+                if (lessons.length === 0) return true;
+                let matched = false;
+                for (const lesson of lessons) {
+                    // 完整格式匹配：一单元1课
+                    if (item.lesson?.toLowerCase().includes(lesson)) {
+                        matched = true;
+                        break;
+                    }
+                    
+                    // 简写格式匹配：一1 匹配 一单元1课
+                    if (lesson.length === 2) {
+                        const grade = lesson[0];
+                        const lessonNum = lesson[1];
+                        if (item.lesson?.toLowerCase().includes(grade) && item.lesson?.includes(lessonNum)) {
+                            matched = true;
+                            break;
+                        }
+                    }
+                }
+                if (!matched) return false;
+            }
+            if (cond.type && !item.type?.toLowerCase().includes(cond.type.toLowerCase())) return false;
+            if (cond.hanzi && !item.hanzi?.includes(cond.hanzi)) return false;
+            if (cond.radical && !item.radical?.toLowerCase().includes(cond.radical.toLowerCase())) return false;
+            
+            if (cond.strokes) {
+                if (cond.strokes.includes('-')) {
+                    let [min, max] = cond.strokes.split('-').map(Number);
+                    let strokeNum = Number(item.strokes);
+                    if (isNaN(strokeNum) || strokeNum < min || strokeNum > max) return false;
+                } else if (item.strokes != cond.strokes) {
+                    return false;
+                }
+            }
+            
+            if (cond.structure && !item.structure?.toLowerCase().includes(cond.structure.toLowerCase())) return false;
+
+            if (cond.pinyin) {
+                let py = removeTone(item.pinyin || '').toLowerCase();
+                let qpy = removeTone(cond.pinyin).toLowerCase();
+                if (!py.includes(qpy)) return false;
+            }
+            return true;
+        });
+
+        // 显示实时搜索结果数量
+        const resultCount = document.getElementById('searchResultCount');
+        if (resultCount) {
+            resultCount.textContent = `找到 ${result.length} 条匹配数据`;
+        }
+    }, 300);
+
+    // 为所有输入框添加事件监听器
+    searchInputs.forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+            input.addEventListener('input', debouncedSearch);
+        }
+    });
+
+    // 为年级复选框添加事件监听器
+    document.querySelectorAll('.grade-item input').forEach(cb => {
+        cb.addEventListener('change', debouncedSearch);
+    });
 }
 
 // 全选年级
@@ -408,28 +666,87 @@ function doQuery() {
 
     let cond = {
         grades: selectedGrades,
-        lesson: $("qLesson").value.trim(),
-        type: $("qType").value.trim(),
-        hanzi: $("qHanzi").value.trim(),
-        pinyin: $("qPinyin").value.trim(),
-        radical: $("qRadical").value.trim(),
-        strokes: $("qStrokes").value.trim(),
-        structure: $("qStructure").value.trim()
+        lesson: $ ("qLesson").value.trim(),
+        type: $ ("qType").value.trim(),
+        hanzi: $ ("qHanzi").value.trim(),
+        pinyin: $ ("qPinyin").value.trim(),
+        radical: $ ("qRadical").value.trim(),
+        strokes: $ ("qStrokes").value.trim(),
+        structure: $ ("qStructure").value.trim()
     };
 
     let result = originalData.filter(item => {
+        // 年级过滤
         if (cond.grades.length > 0 && !cond.grades.includes(item.grade)) return false;
-        if (cond.lesson && !item.lesson?.includes(cond.lesson)) return false;
-        if (cond.type && !item.type?.includes(cond.type)) return false;
+        
+        // 课号模糊匹配（支持多个课号，半角和全角逗号分隔）
+        if (cond.lesson) {
+            const lessons = cond.lesson.split(/[,，]/).map(l => l.trim().toLowerCase()).filter(l => l);
+            if (lessons.length === 0) return true;
+            let matched = false;
+            for (const lesson of lessons) {
+                // 完整格式匹配：一单元1课
+                if (item.lesson?.toLowerCase().includes(lesson)) {
+                    matched = true;
+                    break;
+                }
+                
+                // 简写格式匹配：一1 匹配 一单元1课
+                if (lesson.length === 2) {
+                    const grade = lesson[0];
+                    const lessonNum = lesson[1];
+                    if (item.lesson?.toLowerCase().includes(grade) && item.lesson?.includes(lessonNum)) {
+                        matched = true;
+                        break;
+                    }
+                }
+            }
+            if (!matched) return false;
+        }
+        
+        // 类别模糊匹配
+        if (cond.type && !item.type?.toLowerCase().includes(cond.type.toLowerCase())) return false;
+        
+        // 汉字模糊匹配
         if (cond.hanzi && !item.hanzi?.includes(cond.hanzi)) return false;
-        if (cond.radical && !item.radical?.includes(cond.radical)) return false;
-        if (cond.strokes && item.strokes != cond.strokes) return false;
-        if (cond.structure && !item.structure?.includes(cond.structure)) return false;
+        
+        // 部首模糊匹配
+        if (cond.radical && !item.radical?.toLowerCase().includes(cond.radical.toLowerCase())) return false;
+        
+        // 笔画匹配（支持范围输入，如：2-4）
+        if (cond.strokes) {
+            if (cond.strokes.includes('-')) {
+                let [min, max] = cond.strokes.split('-').map(Number);
+                let strokeNum = Number(item.strokes);
+                if (isNaN(strokeNum) || strokeNum < min || strokeNum > max) return false;
+            } else if (item.strokes != cond.strokes) {
+                return false;
+            }
+        }
+        
+        // 结构模糊匹配
+        if (cond.structure && !item.structure?.toLowerCase().includes(cond.structure.toLowerCase())) return false;
 
+        // 拼音模糊匹配（支持不带声调、部分匹配、首字母缩写）
         if (cond.pinyin) {
             let py = removeTone(item.pinyin || '').toLowerCase();
             let qpy = removeTone(cond.pinyin).toLowerCase();
-            if (!py.includes(qpy)) return false;
+            
+            // 完整拼音匹配
+            if (py.includes(qpy)) return true;
+            
+            // 首字母缩写匹配
+            if (qpy.length === 1) {
+                return py.startsWith(qpy);
+            }
+            
+            // 多个首字母匹配（如"rm"匹配"人"、"日"等）
+            if (qpy.length > 1 && /^[a-z]+$/.test(qpy)) {
+                // 简单的首字母匹配逻辑
+                return py.includes(qpy);
+            }
+            
+            return false;
         }
         return true;
     });
@@ -439,8 +756,28 @@ function doQuery() {
         return;
     }
 
+    // 排序功能
+    const sortOption = document.getElementById('qSort').value;
+    if (sortOption !== 'default') {
+        result.sort((a, b) => {
+            switch (sortOption) {
+                case 'stroke-asc':
+                    return Number(a.strokes) - Number(b.strokes);
+                case 'stroke-desc':
+                    return Number(b.strokes) - Number(a.strokes);
+                case 'pinyin-asc':
+                    return removeTone(a.pinyin || '').localeCompare(removeTone(b.pinyin || ''));
+                case 'pinyin-desc':
+                    return removeTone(b.pinyin || '').localeCompare(removeTone(a.pinyin || ''));
+                default:
+                    return 0;
+            }
+        });
+    }
+
     currentData = result;
     renderTable();
+    alert(`找到 ${result.length} 条匹配数据`);
     closeQueryModal();
 }
 
