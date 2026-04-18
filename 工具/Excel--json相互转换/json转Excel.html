@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON转Excel在线工具 - 支持序号列</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .app-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .panel-header {
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            color: white;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .panel-content {
+            padding: 25px;
+        }
+        
+        .input-area {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .json-input {
+            width: 100%;
+            height: 300px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            resize: vertical;
+            transition: all 0.3s;
+        }
+        
+        .json-input:focus {
+            outline: none;
+            border-color: #2ecc71;
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+        }
+        
+        .input-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .input-btn {
+            background: rgba(46, 204, 113, 0.9);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .input-btn:hover {
+            background: rgba(39, 174, 96, 0.9);
+            transform: scale(1.1);
+        }
+        
+        .upload-area {
+            border: 3px dashed #2ecc71;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #f8fafc;
+            margin-bottom: 20px;
+        }
+        
+        .upload-area:hover, .upload-area.dragover {
+            background-color: #e8f8f0;
+            border-color: #27ae60;
+        }
+        
+        .upload-icon {
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 10px;
+        }
+        
+        .upload-text {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .upload-subtext {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .btn-primary {
+            background: #2ecc71;
+        }
+        
+        .btn-secondary {
+            background: #3498db;
+        }
+        
+        .btn-secondary:hover {
+            background: #2980b9;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .options-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .option-group {
+            margin-bottom: 20px;
+        }
+        
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .option-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .radio-item, .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-item input, .checkbox-item input {
+            margin-right: 8px;
+        }
+        
+        select, input[type="text"], input[type="number"] {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        select:focus, input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #2ecc71;
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+        }
+        
+        .serial-number-options {
+            background: #e8f8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .serial-number-options.show {
+            display: block;
+        }
+        
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .preview-area {
+            background: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            height: 300px;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        .preview-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .preview-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .preview-tab {
+            padding: 8px 16px;
+            background: #f1f2f6;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .preview-tab.active {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .preview-tab:hover:not(.active) {
+            background: #dfe4ea;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .data-table th {
+            background: #2ecc71;
+            color: white;
+            text-align: left;
+            padding: 10px 12px;
+            position: sticky;
+            top: 0;
+        }
+        
+        .data-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .data-table tr:hover {
+            background: #f1f8f1;
+        }
+        
+        .status-message {
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .status-success {
+            background: #d5edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+            display: block;
+        }
+        
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+            display: block;
+        }
+        
+        .status-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border-left: 4px solid #17a2b8;
+            display: block;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #dfe6e9;
+            color: #636e72;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+        
+        .step.active .step-number {
+            background: #2ecc71;
+            color: white;
+            box-shadow: 0 0 0 5px rgba(46, 204, 113, 0.2);
+        }
+        
+        .step-text {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .step.active .step-text {
+            color: #2ecc71;
+            font-weight: 600;
+        }
+        
+        .loader {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loader.show {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #2ecc71;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .examples {
+            margin-top: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .example-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #2ecc71;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .example-item:hover {
+            background: #f1f8f1;
+            transform: translateX(5px);
+        }
+        
+        .example-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .example-desc {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 5px;
+            color: #7f8c8d;
+            cursor: help;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-code"></i> JSON转Excel在线工具</h1>
+            <p class="subtitle">将JSON数据转换为Excel文件，支持自定义序号列、表头设置、多工作表导出，所有处理均在浏览器本地完成，确保数据安全。</p>
+            
+            <div class="step-indicator">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-text">输入JSON数据</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">设置转换选项</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">下载Excel文件</div>
+                </div>
+            </div>
+        </header>
+        
+        <div id="statusMessage" class="status-message"></div>
+        
+        <div class="app-container">
+            <!-- 左侧：JSON输入区域 -->
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">JSON输入</div>
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="panel-content">
+                    <div id="uploadArea" class="upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <div class="upload-text">点击或拖放JSON文件到此处</div>
+                        <div class="upload-subtext">支持 .json, .txt 格式，或直接粘贴JSON数据</div>
+                        <button id="selectFileBtn" class="btn btn-primary">
+                            <i class="fas fa-folder-open"></i> 选择文件
+                        </button>
+                        <input type="file" id="fileInput" accept=".json,.txt" class="file-input">
+                    </div>
+                    
+                    <div class="input-area">
+                        <textarea id="jsonInput" class="json-input" placeholder='在此处粘贴JSON数据，例如：
+[
+  {"姓名": "张三", "年龄": 25, "城市": "北京"},
+  {"姓名": "李四", "年龄": 30, "城市": "上海"},
+  {"姓名": "王五", "年龄": 28, "城市": "广州"}
+]'></textarea>
+                        <div class="input-controls">
+                            <button id="formatBtn" class="input-btn" title="格式化JSON">
+                                <i class="fas fa-indent"></i>
+                            </button>
+                            <button id="clearBtn" class="input-btn" title="清空输入">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="examples">
+                        <div class="option-title">JSON格式示例</div>
+                        <div class="example-item" data-example="array">
+                            <div class="example-title">对象数组格式</div>
+                            <div class="example-desc">最常见的JSON格式，每个对象代表一行数据</div>
+                        </div>
+                        <div class="example-item" data-example="nested">
+                            <div class="example-title">嵌套对象格式</div>
+                            <div class="example-desc">包含嵌套对象的JSON数据</div>
+                        </div>
+                        <div class="example-item" data-example="simple">
+                            <div class="example-title">简单键值对</div>
+                            <div class="example-desc">单个对象的键值对数据</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧：设置和预览区域 -->
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="panel-title">转换设置与预览</div>
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="panel-content">
+                    <div class="options-section">
+                        <!-- 基本设置 -->
+                        <div class="option-group">
+                            <div class="option-title">基本设置</div>
+                            <div class="option-row">
+                                <div>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" id="autoDetectHeaders" checked>
+                                        <span>自动检测表头</span>
+                                        <span class="tooltip">?
+                                            <span class="tooltip-text">自动从JSON数据中提取字段名作为Excel表头</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" id="formatDates" checked>
+                                        <span>格式化日期</span>
+                                        <span class="tooltip">?
+                                            <span class="tooltip-text">将日期字符串转换为Excel日期格式</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 序号列设置 -->
+                        <div class="option-group">
+                            <div class="option-title">序号列设置</div>
+                            <div class="option-row">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="includeSerialNumber" checked>
+                                    <span>包含序号列</span>
+                                    <span class="tooltip">?
+                                        <span class="tooltip-text">在Excel中添加一列序号，用于标识每一行数据</span>
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <div id="serialNumberOptions" class="serial-number-options show">
+                                <div class="option-grid">
+                                    <div>
+                                        <div class="option-title">序号列标题</div>
+                                        <input type="text" id="serialColumnTitle" value="序号" placeholder="列标题">
+                                    </div>
+                                    <div>
+                                        <div class="option-title">起始序号</div>
+                                        <input type="number" id="serialStartNumber" value="1" min="0" max="1000000">
+                                    </div>
+                                    <div>
+                                        <div class="option-title">序号步长</div>
+                                        <input type="number" id="serialStep" value="1" min="1" max="100">
+                                    </div>
+                                    <div>
+                                        <div class="option-title">序号列位置</div>
+                                        <select id="serialColumnPosition">
+                                            <option value="first">第一列</option>
+                                            <option value="last">最后一列</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Excel文件设置 -->
+                        <div class="option-group">
+                            <div class="option-title">Excel文件设置</div>
+                            <div class="option-row">
+                                <div style="flex: 1;">
+                                    <div class="option-title">工作表名称</div>
+                                    <input type="text" id="sheetName" value="Sheet1" placeholder="输入工作表名称" style="width: 100%;">
+                                </div>
+                                <div style="flex: 1;">
+                                    <div class="option-title">文件格式</div>
+                                    <select id="fileFormat" style="width: 100%;">
+                                        <option value="xlsx">.xlsx (Excel 2007+)</option>
+                                        <option value="xls">.xls (Excel 97-2003)</option>
+                                        <option value="csv">.csv (逗号分隔值)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 高级设置 -->
+                        <div class="option-group">
+                            <div class="option-title">高级设置</div>
+                            <div class="option-row">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="preserveNullValues">
+                                    <span>保留空值</span>
+                                    <span class="tooltip">?
+                                        <span class="tooltip-text">将null和undefined值保留为空白单元格</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="autoWrapText">
+                                    <span>自动换行</span>
+                                    <span class="tooltip">?
+                                        <span class="tooltip-text">长文本在Excel单元格中自动换行显示</span>
+                                    </span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="addTimestamp">
+                                    <span>添加时间戳</span>
+                                    <span class="tooltip">?
+                                        <span class="tooltip-text">在文件名中添加时间戳，避免文件覆盖</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 预览标签 -->
+                    <div class="preview-tabs">
+                        <button class="preview-tab active" data-tab="preview">数据预览</button>
+                        <button class="preview-tab" data-tab="info">JSON信息</button>
+                        <button class="preview-tab" data-tab="settings">当前设置</button>
+                    </div>
+                    
+                    <!-- 预览内容 -->
+                    <div id="previewContent">
+                        <div id="dataPreview" class="preview-area">
+                            转换后的数据将在此预览
+                        </div>
+                        <div id="jsonInfo" class="preview-area hidden">
+                            JSON结构信息将在此显示
+                        </div>
+                        <div id="settingsPreview" class="preview-area hidden">
+                            当前设置将在此显示
+                        </div>
+                    </div>
+                    
+                    <!-- 预览控制 -->
+                    <div class="preview-controls">
+                        <div>
+                            <span id="rowCount">0 行</span>
+                            <span id="colCount" style="margin-left: 15px;">0 列</span>
+                        </div>
+                        <button id="validateBtn" class="btn">
+                            <i class="fas fa-check-circle"></i> 验证JSON
+                        </button>
+                    </div>
+                    
+                    <!-- 操作按钮 -->
+                    <div class="btn-group">
+                        <button id="convertBtn" class="btn btn-primary">
+                            <i class="fas fa-file-excel"></i> 转换为Excel
+                        </button>
+                        <button id="downloadBtn" class="btn btn-secondary" disabled>
+                            <i class="fas fa-download"></i> 下载文件
+                        </button>
+                        <button id="resetBtn" class="btn">
+                            <i class="fas fa-redo"></i> 重置
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>正在处理JSON数据，请稍候...</p>
+        </div>
+        
+        <footer>
+            <p>© 2023 JSON转Excel在线工具 | 本工具完全在浏览器中运行，不会上传您的数据到任何服务器</p>
+            <p>使用 <a href="https://github.com/SheetJS/sheetjs" target="_blank">SheetJS</a> 库生成Excel文件</p>
+        </footer>
+    </div>
+
+    <script>
+        // DOM元素
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.getElementById('uploadArea');
+        const selectFileBtn = document.getElementById('selectFileBtn');
+        const jsonInput = document.getElementById('jsonInput');
+        const formatBtn = document.getElementById('formatBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const convertBtn = document.getElementById('convertBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const validateBtn = document.getElementById('validateBtn');
+        const dataPreview = document.getElementById('dataPreview');
+        const jsonInfo = document.getElementById('jsonInfo');
+        const settingsPreview = document.getElementById('settingsPreview');
+        const statusMessage = document.getElementById('statusMessage');
+        const loader = document.getElementById('loader');
+        const rowCount = document.getElementById('rowCount');
+        const colCount = document.getElementById('colCount');
+        const previewTabs = document.querySelectorAll('.preview-tab');
+        const exampleItems = document.querySelectorAll('.example-item');
+        
+        // 序号列相关元素
+        const includeSerialNumber = document.getElementById('includeSerialNumber');
+        const serialNumberOptions = document.getElementById('serialNumberOptions');
+        const serialColumnTitle = document.getElementById('serialColumnTitle');
+        const serialStartNumber = document.getElementById('serialStartNumber');
+        const serialStep = document.getElementById('serialStep');
+        const serialColumnPosition = document.getElementById('serialColumnPosition');
+        
+        // 全局变量
+        let jsonData = null;
+        let workbook = null;
+        let fileName = 'data';
+        
+        // 事件监听
+        selectFileBtn.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', handleFileSelect);
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('drop', handleFileDrop);
+        formatBtn.addEventListener('click', formatJSON);
+        clearBtn.addEventListener('click', clearInput);
+        convertBtn.addEventListener('click', convertToExcel);
+        downloadBtn.addEventListener('click', downloadExcel);
+        resetBtn.addEventListener('click', resetApp);
+        validateBtn.addEventListener('click', validateJSON);
+        
+        // 序号列设置切换
+        includeSerialNumber.addEventListener('change', function() {
+            if (this.checked) {
+                serialNumberOptions.classList.add('show');
+            } else {
+                serialNumberOptions.classList.remove('show');
+            }
+            updateDataPreview();
+        });
+        
+        // 序号列设置变化时更新预览
+        serialColumnTitle.addEventListener('input', updateDataPreview);
+        serialStartNumber.addEventListener('input', updateDataPreview);
+        serialStep.addEventListener('change', updateDataPreview);
+        serialColumnPosition.addEventListener('change', updateDataPreview);
+        
+        // 预览标签切换
+        previewTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                previewTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const tabType = tab.getAttribute('data-tab');
+                if (tabType === 'preview') {
+                    dataPreview.classList.remove('hidden');
+                    jsonInfo.classList.add('hidden');
+                    settingsPreview.classList.add('hidden');
+                } else if (tabType === 'info') {
+                    dataPreview.classList.add('hidden');
+                    jsonInfo.classList.remove('hidden');
+                    settingsPreview.classList.add('hidden');
+                    updateJsonInfo();
+                } else {
+                    dataPreview.classList.add('hidden');
+                    jsonInfo.classList.add('hidden');
+                    settingsPreview.classList.remove('hidden');
+                    updateSettingsPreview();
+                }
+            });
+        });
+        
+        // 示例数据
+        exampleItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const exampleType = item.getAttribute('data-example');
+                loadExample(exampleType);
+            });
+        });
+        
+        // 处理文件选择
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                loadJsonFile(file);
+            }
+        }
+        
+        // 处理文件拖放
+        function handleDragOver(event) {
+            event.preventDefault();
+            uploadArea.classList.add('dragover');
+        }
+        
+        function handleFileDrop(event) {
+            event.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const file = event.dataTransfer.files[0];
+            if (file) {
+                loadJsonFile(file);
+            }
+        }
+        
+        // 加载JSON文件
+        function loadJsonFile(file) {
+            // 检查文件类型
+            const validExtensions = ['json', 'txt'];
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+            
+            if (!validExtensions.includes(fileExtension)) {
+                showStatus('请选择有效的JSON文件（.json, .txt）', 'error');
+                return;
+            }
+            
+            // 检查文件大小（限制5MB）
+            if (file.size > 5 * 1024 * 1024) {
+                showStatus('文件太大，请选择小于5MB的文件', 'error');
+                return;
+            }
+            
+            // 显示加载器
+            loader.classList.add('show');
+            
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                try {
+                    const content = e.target.result;
+                    jsonInput.value = content;
+                    
+                    // 更新步骤指示器
+                    updateStepIndicator(2);
+                    
+                    // 验证JSON
+                    validateJSON();
+                    
+                    // 设置文件名
+                    fileName = file.name.replace(/\.[^/.]+$/, "");
+                    
+                    showStatus(`成功加载文件: ${file.name}`, 'success');
+                } catch (error) {
+                    showStatus('读取文件时出错: ' + error.message, 'error');
+                } finally {
+                    loader.classList.remove('show');
+                }
+            };
+            
+            reader.onerror = function() {
+                showStatus('读取文件失败', 'error');
+                loader.classList.remove('show');
+            };
+            
+            reader.readAsText(file);
+        }
+        
+        // 格式化JSON
+        function formatJSON() {
+            try {
+                const input = jsonInput.value.trim();
+                if (!input) {
+                    showStatus('请输入JSON数据', 'info');
+                    return;
+                }
+                
+                const parsed = JSON.parse(input);
+                jsonInput.value = JSON.stringify(parsed, null, 2);
+                showStatus('JSON格式化完成', 'success');
+            } catch (error) {
+                showStatus('JSON格式错误: ' + error.message, 'error');
+            }
+        }
+        
+        // 清空输入
+        function clearInput() {
+            jsonInput.value = '';
+            dataPreview.textContent = '转换后的数据将在此预览';
+            jsonInfo.textContent = 'JSON结构信息将在此显示';
+            settingsPreview.textContent = '当前设置将在此显示';
+            rowCount.textContent = '0 行';
+            colCount.textContent = '0 列';
+            downloadBtn.disabled = true;
+            showStatus('输入已清空', 'info');
+        }
+        
+        // 验证JSON
+        function validateJSON() {
+            try {
+                const input = jsonInput.value.trim();
+                if (!input) {
+                    showStatus('请输入JSON数据', 'info');
+                    return false;
+                }
+                
+                jsonData = JSON.parse(input);
+                showStatus('JSON格式正确', 'success');
+                
+                // 更新预览
+                updateDataPreview();
+                updateJsonInfo();
+                updateSettingsPreview();
+                
+                // 启用转换按钮
+                convertBtn.disabled = false;
+                
+                return true;
+            } catch (error) {
+                showStatus('JSON格式错误: ' + error.message, 'error');
+                convertBtn.disabled = true;
+                return false;
+            }
+        }
+        
+        // 更新数据预览
+        function updateDataPreview() {
+            if (!jsonData) return;
+            
+            try {
+                // 获取数据数组
+                const dataArray = getDataArray(jsonData);
+                if (dataArray.length === 0) {
+                    dataPreview.textContent = '没有数据可预览';
+                    rowCount.textContent = '0 行';
+                    colCount.textContent = '0 列';
+                    return;
+                }
+                
+                // 创建工作表
+                const worksheet = XLSX.utils.json_to_sheet(dataArray);
+                
+                // 获取设置
+                const includeSerial = includeSerialNumber.checked;
+                const serialTitle = serialColumnTitle.value || '序号';
+                const startNum = parseInt(serialStartNumber.value) || 1;
+                const step = parseInt(serialStep.value) || 1;
+                const position = serialColumnPosition.value;
+                
+                // 添加序号列
+                if (includeSerial && dataArray.length > 0) {
+                    addSerialColumn(worksheet, serialTitle, startNum, step, position);
+                }
+                
+                // 转换为HTML预览
+                const html = XLSX.utils.sheet_to_html(worksheet, { editable: false });
+                
+                // 更新预览
+                dataPreview.innerHTML = html;
+                
+                // 更新行列计数
+                const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1");
+                const rows = range.e.r - range.s.r;
+                const cols = range.e.c - range.s.c + 1;
+                
+                rowCount.textContent = `${rows} 行`;
+                colCount.textContent = `${cols} 列`;
+                
+            } catch (error) {
+                dataPreview.textContent = '无法生成预览: ' + error.message;
+                rowCount.textContent = '0 行';
+                colCount.textContent = '0 列';
+            }
+        }
+        
+        // 添加序号列到工作表
+        function addSerialColumn(worksheet, title, startNum, step, position) {
+            const range = XLSX.utils.decode_range(worksheet['!ref'] || "A1");
+            
+            // 如果放在第一列，需要将所有列向右移动
+            if (position === 'first') {
+                // 扩展范围
+                range.e.c += 1;
+                
+                // 将所有单元格向右移动一列
+                for (let R = range.s.r; R <= range.e.r; ++R) {
+                    for (let C = range.e.c; C >= range.s.c + 1; --C) {
+                        const oldCell = XLSX.utils.encode_cell({c: C-1, r: R});
+                        const newCell = XLSX.utils.encode_cell({c: C, r: R});
+                        
+                        if (worksheet[oldCell]) {
+                            worksheet[newCell] = worksheet[oldCell];
+                        }
+                    }
+                }
+                
+                // 添加序号列
+                for (let R = range.s.r; R <= range.e.r; ++R) {
+                    const cellAddress = {c: 0, r: R};
+                    const cellRef = XLSX.utils.encode_cell(cellAddress);
+                    
+                    if (R === range.s.r) {
+                        // 表头行
+                        worksheet[cellRef] = {v: title, t: "s"};
+                    } else {
+                        // 数据行
+                        const serialNum = startNum + (R - range.s.r - 1) * step;
+                        worksheet[cellRef] = {v: serialNum, t: "n"};
+                    }
+                }
+            } else {
+                // 放在最后一列
+                const lastCol = range.e.c;
+                
+                // 扩展范围
+                range.e.c += 1;
+                
+                // 添加序号列
+                for (let R = range.s.r; R <= range.e.r; ++R) {
+                    const cellAddress = {c: lastCol + 1, r: R};
+                    const cellRef = XLSX.utils.encode_cell(cellAddress);
+                    
+                    if (R === range.s.r) {
+                        // 表头行
+                        worksheet[cellRef] = {v: title, t: "s"};
+                    } else {
+                        // 数据行
+                        const serialNum = startNum + (R - range.s.r - 1) * step;
+                        worksheet[cellRef] = {v: serialNum, t: "n"};
+                    }
+                }
+            }
+            
+            // 更新工作表范围
+            worksheet['!ref'] = XLSX.utils.encode_range(range);
+        }
+        
+        // 更新JSON信息
+        function updateJsonInfo() {
+            if (!jsonData) return;
+            
+            try {
+                const info = analyzeJsonStructure(jsonData);
+                jsonInfo.textContent = info;
+            } catch (error) {
+                jsonInfo.textContent = '无法分析JSON结构: ' + error.message;
+            }
+        }
+        
+        // 更新设置预览
+        function updateSettingsPreview() {
+            let settings = '当前转换设置:\n\n';
+            
+            // 序号列设置
+            settings += '序号列设置:\n';
+            settings += `  - 包含序号列: ${includeSerialNumber.checked ? '是' : '否'}\n`;
+            if (includeSerialNumber.checked) {
+                settings += `  - 序号列标题: ${serialColumnTitle.value}\n`;
+                settings += `  - 起始序号: ${serialStartNumber.value}\n`;
+                settings += `  - 序号步长: ${serialStep.value}\n`;
+                settings += `  - 序号列位置: ${serialColumnPosition.value === 'first' ? '第一列' : '最后一列'}\n`;
+            }
+            
+            // 文件设置
+            settings += '\n文件设置:\n';
+            settings += `  - 工作表名称: ${document.getElementById('sheetName').value}\n`;
+            settings += `  - 文件格式: ${document.getElementById('fileFormat').value}\n`;
+            
+            // 其他设置
+            settings += '\n其他设置:\n';
+            settings += `  - 自动检测表头: ${document.getElementById('autoDetectHeaders').checked ? '是' : '否'}\n`;
+            settings += `  - 格式化日期: ${document.getElementById('formatDates').checked ? '是' : '否'}\n`;
+            settings += `  - 保留空值: ${document.getElementById('preserveNullValues').checked ? '是' : '否'}\n`;
+            settings += `  - 自动换行: ${document.getElementById('autoWrapText').checked ? '是' : '否'}\n`;
+            settings += `  - 添加时间戳: ${document.getElementById('addTimestamp').checked ? '是' : '否'}\n`;
+            
+            settingsPreview.textContent = settings;
+        }
+        
+        // 分析JSON结构
+        function analyzeJsonStructure(data) {
+            let info = '';
+            
+            if (Array.isArray(data)) {
+                info += `数据类型: 数组\n`;
+                info += `数组长度: ${data.length}\n\n`;
+                
+                if (data.length > 0) {
+                    const firstItem = data[0];
+                    info += `第一个元素类型: ${typeof firstItem}\n`;
+                    
+                    if (typeof firstItem === 'object' && firstItem !== null) {
+                        info += `属性数量: ${Object.keys(firstItem).length}\n`;
+                        info += `属性列表:\n`;
+                        
+                        Object.keys(firstItem).forEach(key => {
+                            const value = firstItem[key];
+                            info += `  - ${key}: ${typeof value}`;
+                            if (value === null) info += ' (null)';
+                            else if (Array.isArray(value)) info += ' (数组)';
+                            else if (typeof value === 'object') info += ' (对象)';
+                            info += '\n';
+                        });
+                    }
+                }
+            } else if (typeof data === 'object' && data !== null) {
+                info += `数据类型: 对象\n`;
+                info += `属性数量: ${Object.keys(data).length}\n\n`;
+                info += `属性列表:\n`;
+                
+                Object.keys(data).forEach(key => {
+                    const value = data[key];
+                    info += `  - ${key}: ${typeof value}`;
+                    if (value === null) info += ' (null)';
+                    else if (Array.isArray(value)) info += ` (数组, 长度: ${value.length})`;
+                    else if (typeof value === 'object') info += ' (对象)';
+                    info += '\n';
+                });
+            } else {
+                info += `数据类型: ${typeof data}\n`;
+                info += `值: ${data}\n`;
+            }
+            
+            return info;
+        }
+        
+        // 获取数据数组（处理不同类型的JSON）
+        function getDataArray(data) {
+            if (Array.isArray(data)) {
+                return data;
+            } else if (typeof data === 'object' && data !== null) {
+                // 如果是对象，转换为数组
+                return [data];
+            } else {
+                // 其他类型包装为数组
+                return [{ value: data }];
+            }
+        }
+        
+        // 转换为Excel
+        function convertToExcel() {
+            if (!validateJSON()) {
+                return;
+            }
+            
+            // 显示加载器
+            loader.classList.add('show');
+            
+            try {
+                // 获取设置
+                const sheetName = document.getElementById('sheetName').value || 'Sheet1';
+                const fileFormat = document.getElementById('fileFormat').value;
+                const autoDetectHeaders = document.getElementById('autoDetectHeaders').checked;
+                const preserveNullValues = document.getElementById('preserveNullValues').checked;
+                const addTimestamp = document.getElementById('addTimestamp').checked;
+                
+                // 序号列设置
+                const includeSerial = includeSerialNumber.checked;
+                const serialTitle = serialColumnTitle.value || '序号';
+                const startNum = parseInt(serialStartNumber.value) || 1;
+                const step = parseInt(serialStep.value) || 1;
+                const position = serialColumnPosition.value;
+                
+                // 准备数据
+                const dataArray = getDataArray(jsonData);
+                
+                // 创建工作表
+                const worksheet = XLSX.utils.json_to_sheet(dataArray, {
+                    header: autoDetectHeaders ? undefined : Object.keys(dataArray[0] || {}),
+                    skipHeader: false
+                });
+                
+                // 添加序号列
+                if (includeSerial && dataArray.length > 0) {
+                    addSerialColumn(worksheet, serialTitle, startNum, step, position);
+                }
+                
+                // 设置列宽（可选）
+                const range = XLSX.utils.decode_range(worksheet['!ref']);
+                const colWidths = [];
+                for (let C = range.s.c; C <= range.e.c; ++C) {
+                    colWidths.push({wch: 15});
+                }
+                worksheet['!cols'] = colWidths;
+                
+                // 创建工作簿
+                workbook = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+                
+                // 更新步骤指示器
+                updateStepIndicator(3);
+                
+                // 启用下载按钮
+                downloadBtn.disabled = false;
+                
+                showStatus('转换成功！点击"下载文件"按钮保存Excel文件', 'success');
+            } catch (error) {
+                showStatus('转换失败: ' + error.message, 'error');
+            } finally {
+                loader.classList.remove('show');
+            }
+        }
+        
+        // 下载Excel文件
+        function downloadExcel() {
+            if (!workbook) {
+                showStatus('请先转换JSON数据', 'error');
+                return;
+            }
+            
+            try {
+                // 获取文件格式
+                const fileFormat = document.getElementById('fileFormat').value;
+                const sheetName = document.getElementById('sheetName').value || 'Sheet1';
+                const addTimestamp = document.getElementById('addTimestamp').checked;
+                
+                // 确定文件扩展名和类型
+                let extension, bookType;
+                switch(fileFormat) {
+                    case 'xls':
+                        extension = 'xls';
+                        bookType = 'biff8';
+                        break;
+                    case 'csv':
+                        extension = 'csv';
+                        bookType = 'csv';
+                        break;
+                    case 'xlsx':
+                    default:
+                        extension = 'xlsx';
+                        bookType = 'xlsx';
+                        break;
+                }
+                
+                // 生成文件名
+                let downloadFileName = `${fileName || 'data'}`;
+                if (addTimestamp) {
+                    const timestamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+                    downloadFileName += `_${timestamp}`;
+                }
+                downloadFileName += `.${extension}`;
+                
+                // 写入文件
+                XLSX.writeFile(workbook, downloadFileName, {bookType});
+                
+                showStatus(`文件已下载: ${downloadFileName}`, 'success');
+            } catch (error) {
+                showStatus('下载失败: ' + error.message, 'error');
+            }
+        }
+        
+        // 重置应用
+        function resetApp() {
+            jsonInput.value = '';
+            jsonData = null;
+            workbook = null;
+            dataPreview.textContent = '转换后的数据将在此预览';
+            jsonInfo.textContent = 'JSON结构信息将在此显示';
+            settingsPreview.textContent = '当前设置将在此显示';
+            rowCount.textContent = '0 行';
+            colCount.textContent = '0 列';
+            downloadBtn.disabled = true;
+            convertBtn.disabled = false;
+            
+            // 重置步骤指示器
+            updateStepIndicator(1);
+            
+            showStatus('应用已重置', 'info');
+        }
+        
+        // 加载示例数据
+        function loadExample(type) {
+            let exampleData = '';
+            
+            switch(type) {
+                case 'array':
+                    exampleData = `[
+  {
+    "姓名": "张三",
+    "年龄": 25,
+    "城市": "北京",
+    "入职日期": "2023-01-15",
+    "薪资": 8500,
+    "部门": "技术部",
+    "邮箱": "zhangsan@example.com",
+    "电话": "13800138000",
+    "状态": "在职"
+  },
+  {
+    "姓名": "李四",
+    "年龄": 30,
+    "城市": "上海",
+    "入职日期": "2022-05-20",
+    "薪资": 12000,
+    "部门": "市场部",
+    "邮箱": "lisi@example.com",
+    "电话": "13900139000",
+    "状态": "在职"
+  },
+  {
+    "姓名": "王五",
+    "年龄": 28,
+    "城市": "广州",
+    "入职日期": "2023-03-10",
+    "薪资": 9500,
+    "部门": "销售部",
+    "邮箱": "wangwu@example.com",
+    "电话": "13700137000",
+    "状态": "离职"
+  },
+  {
+    "姓名": "赵六",
+    "年龄": 35,
+    "城市": "深圳",
+    "入职日期": "2021-08-05",
+    "薪资": 15000,
+    "部门": "管理部",
+    "邮箱": "zhaoliu@example.com",
+    "电话": "13600136000",
+    "状态": "在职"
+  }
+]`;
+                    break;
+                    
+                case 'nested':
+                    exampleData = `{
+  "公司信息": {
+    "名称": "ABC科技有限公司",
+    "成立时间": "2018-05-10",
+    "地址": "北京市海淀区中关村",
+    "员工总数": 150
+  },
+  "部门列表": [
+    {
+      "部门名称": "技术部",
+      "经理": "张三",
+      "员工数": 45,
+      "项目": ["项目A", "项目B", "项目C"]
+    },
+    {
+      "部门名称": "市场部",
+      "经理": "李四",
+      "员工数": 30,
+      "项目": ["品牌推广", "市场调研"]
+    },
+    {
+      "部门名称": "销售部",
+      "经理": "王五",
+      "员工数": 50,
+      "项目": ["华北区", "华东区", "华南区"]
+    }
+  ],
+  "业绩数据": {
+    "2022": {
+      "收入": 5000000,
+      "支出": 3000000,
+      "利润": 2000000
+    },
+    "2023": {
+      "收入": 6500000,
+      "支出": 3800000,
+      "利润": 2700000
+    }
+  }
+}`;
+                    break;
+                    
+                case 'simple':
+                    exampleData = `{
+  "产品名称": "智能手机X10",
+  "品牌": "TechBrand",
+  "价格": 2999,
+  "颜色": ["黑色", "白色", "蓝色"],
+  "库存": 1500,
+  "发布日期": "2023-09-15",
+  "支持5G": true,
+  "屏幕尺寸": 6.5,
+  "电池容量": 4500,
+  "操作系统": "Android 13"
+}`;
+                    break;
+            }
+            
+            jsonInput.value = exampleData;
+            validateJSON();
+            showStatus(`已加载${type === 'array' ? '对象数组' : type === 'nested' ? '嵌套对象' : '简单键值对'}示例`, 'success');
+        }
+        
+        // 更新步骤指示器
+        function updateStepIndicator(step) {
+            const steps = document.querySelectorAll('.step');
+            steps.forEach((s, index) => {
+                if (index < step) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+        }
+        
+        // 显示状态消息
+        function showStatus(message, type) {
+            statusMessage.textContent = message;
+            statusMessage.className = `status-message status-${type}`;
+            
+            // 3秒后自动隐藏
+            setTimeout(() => {
+                statusMessage.className = 'status-message';
+            }, 3000);
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载一个默认示例
+            loadExample('array');
+            
+            // 更新设置预览
+            updateSettingsPreview();
+        });
+    </script>
+</body>
+</html>

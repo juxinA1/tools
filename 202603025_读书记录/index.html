@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>读书记录管理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 70px;
+        }
+
+        .title {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #f5f5f5;
+            text-align: center;
+            color: #2c3e50;
+            padding: 10px 0;
+            font-size: 26px;
+            z-index: 99;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* 固定按钮组 - 放在左侧 */
+        .fixed-btn-group {
+            position: fixed;
+            top: 80px;
+            left: 40px;
+            z-index: 999;
+            display: flex;
+            gap: 8px;
+            flex-direction: row;
+        }
+		
+	/* 固定按钮组 - 放在右侧 */
+        .fixed-btn-group2 {
+            position: fixed;
+            top: 80px;
+            right: 60px;
+            z-index: 999;
+            display: flex;
+            gap: 8px;
+            flex-direction: row;
+        }
+
+        .fixed-btn {
+            padding: 6px 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+        .fixed-btn:hover {
+            background: #2980b9;
+        }
+        .search-btn {
+            background: #2ecc71;
+        }
+        .search-btn:hover {
+            background: #27ae60;
+        }
+        .reset-btn {
+            background: #f1a500;
+        }
+        .reset-btn:hover {
+            background: #d88e00;
+        }
+        .export-btn {
+            background: #9b59b6;
+        }
+        .export-btn:hover {
+            background: #8e44ad;
+        }
+        .import-btn {
+            background: #e74c3c;
+        }
+        .import-btn:hover {
+            background: #c0392b;
+        }
+
+        /* 遮罩层 + 悬浮表单 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .form-box {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        /* 检索面板样式 */
+        .search-box {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .form-title {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: end;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .form-row-split {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px 20px;
+        }
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        .btn-success {
+            background: #2ecc71;
+            color: white;
+        }
+        .btn-danger {
+            background: #f1a500;
+            color: white;
+        }
+        .btn-search {
+            background: #2ecc71;
+            color: white;
+        }
+        .btn-close {
+            background: #999;
+            color: white;
+        }
+
+        /* ====================== 表格固定样式 ====================== */
+        .table-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            height: 70vh;
+            overflow: auto;
+            position: relative;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            position: relative;
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            background: #f8f9fa;
+            z-index: 2;
+        }
+
+        th, td {
+            padding: 12px 6px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #fff;
+        }
+
+        /* 表头排序样式 */
+        th {
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover {
+            background: #e9ecef;
+        }
+        .sort-indicator {
+            margin-left: 4px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* 编号列按钮样式 */
+        .num-btn {
+            display: inline-block;
+            padding: 4px 8px;
+            color: #007bff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .num-btn:hover {
+            background: #007bff;
+            color: #fff;
+        }
+
+        /* 列宽 */
+        th:nth-child(1), td:nth-child(1) { width: 50px !important; border-left: 1px solid #eee; border-right: 1px solid #eee; }
+        th:nth-child(2), td:nth-child(2) { width: 220px !important; border-right: 1px solid #eee; }
+        th:nth-child(3), td:nth-child(3) { width: 130px; border-right: 1px solid #eee;}
+        th:nth-child(4), td:nth-child(4) { width: 90px; border-right: 1px solid #eee;}
+        th:nth-child(5), td:nth-child(5) { width: 90px; border-right: 1px solid #eee;}
+        th:nth-child(6), td:nth-child(6) { width: 110px; border-right: 1px solid #eee;}
+        th:nth-child(7), td:nth-child(7) { width: 110px; border-right: 1px solid #eee;}
+        th:nth-child(8), td:nth-child(8) { width: 120px; border-right: 1px solid #eee;}
+        th:nth-child(9), td:nth-child(9) { width: 60px; border-right: 1px solid #eee;}
+        th:nth-child(10),td:nth-child(10){ width: 120px; border-right: 1px solid #eee;}
+
+        th { background:#f8f9fa; }
+        tr:hover { background:#fafafa; }
+        .empty-tip { text-align:center; padding:30px; color:#999; }
+        #updateBtn { display: none; }
+
+        .table-star-rating {
+            display: flex; align-items: center; gap: 2px;
+            font-size: 18px; justify-content: center;
+        }
+        .star-item {
+            position: relative; display: inline-block;
+            width: 18px; text-align: center;
+        }
+        .star-bg { color: #eee; }
+        .star-fill {
+            position: absolute; left: 0; top: 0;
+            white-space: nowrap; overflow: hidden; width: 0;
+        }
+        .star-red { color: #e74c3c; }
+        .star-yellow { color: #f39c12; }
+        .star-green { color: #2ecc71; }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* 统计栏样式 */
+        .stats-bar {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="title">📖 读书记录管理</h1>
+
+<!-- 左侧按钮：导入 导出 -->
+<div class="fixed-btn-group">
+    <button class="fixed-btn import-btn" id="importBtn">📥入</button>
+    <button class="fixed-btn export-btn" id="exportBtn">📤出</button>
+</div>
+
+<!-- 右上角的按钮组 -->
+<div class="fixed-btn-group2">
+    <button class="fixed-btn" id="toggleFormBtn">➕</button>
+    <button class="fixed-btn search-btn" id="openSearchBtn">🔍</button>
+    <button class="fixed-btn reset-btn" id="resetAllBtn">🔄</button>
+</div>
+
+<!-- 隐藏文件上传框 -->
+<input type="file" id="fileInput" accept=".json" style="display:none;">
+
+<!-- 添加/编辑弹窗 -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="form-box" id="formBox">
+        <h3 class="form-title" id="formTitle">添加新书籍</h3>
+        <form id="bookForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>书名</label>
+                    <input type="text" id="bookName" required>
+                </div>
+                <div class="form-group">
+                    <label>作者</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label>国籍</label>
+                    <input type="text" id="nationality" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>字数（万）</label>
+                    <input type="number" step="0.01" id="totalWords" placeholder="例：28.5" required>
+                </div>
+                <div class="form-group">
+                    <label>开始时间</label>
+                    <input type="date" id="startTime" required>
+                </div>
+                <div class="form-group">
+                    <label>结束时间</label>
+                    <input type="date" id="endTime">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>阅读时长</label>
+                    <div class="form-row-split">
+                        <input type="number" step="0.1" id="readHour" placeholder="小时" required>
+                        <input type="number" min="0" max="59" id="readMinute" placeholder="分钟" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>推荐星级</label>
+                    <select id="starScore">
+                        <option value="5.0">5.0星</option><option value="4.5">4.5星</option>
+                        <option value="4.0">4.0星</option><option value="3.5">3.5星</option>
+                        <option value="3.0">3.0星</option><option value="2.5">2.5星</option>
+                        <option value="2.0">2.0星</option><option value="1.5">1.5星</option>
+                        <option value="1.0">1.0星</option><option value="0.5">0.5星</option> 
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>分级</label>
+                    <select id="levelColor">
+                        <option value="green">绿色</option><option value="yellow">黄色</option><option value="red">红色</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" id="saveBtn">保存书籍信息</button>
+                <button type="button" class="btn btn-success" id="updateBtn">更新书籍信息</button>
+                <button type="button" class="btn btn-danger" id="clearBtn">清除</button>
+                <button type="button" class="btn btn-close" id="closeBtn">关闭</button>
+            </div>
+            <input type="hidden" id="editId" value="-1">
+        </form>
+    </div>
+</div>
+
+<!-- 检索弹窗 -->
+<div class="modal-overlay" id="searchOverlay">
+    <div class="search-box">
+        <h3 class="form-title">书籍检索</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label>书名</label>
+                <input type="text" id="s_bookName">
+            </div>
+            <div class="form-group">
+                <label>作者</label>
+                <input type="text" id="s_author">
+            </div>
+            <div class="form-group">
+                <label>国籍</label>
+                <input type="text" id="s_nationality">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>阅读次数</label>
+                <select id="s_readTimes">
+                    <option value="">全部</option>
+                    <option value="1">1次</option>
+                    <option value="2">2次</option>
+                    <option value="2+">2次以上</option>
+                    <option value="3">3次</option>
+                    <option value="3+">3次以上</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>推荐星级</label>
+                <select id="s_starScore">
+                    <option value="">全部</option>
+                    <option value="5.0">5.0星</option><option value="4.5">4.5星</option>
+                    <option value="4.0">4.0星</option><option value="3.5">3.5星</option>
+                    <option value="3.0">3.0星</option><option value="2.5">2.5星</option>
+                    <option value="2.0">2.0星</option><option value="1.5">1.5星</option>
+                    <option value="1.0">1.0星</option><option value="0.5">0.5星</option>                 
+                </select>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top:15px;">
+            <button class="btn btn-search" id="doSearchBtn">执行检索</button>
+            <button class="btn btn-close" id="closeSearchBtn">关闭</button>
+        </div>
+    </div>
+</div>
+
+<div class="table-box">
+    <!-- 统计栏 -->
+    <div class="stats-bar" id="statsBar">
+        总阅读量：0本（多次阅读：0本） | 总字数：0.0 万字 | 总时长：0小时0分钟
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>编号<span class="sort-indicator"></span></th>
+                    <th>书名<span class="sort-indicator"></span></th>
+                    <th>作者<span class="sort-indicator"></span></th>
+                    <th>国籍<span class="sort-indicator"></span></th>
+                    <th>字数(万)<span class="sort-indicator"></span></th>
+                    <th>开始阅读<span class="sort-indicator"></span></th>
+                    <th>结束阅读<span class="sort-indicator"></span></th>
+                    <th>阅读时长<span class="sort-indicator"></span></th>
+                    <th>次数<span class="sort-indicator"></span></th>
+                    <th>推荐星级<span class="sort-indicator"></span></th>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+                <tr><td colspan="10" class="empty-tip">暂无记录</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    let books = JSON.parse(localStorage.getItem('bookList')) || [];
+    let originalBooks = [...books];
+    let currentSort = { column: 0, direction: 'asc' };
+
+    const modalOverlay = document.getElementById('modalOverlay');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const toggleFormBtn = document.getElementById('toggleFormBtn');
+    const openSearchBtn = document.getElementById('openSearchBtn');
+    const resetAllBtn = document.getElementById('resetAllBtn');
+    const exportBtn = document.getElementById('exportBtn');
+    const importBtn = document.getElementById('importBtn');
+    const fileInput = document.getElementById('fileInput');
+    const formTitle = document.getElementById('formTitle');
+    const saveBtn = document.getElementById('saveBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const updateBtn = document.getElementById('updateBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const editIdInput = document.getElementById('editId');
+    const statsBar = document.getElementById('statsBar');
+
+    // 导出 JSON（强制按编号升序）
+    exportBtn.addEventListener('click', function() {
+        if (books.length === 0) {
+            alert('暂无数据可导出！');
+            return;
+        }
+        // 导出前按 id 升序排序
+        const exportData = [...originalBooks].sort((a,b) => (a.id || 0) - (b.id || 0));
+        const dataStr = JSON.stringify(exportData, null, 2);
+        const blob = new Blob([dataStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        const date = new Date().toISOString().split('T')[0];
+        a.download = `读书记录_${date}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+        alert('导出成功！文件已按编号升序排列');
+    });
+
+    // 导入 JSON
+    importBtn.addEventListener('click', () => {
+        fileInput.value = '';
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        if (!file.name.endsWith('.json')) {
+            alert('请选择 JSON 格式文件！');
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+            try {
+                const imported = JSON.parse(evt.target.result);
+                if (!Array.isArray(imported)) {
+                    alert('文件格式不正确，必须是读书记录数组');
+                    return;
+                }
+                if (confirm('导入会覆盖当前所有数据，确定继续吗？')) {
+                    books = imported;
+                    originalBooks = [...books];
+                    localStorage.setItem('bookList', JSON.stringify(books));
+                    resetAllSearch();
+                    alert(`导入成功！共 ${books.length} 条记录`);
+                }
+            } catch (err) {
+                alert('文件解析失败：' + err.message);
+            }
+        };
+        reader.readAsText(file);
+    });
+
+    // 生成固定不变的编号
+    function getNewId() {
+        if (books.length === 0) return 1;
+        return Math.max(...books.map(item => item.id || 0)) + 1;
+    }
+
+    // 统计总阅读量、总字数、总时长
+    function updateStats() {
+        const totalCount = books.length;
+        // 多次阅读本数：次数 > 1
+        const multiReadCount = books.filter(item => item.readTimes > 1).length;
+
+        let totalWord = 0;
+        let totalHour = 0;
+        let totalMin = 0;
+
+        books.forEach(item => {
+            totalWord += parseFloat(item.totalWords/10000) || 0;
+            totalHour += parseFloat(item.readHour) || 0;
+            totalMin += parseInt(item.readMinute) || 0;
+        });
+
+        // 分钟进位到小时
+        const extraHour = Math.floor(totalMin / 60);
+        totalHour += extraHour;
+        totalMin = totalMin % 60;
+
+        statsBar.innerText =
+            `总阅读量：${totalCount}本（多次阅读：${multiReadCount}本） | 总字数：${totalWord.toFixed(1)} 万字 | 总时长：${Math.floor(totalHour)}小时${totalMin}分钟`;
+    }
+
+    // 打开/关闭 添加弹窗
+    function openModal() { modalOverlay.classList.add('show'); }
+    function closeModal() { modalOverlay.classList.remove('show'); resetToAddMode(); }
+
+    // 打开/关闭 检索弹窗
+    function openSearch() { searchOverlay.classList.add('show'); }
+    function closeSearch() { searchOverlay.classList.remove('show'); }
+
+    // 重置检索条件 + 显示全部数据 + 清除排序箭头
+    function resetAllSearch() {
+        document.getElementById('s_bookName').value = '';
+        document.getElementById('s_author').value = '';
+        document.getElementById('s_nationality').value = '';
+        document.getElementById('s_readTimes').value = '';
+        document.getElementById('s_starScore').value = '';
+        books = [...originalBooks];
+        // 强制编号升序
+        currentSort = { column: 0, direction: 'asc' };
+        sortBooks();
+        renderBookList();
+    }
+
+    toggleFormBtn.addEventListener('click', openModal);
+    openSearchBtn.addEventListener('click', openSearch);
+    resetAllBtn.addEventListener('click', resetAllSearch);
+    closeBtn.addEventListener('click', closeModal);
+
+    // 点击空白关闭
+    modalOverlay.addEventListener('click', (e) => e.target === modalOverlay && closeModal());
+    searchOverlay.addEventListener('click', (e) => e.target === searchOverlay && closeSearch());
+    closeSearchBtn.addEventListener('click', closeSearch);
+
+    clearBtn.addEventListener('click', () => {
+        document.getElementById('bookForm').reset();
+    });
+
+    function resetToAddMode() {
+        formTitle.textContent = "添加新书籍";
+        editIdInput.value = "-1";
+        updateBtn.style.display = "none";
+        document.getElementById('bookForm').reset();
+    }
+
+    function checkRequired() {
+        const bookName = document.getElementById('bookName').value.trim();
+        const author = document.getElementById('author').value.trim();
+        const nationality = document.getElementById('nationality').value.trim();
+        const totalWords = document.getElementById('totalWords').value.trim();
+        const startTime = document.getElementById('startTime').value;
+        const readHour = document.getElementById('readHour').value;
+        const readMinute = document.getElementById('readMinute').value;
+
+        if (!bookName) { alert('书名不能为空！'); return false; }
+        if (!author) { alert('作者不能为空！'); return false; }
+        if (!nationality) { alert('国籍不能为空！'); return false; }
+        if (!totalWords) { alert('总字数不能为空！'); return false; }
+        if (!startTime) { alert('开始时间不能为空！'); return false; }
+        if (readHour === '' || readMinute === '') { alert('阅读时长不能为空！'); return false; }
+        return true;
+    }
+
+    // 保存
+    saveBtn.addEventListener('click', () => {
+        if (!checkRequired()) return;
+        const data = {
+            id: getNewId(),
+            bookName: document.getElementById('bookName').value.trim(),
+            author: document.getElementById('author').value.trim(),
+            nationality: document.getElementById('nationality').value.trim(),
+            totalWords: parseFloat(document.getElementById('totalWords').value) * 10000,
+            startTime: document.getElementById('startTime').value,
+            endTime: document.getElementById('endTime').value,
+            readHour: parseFloat(document.getElementById('readHour').value) || 0,
+            readMinute: parseInt(document.getElementById('readMinute').value) || 0,
+            starScore: document.getElementById('starScore').value,
+            levelColor: document.getElementById('levelColor').value,
+            readTimes: 0
+        };
+        const lastCount = getLastReadCount(data.bookName);
+        data.readTimes = lastCount + 1;
+
+        books.push(data);
+        originalBooks = [...books];
+        localStorage.setItem('bookList', JSON.stringify(books));
+        closeModal();
+        resetAllSearch();
+        alert('新增成功！');
+    });
+
+    // 更新
+    updateBtn.addEventListener('click', () => {
+        const idx = editIdInput.value;
+        if (idx == -1) return;
+        if (!checkRequired()) return;
+
+        const oldBook = books[idx];
+        const data = {
+            id: oldBook.id,
+            bookName: document.getElementById('bookName').value.trim(),
+            author: document.getElementById('author').value.trim(),
+            nationality: document.getElementById('nationality').value.trim(),
+            totalWords: parseFloat(document.getElementById('totalWords').value) * 10000,
+            startTime: document.getElementById('startTime').value,
+            endTime: document.getElementById('endTime').value,
+            readHour: parseFloat(document.getElementById('readHour').value) || 0,
+            readMinute: parseInt(document.getElementById('readMinute').value) || 0,
+            starScore: document.getElementById('starScore').value,
+            levelColor: document.getElementById('levelColor').value,
+            readTimes: oldBook.readTimes
+        };
+
+        books[idx] = data;
+        originalBooks = [...books];
+        localStorage.setItem('bookList', JSON.stringify(books));
+        closeModal();
+        resetAllSearch();
+        alert('更新成功！');
+    });
+
+    // 从下往上找最近同名
+    function getLastReadCount(bookName, beforeIndex = null) {
+        let start = beforeIndex ?? books.length;
+        for (let i = start - 1; i >= 0; i--) {
+            if (books[i].bookName.trim() === bookName.trim()) {
+                return books[i].readTimes;
+            }
+        }
+        return 0;
+    }
+
+    // 检索功能
+    doSearchBtn.addEventListener('click', () => {
+        const s_name = document.getElementById('s_bookName').value.trim();
+        const s_author = document.getElementById('s_author').value.trim();
+        const s_nation = document.getElementById('s_nationality').value.trim();
+        const s_read = document.getElementById('s_readTimes').value.trim();
+        const s_star = document.getElementById('s_starScore').value;
+
+        let result = originalBooks.filter(item => {
+            if (s_name && !item.bookName.includes(s_name)) return false;
+            if (s_author && !item.author.includes(s_author)) return false;
+            if (s_nation && !item.nationality.includes(s_nation)) return false;
+            if (s_read) {
+                if (s_read === '2+') {
+                    if (item.readTimes < 2) return false;
+                } else if (s_read === '3+') {
+                    if (item.readTimes < 3) return false;
+                } else {
+                    if (item.readTimes != parseInt(s_read)) return false;
+                }
+            }
+            if (s_star && item.starScore != s_star) return false;
+            return true;
+        });
+        books = result;
+        currentSort = { column: 0, direction: 'asc' };
+        sortBooks();
+        renderBookList();
+        closeSearch();
+    });
+
+    function getTableStarHtml(score, color) {
+        let c = color === 'red' ? 'star-red' : color === 'yellow' ? 'star-yellow' : 'star-green';
+        let stars = '<div class="table-star-rating">';
+        for (let i=1;i<=5;i++){
+            let w = score >= i ? 100 : score >= i-0.5 ? 50 : 0;
+            stars += `<div class="star-item"><div class="star-bg">★</div><div class="star-fill ${c}" style="width:${w}%">★</div></div>`;
+        }
+        return stars + '</div>';
+    }
+
+    function formatWordCount(w) { return (w/10000).toFixed(1); }
+
+    // ====================== 排序功能 ======================
+    // 初始化表头排序点击事件
+    function initSort() {
+        const headers = document.querySelectorAll('th');
+        headers.forEach((th, index) => {
+            th.addEventListener('click', () => {
+                // 切换排序方向
+                if (currentSort.column === index) {
+                    currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSort.column = index;
+                    currentSort.direction = 'asc';
+                }
+                // 更新排序箭头
+                updateSortIndicators();
+                // 执行排序
+                sortBooks();
+                // 重新渲染
+                renderBookList();
+            });
+        });
+    }
+
+    // 更新表头排序箭头显示
+    function updateSortIndicators() {
+        const headers = document.querySelectorAll('th');
+        headers.forEach((th, index) => {
+            const indicator = th.querySelector('.sort-indicator');
+            if (index === currentSort.column) {
+                indicator.textContent = currentSort.direction === 'asc' ? ' ↑' : ' ↓';
+            } else {
+                indicator.textContent = '';
+            }
+        });
+    }
+
+    // 书籍数据排序
+    function sortBooks() {
+        if (currentSort.column === null) return;
+        
+        books.sort((a, b) => {
+            let valA, valB;
+            
+            // 根据列索引获取对应值
+            switch(currentSort.column) {
+                case 0: // 编号
+                    valA = a.id || 0;
+                    valB = b.id || 0;
+                    break;
+                case 1: // 书名
+                    valA = a.bookName || '';
+                    valB = b.bookName || '';
+                    break;
+                case 2: // 作者
+                    valA = a.author || '';
+                    valB = b.author || '';
+                    break;
+                case 3: // 国籍
+                    valA = a.nationality || '';
+                    valB = b.nationality || '';
+                    break;
+                case 4: // 字数
+                    valA = parseFloat(a.totalWords) || 0;
+                    valB = parseFloat(b.totalWords) || 0;
+                    break;
+                case 5: // 开始时间
+                    valA = a.startTime ? new Date(a.startTime) : new Date(0);
+                    valB = b.startTime ? new Date(b.startTime) : new Date(0);
+                    break;
+                case 6: // 结束时间
+                    valA = a.endTime ? new Date(a.endTime) : new Date(9999, 11, 31); // 阅读中放最后
+                    valB = b.endTime ? new Date(b.endTime) : new Date(9999, 11, 31);
+                    break;
+                case 7: // 阅读时长（转总分钟）
+                    valA = (parseFloat(a.readHour) || 0) * 60 + (parseInt(a.readMinute) || 0);
+                    valB = (parseFloat(b.readHour) || 0) * 60 + (parseInt(b.readMinute) || 0);
+                    break;
+                case 8: // 次数
+                    valA = a.readTimes || 0;
+                    valB = b.readTimes || 0;
+                    break;
+                case 9: // 星级
+                    valA = parseFloat(a.starScore) || 0;
+                    valB = parseFloat(b.starScore) || 0;
+                    break;
+                default:
+                    return 0;
+            }
+
+            // 比较值
+            if (valA < valB) return currentSort.direction === 'asc' ? -1 : 1;
+            if (valA > valB) return currentSort.direction === 'asc' ? 1 : -1;
+            return 0;
+        });
+    }
+
+    function renderBookList() {
+        updateStats();
+        if(books.length===0){
+            document.getElementById('bookList').innerHTML=`<tr><td colspan="10" class="empty-tip">暂无记录</td></tr>`;
+            return;
+        }
+        let html='';
+        books.forEach((item,i)=>{
+            html+=`
+            <tr>
+                <td><span class="num-btn" onclick="edit(${i})">${item.id}</span></td>
+                <td>${item.bookName}</td>
+                <td>${item.author}</td>
+                <td>${item.nationality}</td>
+                <td>${formatWordCount(item.totalWords)}</td>
+                <td>${item.startTime}</td>
+                <td>${item.endTime ? item.endTime : '<span style="color:#3498db">阅读中</span>'}</td>
+                <td>${Math.floor(item.readHour)}小时${item.readMinute}分钟</td>
+                <td>${item.readTimes}</td>
+                <td>${getTableStarHtml(+item.starScore,item.levelColor)}</td>
+            </tr>`;
+        });
+        document.getElementById('bookList').innerHTML = html;
+    }
+
+    // 编辑
+    window.edit=function(i){
+        const b=books[i];
+        document.getElementById('bookName').value = b.bookName;
+        document.getElementById('author').value = b.author;
+        document.getElementById('nationality').value = b.nationality;
+        document.getElementById('totalWords').value = (b.totalWords/10000).toFixed(2);
+        document.getElementById('startTime').value = b.startTime;
+        document.getElementById('endTime').value = b.endTime;
+        document.getElementById('readHour').value = b.readHour || 0;
+        document.getElementById('readMinute').value = b.readMinute || 0;
+        document.getElementById('starScore').value = b.starScore;
+        document.getElementById('levelColor').value = b.levelColor;
+        editIdInput.value = i;
+        formTitle.textContent = "编辑书籍信息";
+        updateBtn.style.display = "inline-block";
+        openModal();
+    };
+
+    // 初始化排序功能
+    initSort();
+    resetAllSearch();
+</script>
+</body>
+</html>

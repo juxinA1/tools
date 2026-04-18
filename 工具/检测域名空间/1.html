@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage 容量检测</title>
+</head>
+<body>
+  <h3>LocalStorage 使用情况</h3>
+  <p>总容量：<span id="total"></span></p>
+  <p>已使用：<span id="used"></span></p>
+  <p>剩余容量：<span id="free"></span></p>
+
+<script>
+function getLocalStorageSize() {
+  let total = 0;
+  for (let key in localStorage) {
+    if (localStorage.hasOwnProperty(key)) {
+      total += (localStorage[key].length + key.length) * 2; // 每个字符2字节
+    }
+  }
+  return total;
+}
+
+function formatBytes(bytes) {
+  const mb = bytes / 1048576;
+  return mb.toFixed(2) + " MB";
+}
+
+// 常见总大小约 5MB
+const totalSize = 5 * 1024 * 1024;
+const usedSize = getLocalStorageSize();
+const freeSize = totalSize - usedSize;
+
+document.getElementById("total").textContent = formatBytes(totalSize);
+document.getElementById("used").textContent = formatBytes(usedSize);
+document.getElementById("free").textContent = formatBytes(freeSize);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>点击朗读</title>
+</head>
+<body>
+  <div id="content">
+    你好，现在点击按钮就能朗读这段文字了。
+  </div>
+
+  <button onclick="readPage()">点击开始朗读</button>
+
+  <script>
+    function readPage() {
+      // 停止之前可能在朗读的
+      window.speechSynthesis.cancel();
+
+      let u = new SpeechSynthesisUtterance();
+      u.text = document.getElementById('content').innerText;
+      u.lang = 'zh-CN';
+      u.rate = 1;   // 语速
+      u.volume = 1; // 音量
+
+      speechSynthesis.speak(u);
+    }
+  </script>
+</body>
+</html>
