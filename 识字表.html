@@ -586,6 +586,72 @@
     </div>
 </div>
 
+<!-- 编辑弹窗 -->
+<div class="query-modal" id="editModal">
+    <div class="query-content" style="width: 700px;">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <div style="text-align:center; margin-bottom:25px;">
+            <h3 style="margin:0; color:#2c3e50; font-size:20px; font-weight:600; font-family: 'SimHei', '黑体', sans-serif;">✏️ 编辑汉字<span id="editHanziTitle" style="color: #3498db; font-weight: normal;"></span></h3>
+        </div>
+
+        <input type="hidden" id="editIndex">
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+            <div class="query-item">
+                <label>年级：</label>
+                <input type="text" id="editGrade">
+            </div>
+            <div class="query-item">
+                <label>课号：</label>
+                <input type="text" id="editLesson">
+            </div>
+            <div class="query-item">
+                <label>类别：</label>
+                <select id="editType">
+                    <option value="识字">识字</option>
+                    <option value="写字">写字</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 15px;">
+            <div class="query-item">
+                <label>拼音：</label>
+                <input type="text" id="editPinyin">
+            </div>
+            <div class="query-item">
+                <label>部首：</label>
+                <input type="text" id="editRadical">
+            </div>
+            <div class="query-item">
+                <label>笔画：</label>
+                <input type="text" id="editStrokes">
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-top: 15px;">
+            <div class="query-item">
+                <label>结构：</label>
+                <input type="text" id="editStructure">
+            </div>
+            <div class="query-item">
+                <label>词语：</label>
+                <input type="text" id="editWord">
+            </div>
+        </div>
+
+        <div class="query-item" style="margin-top: 15px;">
+            <label>笔顺：</label>
+            <input type="text" id="editStrokeOrder" style="width: 100%;">
+        </div>
+
+        <div style="display: flex; gap: 15px; justify-content: center; margin-top: 25px;">
+            <button class="btn btn-green" onclick="saveEdit()">💾 保存</button>
+            <button class="btn btn-gray" onclick="closeEditModal()">❌ 取消</button>
+        </div>
+    </div>
+</div>
+
 <!-- 查询弹窗 -->
 <div class="query-modal" id="queryModal">
     <div class="query-content">
@@ -695,7 +761,7 @@ function renderTable(data) {
     renderData.forEach((item, index) => {
         html += `
         <tr>
-            <td>${index + 1}</td>
+            <td class="char-click" onclick="openEditModal(${index})">${index + 1}</td>
             <td>${item.grade || ''}</td>
             <td>${item.lesson || ''}</td>
             <td>${item.type || ''}</td>
@@ -705,7 +771,7 @@ function renderTable(data) {
             <td>${item.strokes}</td>
             <td>${item.structure}</td>
             <td style="text-align:left">${item.word}</td>
-            <td><span style="color: #27ae60;">${item.masteredCount || 0}</span>-<span style="color: #e74c3c;">${item.notMasteredCount || 0}</span></td>
+            <td><span style="color: #27ae60;">${item.masteredCount || 0}</span> - <span style="color: #e74c3c;">${item.notMasteredCount || 0}</span></td>
         </tr>`;
     });
     $ ("tableBody").innerHTML = html;
@@ -1093,8 +1159,8 @@ function generatePrintableDictation2() {
         // 从word字段中提取拼音（从第一个"（"开始，到第一个"）"结束）
         let wordPinyin = '';
         if (item.word) {
-            const startIndex = item.word.indexOf('（');
-            const endIndex = item.word.indexOf('）');
+            const startIndex = item.word.indexOf('(');
+            const endIndex = item.word.indexOf(')');
             if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
                 wordPinyin = item.word.substring(startIndex + 1, endIndex);
             }
@@ -1204,8 +1270,8 @@ function openModal(index, hanzi, pinyin, strokeOrder, radical, strokes, structur
         wordList.forEach(item => {
             let wordText = item;
             let wordPinyin = '';
-            const startIndex = item.indexOf('（');
-            const endIndex = item.indexOf('）');
+            const startIndex = item.indexOf('(');
+            const endIndex = item.indexOf(')');
             if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
                 wordPinyin = item.substring(startIndex + 1, endIndex);
                 wordText = item.substring(0, startIndex);
@@ -1354,11 +1420,6 @@ function adjustMasteredCount(adjustment) {
     const currentCount = parseInt(document.getElementById('modalMastered').textContent) || 0;
     const newCount = Math.max(0, currentCount + adjustment);
     document.getElementById('modalMastered').textContent = newCount;
-    
-    // 保存到当前汉字的数据中
-    if (currentData[currentCharIndex]) {
-        currentData[currentCharIndex].masteredCount = newCount;
-    }
 }
 
 // 调整未掌握数量
@@ -1367,11 +1428,6 @@ function adjustNotMasteredCount(adjustment) {
     const currentCount = parseInt(document.getElementById('modalNotMastered').textContent) || 0;
     const newCount = Math.max(0, currentCount + adjustment);
     document.getElementById('modalNotMastered').textContent = newCount;
-    
-    // 保存到当前汉字的数据中
-    if (currentData[currentCharIndex]) {
-        currentData[currentCharIndex].notMasteredCount = newCount;
-    }
 }
 
 // 切换汉字掌握状态
@@ -1402,6 +1458,19 @@ function toggleMastered(index) {
     }
 }
 function closeModal() {
+    // 保存当前汉字的掌握情况
+    if (currentData[currentCharIndex]) {
+        const masteredCount = parseInt(document.getElementById('modalMastered').textContent) || 0;
+        const notMasteredCount = parseInt(document.getElementById('modalNotMastered').textContent) || 0;
+        
+        currentData[currentCharIndex].masteredCount = masteredCount;
+        originalData[currentCharIndex].masteredCount = masteredCount;
+        currentData[currentCharIndex].notMasteredCount = notMasteredCount;
+        originalData[currentCharIndex].notMasteredCount = notMasteredCount;
+        
+        saveToLocal();
+        renderTable(currentData);
+    }
     $("modal").classList.remove("show");
 }
 
@@ -1893,11 +1962,22 @@ function exportJson() {
     // 创建Blob对象
     const blob = new Blob([jsonStr], { type: 'application/json' });
     
+    // 生成带时间戳的文件名
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timestamp = `${year}${month}${day}_${hours}${minutes}${seconds}`;
+    const fileName = `识字表_${timestamp}.json`;
+    
     // 创建下载链接
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = '字表.json';
+    a.download = fileName;
     
     // 触发下载
     document.body.appendChild(a);
@@ -1908,6 +1988,54 @@ function exportJson() {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
     }, 100);
+}
+
+// 打开编辑弹窗
+function openEditModal(index) {
+    const item = currentData[index];
+    if (!item) return;
+
+    document.getElementById('editIndex').value = index;
+    document.getElementById('editHanziTitle').textContent = `（${item.hanzi || ''}）`;
+    document.getElementById('editGrade').value = item.grade || '';
+    document.getElementById('editLesson').value = item.lesson || '';
+    document.getElementById('editType').value = item.type || '识字';
+    document.getElementById('editPinyin').value = item.pinyin || '';
+    document.getElementById('editRadical').value = item.radical || '';
+    document.getElementById('editStrokes').value = item.strokes || '';
+    document.getElementById('editStructure').value = item.structure || '';
+    document.getElementById('editStrokeOrder').value = item.strokeOrder || '';
+    document.getElementById('editWord').value = item.word || '';
+
+    document.getElementById('editModal').classList.add('show');
+}
+
+// 关闭编辑弹窗
+function closeEditModal() {
+    document.getElementById('editModal').classList.remove('show');
+}
+
+// 保存编辑
+function saveEdit() {
+    const index = parseInt(document.getElementById('editIndex').value);
+    if (isNaN(index) || !currentData[index]) return;
+
+    currentData[index].grade = document.getElementById('editGrade').value;
+    currentData[index].lesson = document.getElementById('editLesson').value;
+    currentData[index].type = document.getElementById('editType').value;
+    currentData[index].pinyin = document.getElementById('editPinyin').value;
+    currentData[index].radical = document.getElementById('editRadical').value;
+    currentData[index].strokes = document.getElementById('editStrokes').value;
+    currentData[index].structure = document.getElementById('editStructure').value;
+    currentData[index].strokeOrder = document.getElementById('editStrokeOrder').value;
+    currentData[index].word = document.getElementById('editWord').value;
+
+    // 同步更新 originalData
+    originalData[index] = { ...currentData[index] };
+
+    saveToLocal();
+    renderTable(currentData);
+    closeEditModal();
 }
 
 renderTable();
