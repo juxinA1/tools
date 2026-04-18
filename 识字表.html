@@ -44,6 +44,14 @@
             flex-wrap: wrap;
             flex-shrink: 0;
         }
+        .export-btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            background: #e74c3c;
+        }
         .btn {
             padding: 8px 14px;
             border: none;
@@ -339,6 +347,7 @@
         <button class="btn btn-orange" onclick="openQueryModal()">🔍 查询</button>
         <button class="btn btn-gray" onclick="resetTable()">🔄 重置</button>
         <button class="btn btn-green" onclick="triggerImport()">📁 导入</button>
+        <button class="export-btn" onclick="exportJson()">📤 导出</button>
         <button class="btn btn-purple" onclick="generatePrintableDictation()">🖨️ 练习</button>
         <button class="btn btn-blue" onclick="generatePrintableDictation2()">🖨️ 默写</button>
         <input type="file" id="fileInput" accept=".json">
@@ -367,26 +376,62 @@
 
 <!-- 大字弹窗 -->
 <div class="modal" id="modal">
-    <div class="modal-content" style="width: 1000px; padding: 60px;">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="pinyin-show" id="modalPinyin" style="margin-bottom: 40px;"></div>
-        <div style="display: flex; gap: 60px; align-items: center; margin-bottom: 40px;">
+    <div class="modal-content" style="width: 800px; padding: 40px; position: relative;">
+        <!-- 关闭按钮 -->
+        <span class="close" onclick="closeModal()" style="position: absolute; top: 15px; right: 20px;">&times;</span>
+        
+        <!-- 拼音和掌握情况 -->
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+            <div style="font-size: 24px; color: #27ae60; display: flex; align-items: center; gap: 10px;">
+                已掌握：
+                <button onclick="adjustMasteredCount(-1)" style="width: 24px; height: 24px; font-size: 16px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">-</button>
+                <span id="modalMastered">0</span>
+                <button onclick="adjustMasteredCount(1)" style="width: 24px; height: 24px; font-size: 16px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">+</button>
+            </div>
+            <div class="pinyin-show" id="modalPinyin" style="text-align: center;"></div>
+            <div style="font-size: 24px; color: #e74c3c; display: flex; align-items: center; gap: 10px;">
+                未掌握：
+                <button onclick="adjustNotMasteredCount(-1)" style="width: 24px; height: 24px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">-</button>
+                <span id="modalNotMastered">0</span>
+                <button onclick="adjustNotMasteredCount(1)" style="width: 24px; height: 24px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">+</button>
+            </div>
+        </div>
+        
+        <!-- 主要内容区域 -->
+        <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 10px;">
             <!-- 左侧信息 -->
-            <div style="flex: 1; font-size: 32px; color: #333; line-height: 2.5;">
-                <div>笔画：<span id="modalStrokes">--</span></div>
-                <div>结构：<span id="modalStructure">--</span></div>
+            <div style="flex: 1; font-size: 24px; color: #333; line-height: 1.8; text-align: left;">
+                <div style="margin-bottom: 5px;">年级：<span id="modalGrade">--</span></div>
+                <div style="margin-bottom: 5px;">类别：<span id="modalType">--</span></div>
+                <div style="margin-bottom: 5px;">笔画：<span id="modalStrokes">--</span></div>
+                <div style="margin-bottom: 5px;">结构：<span id="modalStructure">--</span></div>
                 <div>部首：<span id="modalRadical">--</span></div>
             </div>
+            
             <!-- 中间田字格 -->
-            <div class="tianzige"><div class="hanzi-show" id="modalHanzi"></div></div>
+            <div style="flex-shrink: 0;">
+                <div class="tianzige"><div class="hanzi-show" id="modalHanzi"></div></div>
+            </div>
+            
             <!-- 右侧组词 -->
             <div style="flex: 1;">
                 <div id="modalWords"></div>
             </div>
         </div>
-        <!-- 笔顺放在最下面 -->
-        <div class="stroke-show" style="text-align: center; font-size: 28px; color: #333; margin-top: 30px;">
-            笔顺：<span id="modalStroke">--</span>
+        
+        <!-- 笔顺 -->
+        <div class="stroke-show" style="font-size: 24px; color: #333; margin-bottom: 30px; line-height: 1.8; min-height: 60px; display: flex; align-items: center;">
+            <div style="width: 80px; flex-shrink: 0;">笔顺：</div>
+            <div style="flex: 1; text-align: center;"><span id="modalStroke">--</span></div>
+        </div>
+        
+        <!-- 导航按钮 -->
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <button onclick="prevChar()" style="padding: 10px 20px; font-size: 16px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;">上一个</button>
+            <button onclick="randomChar()" style="padding: 10px 20px; font-size: 16px; background: #f39c12; color: white; border: none; border-radius: 6px; cursor: pointer;">随机</button>
+            <button onclick="nextChar()" style="padding: 10px 20px; font-size: 16px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;">下一个</button>
+            <button onclick="toggleAll()" style="padding: 10px 20px; font-size: 16px; background: #95a5a6; color: white; border: none; border-radius: 6px; cursor: pointer;">隐藏全部</button>
+            <button onclick="closeModal()" style="padding: 10px 20px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">关闭</button>
         </div>
     </div>
 </div>
@@ -627,8 +672,8 @@ function removeTone(s) {
 }
 
 let defaultData = [
-    { grade: "一年级上", lesson: "第1单元第1课", type: "生字", hanzi: "人", pinyin: "rén", radical: "人", strokes: "2", structure: "独体", word: "人们、别人、人口", strokeOrder: "撇、捺" },
-    { grade: "一年级上", lesson: "第1单元第1课", type: "生字", hanzi: "口", pinyin: "kǒu", radical: "口", strokes: "3", structure: "独体", word: "开口、口水、门口", strokeOrder: "竖、横折、横" }
+    { grade: "一年级上", lesson: "一单元1课", type: "生字", hanzi: "人", pinyin: "rén", radical: "人", strokes: "2", structure: "独体", word: "人们、别人、人口", strokeOrder: "撇、捺" },
+    { grade: "一年级上", lesson: "一单元1课", type: "生字", hanzi: "口", pinyin: "kǒu", radical: "口", strokes: "3", structure: "独体", word: "开口、口水、门口", strokeOrder: "竖、横折、横" }
 ];
 
 let originalData = JSON.parse(localStorage.getItem("charDB")) || [...defaultData];
@@ -636,6 +681,7 @@ let currentData = [...originalData];
 const $ = id => document.getElementById(id);
 
 let hasImported = false;
+let currentCharIndex = -1; // 跟踪当前显示的汉字索引
 
 function saveToLocal() {
     localStorage.setItem("charDB", JSON.stringify(originalData));
@@ -651,7 +697,7 @@ function renderTable(data) {
             <td>${item.grade || ''}</td>
             <td>${item.lesson || ''}</td>
             <td>${item.type || ''}</td>
-            <td class="char-click" onclick="openModal('${item.hanzi}','${item.pinyin}','${item.strokeOrder}','${item.radical}','${item.strokes}','${item.structure}','${item.word}')">${item.hanzi}</td>
+            <td class="char-click" onclick="openModal(${index}, '${item.hanzi}','${item.pinyin}','${item.strokeOrder}','${item.radical}','${item.strokes}','${item.structure}','${item.word}','${item.grade || ''}','${item.type || ''}')">${item.hanzi}</td>
             <td>${item.pinyin}</td>
             <td>${item.radical}</td>
             <td>${item.strokes}</td>
@@ -803,7 +849,7 @@ function generatePrintableDictation() {
         <title>汉字练习</title>
         <style>
             @page {
-                margin-top: 4cm;
+                margin-top: 2cm;
                 margin-bottom: 2cm;
                 margin-left: 1.5cm;
                 margin-right: 1.5cm;
@@ -836,7 +882,7 @@ function generatePrintableDictation() {
                 .word-tianzige::after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; border-top: 1px dashed #666; }
             }
             @media screen {
-                body { margin: 20px auto; font-family: SimSun, serif; width: 210mm; min-height: 297mm; padding: 4cm 1.5cm 2cm 1.5cm; box-sizing: border-box; border: 1px solid #999; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+                body { margin: 20px auto; font-family: SimSun, serif; width: 210mm; min-height: 297mm; padding: 2cm 1.5cm 2cm 1.5cm; box-sizing: border-box; border: 1px solid #999; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
                 .dictation-item { margin-bottom: 25px; page-break-inside: avoid; }
                 .dictation-item:last-child { margin-bottom: 0; }
                 .info-bar { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
@@ -857,15 +903,16 @@ function generatePrintableDictation() {
         </style>
     </head>
     <body>
-        <h1 style="text-align: center; margin-bottom: 30px;">汉字练习</h1>
         <button id="printBtn" onclick="window.print()" class="no-print">🖨️ 打印</button>
         <button id="closeBtn" onclick="window.close()" class="no-print">❌ 关闭</button>
     `;
     
     // 添加每个汉字的默写内容
-        dictationData.forEach((item, index) => {
+    dictationData.forEach((item, index) => {
         if (index % 6 === 0) {
             html += '<div class="dictation-page">';
+            const grade = dictationData[index]?.grade || '一年级';
+            html += `<h1 style="text-align: center; margin-bottom: 40px;">${grade} 汉字练习</h1>`;
         }
         
         html += `
@@ -926,6 +973,11 @@ function generatePrintableDictation() {
         }
     });
     
+    // 确保最后一个dictation-page标签被闭合
+    if (dictationData.length > 0 && dictationData.length % 6 !== 0) {
+        html += '</div>';
+    }
+    
     // 关闭HTML
     html += `
     </body>
@@ -966,7 +1018,7 @@ function generatePrintableDictation2() {
         <title>汉字默写</title>
         <style>
             @page {
-                margin-top: 4cm;
+                margin-top: 2cm;
                 margin-bottom: 2cm;
                 margin-left: 1.5cm;
                 margin-right: 1.5cm;
@@ -999,7 +1051,7 @@ function generatePrintableDictation2() {
                 .word-tianzige::after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; border-top: 1px dashed #666; }
             }
             @media screen {
-                body { margin: 20px auto; font-family: SimSun, serif; width: 210mm; min-height: 297mm; padding: 4cm 1.5cm 2cm 1.5cm; box-sizing: border-box; border: 1px solid #999; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+                body { margin: 20px auto; font-family: SimSun, serif; width: 210mm; min-height: 297mm; padding: 2cm 1.5cm 2cm 1.5cm; box-sizing: border-box; border: 1px solid #999; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
                 .dictation-item { margin-bottom: 25px; page-break-inside: avoid; }
                 .dictation-item:last-child { margin-bottom: 0; }
                 .info-bar { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
@@ -1020,7 +1072,6 @@ function generatePrintableDictation2() {
         </style>
     </head>
     <body>
-        <h1 style="text-align: center; margin-bottom: 30px;">汉字默写</h1>
         <button id="printBtn" onclick="window.print()" class="no-print">🖨️ 打印</button>
         <button id="closeBtn" onclick="window.close()" class="no-print">❌ 关闭</button>
     `;
@@ -1029,6 +1080,8 @@ function generatePrintableDictation2() {
     dictationData.forEach((item, index) => {
         if (index % 6 === 0) {
             html += '<div class="dictation-page">';
+            const grade = dictationData[index]?.grade || '一年级';
+            html += `<h1 style="text-align: center; margin-bottom: 40px;">${grade} 汉字默写</h1>`;
         }
         
         // 获取第一个词语
@@ -1101,6 +1154,11 @@ function generatePrintableDictation2() {
         }
     });
     
+    // 确保最后一个dictation-page标签被闭合
+    if (dictationData.length > 0 && dictationData.length % 6 !== 0) {
+        html += '</div>';
+    }
+    
     // 关闭HTML
     html += `
     </body>
@@ -1123,13 +1181,18 @@ function resetTable() {
     renderTable();
 }
 
-function openModal(hanzi, pinyin, strokeOrder, radical, strokes, structure, word) {
+function openModal(index, hanzi, pinyin, strokeOrder, radical, strokes, structure, word, grade, type) {
+    // 直接使用传入的索引，确保按照表格编号顺序
+    currentCharIndex = index;
+    
     $ ("modalHanzi").textContent = hanzi;
     $ ("modalPinyin").textContent = pinyin;
     $ ("modalStroke").textContent = strokeOrder || '--';
     $ ("modalRadical").textContent = radical || '--';
     $ ("modalStrokes").textContent = strokes || '--';
     $ ("modalStructure").textContent = structure || '--';
+    $ ("modalGrade").textContent = grade || '--';
+    $ ("modalType").textContent = type || '--';
     
     // 分离词语和拼音
     let wordsHtml = '';
@@ -1145,23 +1208,195 @@ function openModal(hanzi, pinyin, strokeOrder, radical, strokes, structure, word
                 wordText = item.substring(0, startIndex);
             }
             wordsHtml += `
-                <div style="margin-bottom: 20px;">
-                    <div style="font-size: 32px; color: #666; margin-bottom: 8px;">${wordPinyin || '--'}</div>
-                    <div style="font-size: 44px; color: #333;">${wordText || '--'}</div>
+                <div style="margin-bottom: 25px;">
+                    <div style="font-size: 24px; color: #666; margin-bottom: 10px;">${wordPinyin || '--'}</div>
+                    <div style="font-size: 40px; color: #333;">${wordText || '--'}</div>
                 </div>
             `;
         });
     } else {
         wordsHtml = `
-            <div style="margin-bottom: 20px;">
-                <div style="font-size: 32px; color: #666; margin-bottom: 8px;">--</div>
-                <div style="font-size: 44px; color: #333;">--</div>
+            <div style="margin-bottom: 25px;">
+                <div style="font-size: 24px; color: #666; margin-bottom: 10px;">--</div>
+                <div style="font-size: 40px; color: #333;">--</div>
             </div>
         `;
     }
     $ ("modalWords").innerHTML = wordsHtml;
     
+    // 显示当前汉字的掌握情况
+    let masteredCount, notMasteredCount;
+    if (currentData[index] && currentData[index].masteredCount !== undefined) {
+        // 使用当前汉字的已掌握计数
+        masteredCount = currentData[index].masteredCount;
+    } else {
+        // 默认值
+        masteredCount = 0;
+    }
+    
+    if (currentData[index] && currentData[index].notMasteredCount !== undefined) {
+        // 使用当前汉字的未掌握计数
+        notMasteredCount = currentData[index].notMasteredCount;
+    } else {
+        // 默认值
+        notMasteredCount = 0;
+    }
+    
+    document.getElementById('modalMastered').textContent = masteredCount;
+    document.getElementById('modalNotMastered').textContent = notMasteredCount;
+    
+    // 保持全部显示状态
+    if (!allVisible) {
+        document.getElementById('modalPinyin').style.visibility = 'hidden';
+        const wordPinyinElements = document.querySelectorAll('#modalWords > div > div:first-child');
+        wordPinyinElements.forEach(el => el.style.visibility = 'hidden');
+        document.getElementById('modalGrade').style.visibility = 'hidden';
+        document.getElementById('modalType').style.visibility = 'hidden';
+        document.getElementById('modalStrokes').style.visibility = 'hidden';
+        document.getElementById('modalStructure').style.visibility = 'hidden';
+        document.getElementById('modalRadical').style.visibility = 'hidden';
+        document.getElementById('modalStroke').style.visibility = 'hidden';
+    } else {
+        document.getElementById('modalPinyin').style.visibility = 'visible';
+        const wordPinyinElements = document.querySelectorAll('#modalWords > div > div:first-child');
+        wordPinyinElements.forEach(el => el.style.visibility = 'visible');
+        document.getElementById('modalGrade').style.visibility = 'visible';
+        document.getElementById('modalType').style.visibility = 'visible';
+        document.getElementById('modalStrokes').style.visibility = 'visible';
+        document.getElementById('modalStructure').style.visibility = 'visible';
+        document.getElementById('modalRadical').style.visibility = 'visible';
+        document.getElementById('modalStroke').style.visibility = 'visible';
+    }
+    
+    
     $ ("modal").classList.add("show");
+}
+
+// 上一个汉字
+function prevChar() {
+    if (currentData.length === 0) return;
+    // 按照编号顺序，当前索引减1
+    currentCharIndex = currentCharIndex - 1;
+    if (currentCharIndex < 0) {
+        currentCharIndex = currentData.length - 1; // 循环到最后一个
+    }
+    const item = currentData[currentCharIndex];
+    openModal(currentCharIndex, item.hanzi, item.pinyin, item.strokeOrder, item.radical, item.strokes, item.structure, item.word, item.grade, item.type);
+}
+
+// 下一个汉字
+function nextChar() {
+    if (currentData.length === 0) return;
+    // 按照编号顺序，当前索引加1
+    currentCharIndex = currentCharIndex + 1;
+    if (currentCharIndex >= currentData.length) {
+        currentCharIndex = 0; // 循环到第一个
+    }
+    const item = currentData[currentCharIndex];
+    openModal(currentCharIndex, item.hanzi, item.pinyin, item.strokeOrder, item.radical, item.strokes, item.structure, item.word, item.grade, item.type);
+}
+
+// 随机汉字
+function randomChar() {
+    if (currentData.length === 0) return;
+    // 生成随机索引
+    currentCharIndex = Math.floor(Math.random() * currentData.length);
+    const item = currentData[currentCharIndex];
+    openModal(currentCharIndex, item.hanzi, item.pinyin, item.strokeOrder, item.radical, item.strokes, item.structure, item.word, item.grade, item.type);
+}
+
+// 隐藏/显示全部
+let allVisible = true;
+function toggleAll() {
+    allVisible = !allVisible;
+    const pinyinElement = document.getElementById('modalPinyin');
+    const wordPinyinElements = document.querySelectorAll('#modalWords > div > div:first-child');
+    const gradeElement = document.getElementById('modalGrade');
+    const typeElement = document.getElementById('modalType');
+    const strokesElement = document.getElementById('modalStrokes');
+    const structureElement = document.getElementById('modalStructure');
+    const radicalElement = document.getElementById('modalRadical');
+    const strokeElement = document.getElementById('modalStroke');
+    const toggleButton = document.querySelector('button[onclick="toggleAll()"]');
+    
+    if (allVisible) {
+        // 显示全部
+        pinyinElement.style.visibility = 'visible';
+        wordPinyinElements.forEach(el => el.style.visibility = 'visible');
+        gradeElement.style.visibility = 'visible';
+        typeElement.style.visibility = 'visible';
+        strokesElement.style.visibility = 'visible';
+        structureElement.style.visibility = 'visible';
+        radicalElement.style.visibility = 'visible';
+        strokeElement.style.visibility = 'visible';
+        toggleButton.textContent = '隐藏全部';
+    } else {
+        // 隐藏全部，但保留年级和类别
+        pinyinElement.style.visibility = 'hidden';
+        wordPinyinElements.forEach(el => el.style.visibility = 'hidden');
+        // 年级和类别不隐藏
+        // gradeElement.style.visibility = 'hidden';
+        // typeElement.style.visibility = 'hidden';
+        strokesElement.style.visibility = 'hidden';
+        structureElement.style.visibility = 'hidden';
+        radicalElement.style.visibility = 'hidden';
+        strokeElement.style.visibility = 'hidden';
+        toggleButton.textContent = '显示全部';
+    }
+}
+
+// 调整已掌握数量
+function adjustMasteredCount(adjustment) {
+    // 确保数量不为负数
+    const currentCount = parseInt(document.getElementById('modalMastered').textContent) || 0;
+    const newCount = Math.max(0, currentCount + adjustment);
+    document.getElementById('modalMastered').textContent = newCount;
+    
+    // 保存到当前汉字的数据中
+    if (currentData[currentCharIndex]) {
+        currentData[currentCharIndex].masteredCount = newCount;
+    }
+}
+
+// 调整未掌握数量
+function adjustNotMasteredCount(adjustment) {
+    // 确保数量不为负数
+    const currentCount = parseInt(document.getElementById('modalNotMastered').textContent) || 0;
+    const newCount = Math.max(0, currentCount + adjustment);
+    document.getElementById('modalNotMastered').textContent = newCount;
+    
+    // 保存到当前汉字的数据中
+    if (currentData[currentCharIndex]) {
+        currentData[currentCharIndex].notMasteredCount = newCount;
+    }
+}
+
+// 切换汉字掌握状态
+function toggleMastered(index) {
+    if (currentData[index]) {
+        currentData[index].mastered = !currentData[index].mastered;
+        renderTable();
+        
+        // 如果当前显示的是这个汉字，更新弹窗中的统计信息
+        if (currentCharIndex === index) {
+            // 重新显示当前汉字的掌握情况
+            let masteredCount, notMasteredCount;
+            if (currentData[index] && currentData[index].masteredCount !== undefined) {
+                masteredCount = currentData[index].masteredCount;
+            } else {
+                masteredCount = 0;
+            }
+            
+            if (currentData[index] && currentData[index].notMasteredCount !== undefined) {
+                notMasteredCount = currentData[index].notMasteredCount;
+            } else {
+                notMasteredCount = 0;
+            }
+            
+            document.getElementById('modalMastered').textContent = masteredCount;
+            document.getElementById('modalNotMastered').textContent = notMasteredCount;
+        }
+    }
 }
 function closeModal() {
     $("modal").classList.remove("show");
@@ -1643,6 +1878,34 @@ $("fileInput").addEventListener("change", e => {
     };
     reader.readAsText(file);
 });
+
+// 导出JSON文件
+function exportJson() {
+    // 准备要导出的数据
+    const exportData = originalData;
+    
+    // 创建JSON字符串
+    const jsonStr = JSON.stringify(exportData, null, 2);
+    
+    // 创建Blob对象
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    
+    // 创建下载链接
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = '字表.json';
+    
+    // 触发下载
+    document.body.appendChild(a);
+    a.click();
+    
+    // 清理
+    setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 100);
+}
 
 renderTable();
 </script>
