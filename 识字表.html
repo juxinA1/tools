@@ -1208,9 +1208,9 @@ function openModal(index, hanzi, pinyin, strokeOrder, radical, strokes, structur
                 wordText = item.substring(0, startIndex);
             }
             wordsHtml += `
-                <div style="margin-bottom: 25px; cursor: pointer;" onclick="speakWord('${wordText}', '${wordPinyin}')">
+                <div style="margin-bottom: 25px;">
                     <div style="font-size: 24px; color: #666; margin-bottom: 10px;">${wordPinyin || '--'}</div>
-                    <div style="font-size: 40px; color: #333;">${wordText || '--'}</div>
+                    <div style="font-size: 40px; color: #333; cursor: pointer;" onclick="speakWord('${wordText}', '${wordPinyin}')">${wordText || '--'}</div>
                 </div>
             `;
         });
