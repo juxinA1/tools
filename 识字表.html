@@ -104,7 +104,8 @@
         .col-rad      { width: 150px; }
         .col-stroke   { width: 60px;  }
         .col-struct   { width: 80px;  }
-        .col-word     { width: 360px; }
+        .col-word     { width: 300px; }
+        .col-status   { width: 100px; }
 
         .char-click {
             color: #3498db;
@@ -367,6 +368,7 @@
                     <th class="col-stroke" onclick="sortTable('strokes')">笔画</th>
                     <th class="col-struct" onclick="sortTable('structure')">结构</th>
                     <th class="col-word">词语</th>
+                    <th class="col-status">状态</th>
                 </tr>
             </thead>
             <tbody id="tableBody"></tbody>
@@ -702,7 +704,8 @@ function renderTable(data) {
             <td>${item.radical}</td>
             <td>${item.strokes}</td>
             <td>${item.structure}</td>
-            <td style="text-align:left; cursor: pointer;" onclick="speakWord('${item.word}', '')">${item.word}</td>
+            <td style="text-align:left">${item.word}</td>
+            <td>${item.masteredCount || 0}-${item.notMasteredCount || 0}</td>
         </tr>`;
     });
     $ ("tableBody").innerHTML = html;
@@ -1210,7 +1213,7 @@ function openModal(index, hanzi, pinyin, strokeOrder, radical, strokes, structur
             wordsHtml += `
                 <div style="margin-bottom: 25px;">
                     <div style="font-size: 24px; color: #666; margin-bottom: 10px;">${wordPinyin || '--'}</div>
-                    <div style="font-size: 40px; color: #333; cursor: pointer;" onclick="speakWord('${wordText}', '${wordPinyin}')">${wordText || '--'}</div>
+                    <div style="font-size: 40px; color: #333;">${wordText || '--'}</div>
                 </div>
             `;
         });
@@ -1400,23 +1403,6 @@ function toggleMastered(index) {
 }
 function closeModal() {
     $("modal").classList.remove("show");
-}
-
-function speakWord(wordText, wordPinyin) {
-    if (!wordText || wordText === '--') return;
-    
-    const utterance = new SpeechSynthesisUtterance(wordText);
-    utterance.lang = 'zh-CN';
-    utterance.rate = 0.8;
-    utterance.pitch = 1;
-    
-    const voices = speechSynthesis.getVoices();
-    const chineseVoice = voices.find(v => v.lang.includes('zh') || v.lang.includes('CN'));
-    if (chineseVoice) {
-        utterance.voice = chineseVoice;
-    }
-    
-    speechSynthesis.speak(utterance);
 }
 
 function openQueryModal() {
