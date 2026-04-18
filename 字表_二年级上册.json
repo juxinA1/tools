@@ -3329,7 +3329,7 @@
     "type": "识字",
     "hanzi": "唤",
     "pinyin": "huàn",
-    "radical": "口(口字旁)",
+    "radical": "口（口字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、点、撇、竖、横折、横、撇、捺",
@@ -3341,11 +3341,11 @@
     "type": "识字",
     "hanzi": "葫",
     "pinyin": "hú",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 12,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、撇、横折钩、横、竖、横折、横、横、竖、点",
-    "word": "葫芦、葫芦丝"
+    "word": "葫芦（hú lu）、葫芦丝（hú lu sī）"
   },
   {
     "grade": "二年级上",
@@ -3353,11 +3353,11 @@
     "type": "识字",
     "hanzi": "芦",
     "pinyin": "lú",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、点、横折、横、撇",
-    "word": "葫芦、芦苇"
+    "word": "葫芦（hú lu）、芦苇（lú wěi）"
   },
   {
     "grade": "二年级上",
@@ -3365,11 +3365,11 @@
     "type": "识字",
     "hanzi": "谢",
     "pinyin": "xiè",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、竖、横折钩、横、横、撇、竖、点、横、竖钩",
-    "word": "谢谢、感谢"
+    "word": "谢谢（xiè xie）、感谢（gǎn xiè）"
   },
   {
     "grade": "二年级上",
@@ -3377,11 +3377,11 @@
     "type": "识字",
     "hanzi": "以",
     "pinyin": "yǐ",
-    "radical": "人",
+    "radical": "人（人字头）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "竖提、点、横、点",
-    "word": "以后、以为"
+    "word": "以后（yǐ hòu）、以为（yǐ wéi）"
   },
   {
     "grade": "二年级上",
@@ -3389,11 +3389,11 @@
     "type": "识字",
     "hanzi": "盯",
     "pinyin": "dīng",
-    "radical": "目",
+    "radical": "目（目字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、横、横、竖钩",
-    "word": "盯着、盯住"
+    "word": "盯着（dīng zhe）、盯住（dīng zhù）"
   },
   {
     "grade": "二年级上",
@@ -3401,11 +3401,11 @@
     "type": "识字",
     "hanzi": "赛",
     "pinyin": "sài",
-    "radical": "贝",
+    "radical": "贝（贝字旁）",
     "strokes": 14,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、横、横、竖、竖、横、撇、捺、竖、横折、撇、点",
-    "word": "比赛、赛跑"
+    "word": "比赛（bǐ sài）、赛跑（sài pǎo）"
   },
   {
     "grade": "二年级上",
@@ -3413,11 +3413,11 @@
     "type": "识字",
     "hanzi": "怪",
     "pinyin": "guài",
-    "radical": "忄",
+    "radical": "忄（竖心旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、竖、横撇、捺、横、竖、横",
-    "word": "奇怪、怪物"
+    "word": "奇怪（qí guài）、怪物（guài wù）"
   },
   {
     "grade": "二年级上",
@@ -3425,11 +3425,11 @@
     "type": "识字",
     "hanzi": "慢",
     "pinyin": "màn",
-    "radical": "忄",
+    "radical": "忄（竖心旁）",
     "strokes": 14,
     "structure": "左右",
     "strokeOrder": "点、点、竖、竖、横折、横、横、竖、横折、竖、竖、横、横、横",
-    "word": "慢慢、缓慢"
+    "word": "慢慢（màn màn）、缓慢（huǎn màn）"
   },
   {
     "grade": "二年级上",
@@ -3437,11 +3437,11 @@
     "type": "识字",
     "hanzi": "轿",
     "pinyin": "jiào",
-    "radical": "车",
+    "radical": "车（车字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "横、撇折、竖、提、撇、横、撇、捺、撇、竖",
-    "word": "轿车、花轿"
+    "word": "轿车（jiào chē）、花轿（huā jiào）"
   },
   {
     "grade": "二年级上",
@@ -3449,11 +3449,11 @@
     "type": "识字",
     "hanzi": "救",
     "pinyin": "jiù",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、竖、横、撇、点、提、撇、横、撇、捺、点",
-    "word": "救急、抢救"
+    "word": "救急（jiù jí）、抢救（qiǎng jiù）"
   },
   {
     "grade": "二年级上",
@@ -3461,11 +3461,11 @@
     "type": "识字",
     "hanzi": "摩",
     "pinyin": "mó",
-    "radical": "手",
+    "radical": "手（手字旁）",
     "strokes": 15,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、横、竖、撇、点、竖、横折、横、撇、横、横、竖钩",
-    "word": "摩擦、观摩"
+    "word": "摩擦（mó cā）、观摩（guān mó）"
   },
   {
     "grade": "二年级上",
@@ -3473,11 +3473,11 @@
     "type": "识字",
     "hanzi": "托",
     "pinyin": "tuō",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇、横、竖弯钩",
-    "word": "托起、托付"
+    "word": "托起（tuō qǐ）、托付（tuō fù）"
   },
   {
     "grade": "二年级上",
@@ -3485,11 +3485,11 @@
     "type": "识字",
     "hanzi": "防",
     "pinyin": "fáng",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横折折折钩、竖、横折钩、撇、撇",
-    "word": "防止、国防"
+    "word": "防止（fáng zhǐ）、国防（guó fáng）"
   },
   {
     "grade": "二年级上",
@@ -3497,11 +3497,11 @@
     "type": "识字",
     "hanzi": "渔",
     "pinyin": "yú",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "点、点、提、撇、横撇、竖、横折、横、竖、横、横",
-    "word": "渔民、渔业"
+    "word": "渔民（yú mín）、渔业（yú yè）"
   },
   {
     "grade": "二年级上",
@@ -3509,11 +3509,11 @@
     "type": "识字",
     "hanzi": "货",
     "pinyin": "huò",
-    "radical": "贝",
+    "radical": "贝（贝字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、竖、撇、横折、横、竖、横折、撇、点",
-    "word": "货物、百货"
+    "word": "货物（huò wù）、百货（bǎi huò）"
   },
   {
     "grade": "二年级上",
@@ -3521,11 +3521,11 @@
     "type": "识字",
     "hanzi": "科",
     "pinyin": "kē",
-    "radical": "禾",
+    "radical": "禾（禾木旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、点、点、横、点、撇",
-    "word": "科学、科目"
+    "word": "科学（kē xué）、科目（kē mù）"
   },
   {
     "grade": "二年级上",
@@ -3533,11 +3533,11 @@
     "type": "识字",
     "hanzi": "考",
     "pinyin": "kǎo",
-    "radical": "耂",
+    "radical": "耂（老字头）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "横、竖、横、撇、横、竖折折钩",
-    "word": "考试、考场"
+    "word": "考试（kǎo shì）、考场（kǎo chǎng）"
   },
   {
     "grade": "二年级上",
@@ -3545,11 +3545,11 @@
     "type": "识字",
     "hanzi": "察",
     "pinyin": "chá",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 14,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、撇、横撇、点、点、横撇、点、横、横、竖、撇、点",
-    "word": "观察、察觉"
+    "word": "观察（guān chá）、察觉（chá jué）"
   },
   {
     "grade": "二年级上",
@@ -3557,11 +3557,11 @@
     "type": "识字",
     "hanzi": "楼",
     "pinyin": "lóu",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、点、撇、横、竖、撇、捺、撇、点、横",
-    "word": "高楼、楼梯"
+    "word": "高楼（gāo lóu）、楼梯（lóu tī）"
   },
   {
     "grade": "二年级上",
@@ -3569,11 +3569,11 @@
     "type": "识字",
     "hanzi": "艰",
     "pinyin": "jiān",
-    "radical": "艮",
+    "radical": "艮（艮字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横折、横、横、竖提、撇、点、撇、捺",
-    "word": "艰难、艰苦"
+    "word": "艰难（jiān nán）、艰苦（jiān kǔ）"
   },
   {
     "grade": "二年级上",
@@ -3581,11 +3581,11 @@
     "type": "识字",
     "hanzi": "斗",
     "pinyin": "dòu",
-    "radical": "斗",
+    "radical": "斗（斗字旁）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "点、点、横、竖",
-    "word": "斗争、战斗"
+    "word": "斗争（dòu zhēng）、战斗（zhàn dòu）"
   },
   {
     "grade": "二年级上",
@@ -3593,11 +3593,11 @@
     "type": "识字",
     "hanzi": "代",
     "pinyin": "dài",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、斜钩、点",
-    "word": "时代、年代"
+    "word": "时代（shí dài）、年代（nián dài）"
   },
   {
     "grade": "二年级上",
@@ -3605,11 +3605,11 @@
     "type": "识字",
     "hanzi": "临",
     "pinyin": "lín",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "竖、竖、撇、横、竖、横折、横、横、竖",
-    "word": "来临、临时"
+    "word": "来临（lái lín）、临时（lín shí）"
   },
   {
     "grade": "二年级上",
@@ -3617,11 +3617,11 @@
     "type": "识字",
     "hanzi": "腊",
     "pinyin": "là",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、横折钩、横、横、横、竖、竖、横、竖、横折、横、横",
-    "word": "腊月、腊肉"
+    "word": "腊月（là yuè）、腊肉（là ròu）"
   },
   {
     "grade": "二年级上",
@@ -3629,11 +3629,11 @@
     "type": "识字",
     "hanzi": "军",
     "pinyin": "jūn",
-    "radical": "冖",
+    "radical": "冖（秃宝盖）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "点、横钩、横、撇折、横、竖",
-    "word": "军队、军人"
+    "word": "军队（jūn duì）、军人（jūn rén）"
   },
   {
     "grade": "二年级上",
@@ -3641,11 +3641,11 @@
     "type": "识字",
     "hanzi": "薄",
     "pinyin": "bó",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 16,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、点、点、提、横、竖、横折、横、横、竖、点、点、提、横",
-    "word": "单薄、薄弱"
+    "word": "单薄（dān bó）、薄弱（bó ruò）"
   },
   {
     "grade": "二年级上",
@@ -3653,11 +3653,11 @@
     "type": "识字",
     "hanzi": "章",
     "pinyin": "zhāng",
-    "radical": "立",
+    "radical": "立（立字旁）",
     "strokes": 11,
     "structure": "上中下",
     "strokeOrder": "点、横、点、撇、横、竖、横折、横、横、横、竖",
-    "word": "文章、章节"
+    "word": "文章（wén zhāng）、章节（zhāng jié）"
   },
   {
     "grade": "二年级上",
@@ -3665,11 +3665,11 @@
     "type": "识字",
     "hanzi": "握",
     "pinyin": "wò",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、横、竖、横折、横、撇、横、撇、捺、横",
-    "word": "握手、把握"
+    "word": "握手（wò shǒu）、把握（bǎ wò）"
   },
   {
     "grade": "二年级上",
@@ -3677,11 +3677,11 @@
     "type": "识字",
     "hanzi": "凝",
     "pinyin": "níng",
-    "radical": "冫",
+    "radical": "冫（两点水）",
     "strokes": 16,
     "structure": "左右",
     "strokeOrder": "点、提、撇、竖弯钩、竖、横折、横、横、撇、竖弯钩、竖、横折、横、横、撇、点",
-    "word": "凝视、凝固"
+    "word": "凝视（níng shì）、凝固（níng gù）"
   },
   {
     "grade": "二年级上",
@@ -3689,11 +3689,11 @@
     "type": "识字",
     "hanzi": "觉",
     "pinyin": "jué",
-    "radical": "见",
+    "radical": "见（见字旁）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "点、点、撇、点、横钩、竖、横折、撇、竖弯钩",
-    "word": "觉得、感觉"
+    "word": "觉得（jué de）、感觉（gǎn jué）"
   },
   {
     "grade": "二年级上",
@@ -3701,11 +3701,11 @@
     "type": "识字",
     "hanzi": "油",
     "pinyin": "yóu",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、竖、横折、横、横、竖",
-    "word": "石油、油水"
+    "word": "石油（shí yóu）、油水（yóu shuǐ）"
   },
   {
     "grade": "二年级上",
@@ -3713,11 +3713,11 @@
     "type": "识字",
     "hanzi": "辉",
     "pinyin": "huī",
-    "radical": "光",
+    "radical": "光（光字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "竖、点、撇、横、撇、竖提、点、横撇、横、撇折、竖、竖",
-    "word": "光辉、辉煌"
+    "word": "光辉（guāng huī）、辉煌（huī huáng）"
   },
   {
     "grade": "二年级上",
@@ -3725,11 +3725,11 @@
     "type": "识字",
     "hanzi": "革",
     "pinyin": "gé",
-    "radical": "革",
+    "radical": "革（革字旁）",
     "strokes": 9,
     "structure": "独体",
     "strokeOrder": "横、竖、竖、横、竖、横折、横、横、竖",
-    "word": "革命、皮革"
+    "word": "革命（gé mìng）、皮革（pí gé）"
   },
   {
     "grade": "二年级上",
@@ -3737,11 +3737,11 @@
     "type": "识字",
     "hanzi": "命",
     "pinyin": "mìng",
-    "radical": "人",
+    "radical": "人（人字头）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、捺、横、竖、横折、横、横、竖弯钩",
-    "word": "生命、命令"
+    "word": "生命（shēng mìng）、命令（mìng lìng）"
   },
   {
     "grade": "二年级上",
@@ -3749,11 +3749,11 @@
     "type": "识字",
     "hanzi": "利",
     "pinyin": "lì",
-    "radical": "刂",
+    "radical": "刂（立刀旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、点、竖、竖钩",
-    "word": "利益、有利"
+    "word": "利益（lì yì）、有利（yǒu lì）"
   },
   {
     "grade": "二年级上",
@@ -3761,11 +3761,11 @@
     "type": "识字",
     "hanzi": "朱",
     "pinyin": "zhū",
-    "radical": "丿",
+    "radical": "丿（撇）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "撇、横、横、竖、撇、捺",
-    "word": "朱红、朱砂"
+    "word": "朱红（zhū hóng）、朱砂（zhū shā）"
   },
   {
     "grade": "二年级上",
@@ -3773,11 +3773,11 @@
     "type": "识字",
     "hanzi": "德",
     "pinyin": "dé",
-    "radical": "彳",
+    "radical": "彳（双人旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "撇、撇、竖、横、竖、竖、横折、竖、竖、横、横、点、斜钩、点、点",
-    "word": "品德、道德"
+    "word": "品德（pǐn dé）、道德（dào dé）"
   },
   {
     "grade": "二年级上",
@@ -3785,11 +3785,11 @@
     "type": "识字",
     "hanzi": "扁",
     "pinyin": "biǎn",
-    "radical": "户",
+    "radical": "户（户字旁）",
     "strokes": 9,
     "structure": "半包围",
     "strokeOrder": "点、横折、横、撇、竖、横折钩、横、竖、竖",
-    "word": "扁担、扁平"
+    "word": "扁担（biǎn dan）、扁平（biǎn píng）"
   },
   {
     "grade": "二年级上",
@@ -3797,11 +3797,11 @@
     "type": "识字",
     "hanzi": "担",
     "pinyin": "dàn",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、竖、横折、横、横、横",
-    "word": "扁担、担子"
+    "word": "扁担（biǎn dan）、担子（dàn zi）"
   },
   {
     "grade": "二年级上",
@@ -3809,11 +3809,11 @@
     "type": "识字",
     "hanzi": "同",
     "pinyin": "tóng",
-    "radical": "冂",
+    "radical": "冂（同字框）",
     "strokes": 6,
     "structure": "半包围",
     "strokeOrder": "竖、横折钩、横、竖、横折、横",
-    "word": "同志、相同"
+    "word": "同志（tóng zhì）、相同（xiāng tóng）"
   },
   {
     "grade": "二年级上",
@@ -3821,11 +3821,11 @@
     "type": "识字",
     "hanzi": "志",
     "pinyin": "zhì",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、横、点、斜钩、点、点",
-    "word": "同志、志向"
+    "word": "同志（tóng zhì）、志向（zhì xiàng）"
   },
   {
     "grade": "二年级上",
@@ -3833,11 +3833,11 @@
     "type": "识字",
     "hanzi": "伍",
     "pinyin": "wǔ",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、竖、横折、横",
-    "word": "队伍、入伍"
+    "word": "队伍（duì wu）、入伍（rù wǔ）"
   },
   {
     "grade": "二年级上",
@@ -3845,11 +3845,11 @@
     "type": "识字",
     "hanzi": "敌",
     "pinyin": "dí",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、竖、横折、横、撇、横、撇、捺",
-    "word": "敌人、敌对"
+    "word": "敌人（dí rén）、敌对（dí duì）"
   },
   {
     "grade": "二年级上",
@@ -3857,11 +3857,11 @@
     "type": "识字",
     "hanzi": "根",
     "pinyin": "gēn",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横折、横、横、竖提、撇、捺",
-    "word": "根本、树根"
+    "word": "根本（gēn běn）、树根（shù gēn）"
   },
   {
     "grade": "二年级上",
@@ -3869,11 +3869,11 @@
     "type": "识字",
     "hanzi": "据",
     "pinyin": "jù",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、横、竖、横折、横、横、撇、横折钩、竖",
-    "word": "根据、依据"
+    "word": "根据（gēn jù）、依据（yī jù）"
   },
   {
     "grade": "二年级上",
@@ -3881,11 +3881,11 @@
     "type": "识字",
     "hanzi": "抽",
     "pinyin": "chōu",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、竖、横折、横、竖、横",
-    "word": "抽水、抽出"
+    "word": "抽水（chōu shuǐ）、抽出（chōu chū）"
   },
   {
     "grade": "二年级上",
@@ -3893,11 +3893,11 @@
     "type": "识字",
     "hanzi": "陡",
     "pinyin": "dǒu",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横折折折钩、竖、横、竖、横、竖、横、撇、捺",
-    "word": "陡峭、陡坡"
+    "word": "陡峭（dǒu qiào）、陡坡（dǒu pō）"
   },
   {
     "grade": "二年级上",
@@ -3905,11 +3905,11 @@
     "type": "识字",
     "hanzi": "鞋",
     "pinyin": "xié",
-    "radical": "革",
+    "radical": "革（革字旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "横、竖、竖、横、竖、横折、横、横、竖、横、竖、横、竖、横、横",
-    "word": "鞋子、皮鞋"
+    "word": "鞋子（xié zi）、皮鞋（pí xié）"
   },
   {
     "grade": "二年级上",
@@ -3917,11 +3917,11 @@
     "type": "识字",
     "hanzi": "疼",
     "pinyin": "téng",
-    "radical": "疒",
+    "radical": "疒（病字头）",
     "strokes": 10,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、点、提、撇、横撇、捺、点、点",
-    "word": "疼痛、心疼"
+    "word": "疼痛（téng tòng）、心疼（xīn téng）"
   },
   {
     "grade": "二年级上",
@@ -3929,11 +3929,11 @@
     "type": "识字",
     "hanzi": "敬",
     "pinyin": "jìng",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖、竖、撇、横折钩、竖、横折、横、撇、横、撇、捺",
-    "word": "尊敬、敬爱"
+    "word": "尊敬（zūn jìng）、敬爱（jìng ài）"
   },
   {
     "grade": "二年级上",
@@ -3941,11 +3941,11 @@
     "type": "识字",
     "hanzi": "泼",
     "pinyin": "pō",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、撇、撇、横、撇、捺",
-    "word": "泼水、活泼"
+    "word": "泼水（pō shuǐ）、活泼（huó pō）"
   },
   {
     "grade": "二年级上",
@@ -3953,11 +3953,11 @@
     "type": "识字",
     "hanzi": "民",
     "pinyin": "mín",
-    "radical": "乛",
+    "radical": "乛（横钩）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "横折、横、竖提、横、斜钩",
-    "word": "人民、民族"
+    "word": "人民（rén mín）、民族（mín zú）"
   },
   {
     "grade": "二年级上",
@@ -3965,11 +3965,11 @@
     "type": "识字",
     "hanzi": "度",
     "pinyin": "dù",
-    "radical": "广",
+    "radical": "广（广字头）",
     "strokes": 9,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、横、竖、竖、横、横撇、捺",
-    "word": "温度、度过"
+    "word": "温度（wēn dù）、度过（dù guò）"
   },
   {
     "grade": "二年级上",
@@ -3977,11 +3977,11 @@
     "type": "识字",
     "hanzi": "特",
     "pinyin": "tè",
-    "radical": "牛",
+    "radical": "牛（牛字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、提、横、竖、横、横、竖钩、点",
-    "word": "特别、特殊"
+    "word": "特别（tè bié）、特殊（tè shū）"
   },
   {
     "grade": "二年级上",
@@ -3989,11 +3989,11 @@
     "type": "识字",
     "hanzi": "周",
     "pinyin": "zhōu",
-    "radical": "冂",
+    "radical": "冂（同字框）",
     "strokes": 8,
     "structure": "半包围",
     "strokeOrder": "撇、横折钩、横、竖、横、竖、横折、横",
-    "word": "周围、四周"
+    "word": "周围（zhōu wéi）、四周（sì zhōu）"
   },
   {
     "grade": "二年级上",
@@ -4001,11 +4001,11 @@
     "type": "识字",
     "hanzi": "恩",
     "pinyin": "ēn",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、撇、捺、横、点、斜钩、点、点",
-    "word": "恩人、感恩"
+    "word": "恩人（ēn rén）、感恩（gǎn ēn）"
   },
   {
     "grade": "二年级上",
@@ -4013,11 +4013,11 @@
     "type": "识字",
     "hanzi": "敲",
     "pinyin": "qiāo",
-    "radical": "高",
+    "radical": "高（高字旁）",
     "strokes": 14,
     "structure": "左右",
     "strokeOrder": "点、横、竖、横折、横、竖、横折钩、竖、横折、横、横、竖、横撇、捺",
-    "word": "敲打、敲门"
+    "word": "敲打（qiāo dǎ）、敲门（qiāo mén）"
   },
   {
     "grade": "二年级上",
@@ -4025,11 +4025,11 @@
     "type": "识字",
     "hanzi": "铺",
     "pinyin": "pū",
-    "radical": "钅",
+    "radical": "钅（金字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、横、横、横、竖提、横、竖、横折、横、横、竖、点",
-    "word": "铺床、铺路"
+    "word": "铺床（pū chuáng）、铺路（pū lù）"
   },
   {
     "grade": "二年级上",
@@ -4037,11 +4037,11 @@
     "type": "识字",
     "hanzi": "龙",
     "pinyin": "lóng",
-    "radical": "龙",
+    "radical": "龙（龙字旁）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "横、撇、竖弯钩、撇、点",
-    "word": "龙舟、巨龙"
+    "word": "龙舟（lóng zhōu）、巨龙（jù lóng）"
   },
   {
     "grade": "二年级上",
@@ -4049,11 +4049,11 @@
     "type": "识字",
     "hanzi": "串",
     "pinyin": "chuàn",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 7,
     "structure": "独体",
     "strokeOrder": "竖、横折、横、竖、横折、横、竖",
-    "word": "一串、串联"
+    "word": "一串（yī chuàn）、串联（chuàn lián）"
   },
   {
     "grade": "二年级上",
@@ -4061,11 +4061,11 @@
     "type": "识字",
     "hanzi": "容",
     "pinyin": "róng",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、撇、点、撇、捺、竖、横折、横",
-    "word": "容易、笑容"
+    "word": "容易（róng yì）、笑容（xiào róng）"
   },
   {
     "grade": "二年级上",
@@ -4073,11 +4073,11 @@
     "type": "识字",
     "hanzi": "踩",
     "pinyin": "cǎi",
-    "radical": "足",
+    "radical": "足（足字旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、竖、提、撇、点、点、撇、横、竖、撇、捺",
-    "word": "踩水、踩踏"
+    "word": "踩水（cǎi shuǐ）、踩踏（cǎi tà）"
   },
   {
     "grade": "二年级上",
@@ -4085,11 +4085,11 @@
     "type": "识字",
     "hanzi": "始",
     "pinyin": "shǐ",
-    "radical": "女",
+    "radical": "女（女字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇点、撇、横、撇折、点、竖、横折、横",
-    "word": "开始、始终"
+    "word": "开始（kāi shǐ）、始终（shǐ zhōng）"
   },
   {
     "grade": "二年级上",
@@ -4097,11 +4097,11 @@
     "type": "识字",
     "hanzi": "盛",
     "pinyin": "shèng",
-    "radical": "皿",
+    "radical": "皿（皿字底）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "横、撇、横折、斜钩、撇、点、竖、横折、竖、竖、横",
-    "word": "盛开、茂盛"
+    "word": "盛开（shèng kāi）、茂盛（mào shèng）"
   },
   {
     "grade": "二年级上",
@@ -4109,11 +4109,11 @@
     "type": "识字",
     "hanzi": "碗",
     "pinyin": "wǎn",
-    "radical": "石",
+    "radical": "石（石字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "横、撇、竖、横折、横、点、点、横撇、撇、横撇、竖钩、点、点",
-    "word": "饭碗、碗筷"
+    "word": "饭碗（fàn wǎn）、碗筷（wǎn kuài）"
   },
   {
     "grade": "二年级上",
@@ -4121,11 +4121,11 @@
     "type": "识字",
     "hanzi": "祝",
     "pinyin": "zhù",
-    "radical": "礻",
+    "radical": "礻（示字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "点、横钩、竖、点、竖、横折、横、撇、竖弯钩",
-    "word": "祝福、祝贺"
+    "word": "祝福（zhù fú）、祝贺（zhù hè）"
   },
   {
     "grade": "二年级上",
@@ -4133,11 +4133,11 @@
     "type": "识字",
     "hanzi": "寿",
     "pinyin": "shòu",
-    "radical": "寸",
+    "radical": "寸（寸字旁）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "横、横、撇、横、竖、点、横",
-    "word": "长寿、寿命"
+    "word": "长寿（cháng shòu）、寿命（shòu mìng）"
   },
   {
     "grade": "二年级上",
@@ -4145,11 +4145,11 @@
     "type": "识字",
     "hanzi": "刘",
     "pinyin": "liú",
-    "radical": "刂",
+    "radical": "刂（立刀旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、横、撇、点、竖、竖钩",
-    "word": "姓刘、刘海"
+    "word": "姓刘（xìng liú）、刘海（liú hǎi）"
   },
   {
     "grade": "二年级上",
@@ -4157,11 +4157,11 @@
     "type": "识字",
     "hanzi": "兰",
     "pinyin": "lán",
-    "radical": "丷",
+    "radical": "丷（倒八）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "点、撇、横、横、横",
-    "word": "兰花、兰草"
+    "word": "兰花（lán huā）、兰草（lán cǎo）"
   },
   {
     "grade": "二年级上",
@@ -4169,11 +4169,11 @@
     "type": "识字",
     "hanzi": "派",
     "pinyin": "pài",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "点、点、提、撇、撇、撇、竖提、撇、捺",
-    "word": "派出、派别"
+    "word": "派出（pài chū）、派别（pài bié）"
   },
   {
     "grade": "二年级上",
@@ -4181,11 +4181,11 @@
     "type": "识字",
     "hanzi": "由",
     "pinyin": "yóu",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "竖、横折、横、竖、横",
-    "word": "由于、自由"
+    "word": "由于（yóu yú）、自由（zì yóu）"
   },
   {
     "grade": "二年级上",
@@ -4193,11 +4193,11 @@
     "type": "识字",
     "hanzi": "于",
     "pinyin": "yú",
-    "radical": "二",
+    "radical": "二（二字旁）",
     "strokes": 3,
     "structure": "独体",
     "strokeOrder": "横、横、竖钩",
-    "word": "于是、对于"
+    "word": "于是（yú shì）、对于（duì yú）"
   },
   {
     "grade": "二年级上",
@@ -4205,11 +4205,11 @@
     "type": "识字",
     "hanzi": "卖",
     "pinyin": "mài",
-    "radical": "十",
+    "radical": "十（十字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "横、竖、横撇、点、点、横、撇、点",
-    "word": "买卖、卖菜"
+    "word": "买卖（mǎi mài）、卖菜（mài cài）"
   },
   {
     "grade": "二年级上",
@@ -4217,11 +4217,11 @@
     "type": "识字",
     "hanzi": "员",
     "pinyin": "yuán",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、竖、横折、撇、点",
-    "word": "队员、员工"
+    "word": "队员（duì yuán）、员工（yuán gōng）"
   },
   {
     "grade": "二年级上",
@@ -4229,11 +4229,11 @@
     "type": "识字",
     "hanzi": "捕",
     "pinyin": "bǔ",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、横、竖、横折、横、横、竖、点",
-    "word": "捕捉、捕鱼"
+    "word": "捕捉（bǔ zhuō）、捕鱼（bǔ yú）"
   },
   {
     "grade": "二年级上",
@@ -4241,11 +4241,11 @@
     "type": "识字",
     "hanzi": "买",
     "pinyin": "mǎi",
-    "radical": "乙",
+    "radical": "乙（横折弯钩）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "横撇、点、点、横、撇、点",
-    "word": "购买、买菜"
+    "word": "购买（gòu mǎi）、买菜（mǎi cài）"
   },
   {
     "grade": "二年级上",
@@ -4253,11 +4253,11 @@
     "type": "识字",
     "hanzi": "似",
     "pinyin": "sì",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、点、撇、点",
-    "word": "似乎、相似"
+    "word": "似乎（sì hū）、相似（xiāng sì）"
   },
   {
     "grade": "二年级上",
@@ -4265,11 +4265,11 @@
     "type": "识字",
     "hanzi": "踏",
     "pinyin": "tà",
-    "radical": "足",
+    "radical": "足（足字旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、竖、提、竖、横折、横、横、竖、撇、撇、捺",
-    "word": "踏步、踏青"
+    "word": "踏步（tà bù）、踏青（tà qīng）"
   },
   {
     "grade": "二年级上",
@@ -4277,11 +4277,11 @@
     "type": "识字",
     "hanzi": "烈",
     "pinyin": "liè",
-    "radical": "灬",
+    "radical": "灬（四点底）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "横、撇、横撇、点、竖、竖、点、点、点、点",
-    "word": "热烈、烈火"
+    "word": "热烈（rè liè）、烈火（liè huǒ）"
   },
   {
     "grade": "二年级上",
@@ -4289,11 +4289,11 @@
     "type": "识字",
     "hanzi": "荣",
     "pinyin": "róng",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、点、横钩、横、竖、撇、捺",
-    "word": "光荣、荣誉"
+    "word": "光荣（guāng róng）、荣誉（róng yù）"
   },
   {
     "grade": "二年级上",
@@ -4301,11 +4301,11 @@
     "type": "识字",
     "hanzi": "岁",
     "pinyin": "suì",
-    "radical": "山",
+    "radical": "山（山字旁）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "竖、竖折、竖、撇、横撇、点",
-    "word": "岁月、岁数"
+    "word": "岁月（suì yuè）、岁数（suì shù）"
   },
   {
     "grade": "二年级上",
@@ -4313,11 +4313,11 @@
     "type": "识字",
     "hanzi": "题",
     "pinyin": "tí",
-    "radical": "页",
+    "radical": "页（页字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、横、竖、横、撇、捺、横、撇、竖弯钩",
-    "word": "题目、问题"
+    "word": "题目（tí mù）、问题（wèn tí）"
   },
   {
     "grade": "二年级上",
@@ -4325,11 +4325,11 @@
     "type": "识字",
     "hanzi": "锋",
     "pinyin": "fēng",
-    "radical": "钅",
+    "radical": "钅（金字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、横、横、横、竖提、撇、横撇、捺、横、横、横、竖",
-    "word": "锋利、先锋"
+    "word": "锋利（fēng lì）、先锋（xiān fēng）"
   },
   {
     "grade": "二年级上",
@@ -4337,11 +4337,11 @@
     "type": "识字",
     "hanzi": "蜜",
     "pinyin": "mì",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 14,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、点、斜钩、点、撇、点、竖、横折、横、竖、横、点",
-    "word": "蜜蜂、甜蜜"
+    "word": "蜜蜂（mì fēng）、甜蜜（tián mì）"
   },
   {
     "grade": "二年级上",
@@ -4349,11 +4349,11 @@
     "type": "识字",
     "hanzi": "峰",
     "pinyin": "fēng",
-    "radical": "山",
+    "radical": "山（山字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "竖、竖折、竖、撇、横撇、捺、横、横、横、竖",
-    "word": "山峰、顶峰"
+    "word": "山峰（shān fēng）、顶峰（dǐng fēng）"
   },
   {
     "grade": "二年级上",
@@ -4361,11 +4361,11 @@
     "type": "识字",
     "hanzi": "蜂",
     "pinyin": "fēng",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、点、撇、横撇、捺、横、横、横、竖",
-    "word": "蜜蜂、黄蜂"
+    "word": "蜜蜂（mì fēng）、黄蜂（huáng fēng）"
   },
   {
     "grade": "二年级上",
@@ -4373,11 +4373,11 @@
     "type": "识字",
     "hanzi": "爆",
     "pinyin": "bào",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 18,
     "structure": "左右",
     "strokeOrder": "点、撇、撇、捺、竖、横折、横、横、横、竖、竖、横、撇、捺、竖钩、点、提、撇、点",
-    "word": "爆炸、火爆"
+    "word": "爆炸（bào zhà）、火爆（huǒ bào）"
   },
   {
     "grade": "二年级上",
@@ -4385,11 +4385,11 @@
     "type": "识字",
     "hanzi": "争",
     "pinyin": "zhēng",
-    "radical": "⺈",
+    "radical": "⺈（斜刀头）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "撇、横撇、横折、横、横、竖钩",
-    "word": "争取、争吵"
+    "word": "争取（zhēng qǔ）、争吵（zhēng chǎo）"
   },
   {
     "grade": "二年级上",
@@ -4397,11 +4397,11 @@
     "type": "识字",
     "hanzi": "抄",
     "pinyin": "chāo",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、竖、撇、点、撇",
-    "word": "抄写、摘抄"
+    "word": "抄写（chāo xiě）、摘抄（zhāi chāo）"
   },
   {
     "grade": "二年级上",
@@ -4409,11 +4409,11 @@
     "type": "识字",
     "hanzi": "炒",
     "pinyin": "chǎo",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、撇、撇、捺、竖、撇、点、撇",
-    "word": "炒菜、炒饭"
+    "word": "炒菜（chǎo cài）、炒饭（chǎo fàn）"
   },
   {
     "grade": "二年级上",
@@ -4421,11 +4421,11 @@
     "type": "识字",
     "hanzi": "幕",
     "pinyin": "mù",
-    "radical": "巾",
+    "radical": "巾（巾字旁）",
     "strokes": 13,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、竖、横折、横、横、横、撇、捺、竖、横折钩、竖",
-    "word": "幕布、开幕"
+    "word": "幕布（mù bù）、开幕（kāi mù）"
   },
   {
     "grade": "二年级上",
@@ -4433,11 +4433,11 @@
     "type": "识字",
     "hanzi": "墓",
     "pinyin": "mù",
-    "radical": "土",
+    "radical": "土（土字旁）",
     "strokes": 13,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、竖、横折、横、横、横、撇、捺、横、竖、横",
-    "word": "坟墓、墓地"
+    "word": "坟墓（fén mù）、墓地（mù dì）"
   },
   {
     "grade": "二年级上",
@@ -4445,11 +4445,11 @@
     "type": "识字",
     "hanzi": "慕",
     "pinyin": "mù",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 14,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、竖、横折、横、横、横、撇、捺、点、斜钩、点、点",
-    "word": "羡慕、爱慕"
+    "word": "羡慕（xiàn mù）、爱慕（ài mù）"
   },
   {
     "grade": "二年级上",
@@ -4457,11 +4457,11 @@
     "type": "识字",
     "hanzi": "绝",
     "pinyin": "jué",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、撇、横撇、横折、竖、横、竖弯钩",
-    "word": "绝对、绝句"
+    "word": "绝对（jué duì）、绝句（jué jù）"
   },
   {
     "grade": "二年级上",
@@ -4469,11 +4469,11 @@
     "type": "识字",
     "hanzi": "径",
     "pinyin": "jìng",
-    "radical": "彳",
+    "radical": "彳（双人旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇、撇、竖、横撇、点、横、竖、横",
-    "word": "小径、路径"
+    "word": "小径（xiǎo jìng）、路径（lù jìng）"
   },
   {
     "grade": "二年级上",
@@ -4481,11 +4481,11 @@
     "type": "识字",
     "hanzi": "踪",
     "pinyin": "zōng",
-    "radical": "足",
+    "radical": "足（足字旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、竖、提、点、点、撇、横、横、竖钩、撇、点",
-    "word": "踪迹、踪影"
+    "word": "踪迹（zōng jì）、踪影（zōng yǐng）"
   },
   {
     "grade": "二年级上",
@@ -4493,11 +4493,11 @@
     "type": "识字",
     "hanzi": "灭",
     "pinyin": "miè",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "横、点、撇、撇、捺",
-    "word": "消灭、灭火"
+    "word": "消灭（xiāo miè）、灭火（miè huǒ）"
   },
   {
     "grade": "二年级上",
@@ -4505,11 +4505,11 @@
     "type": "识字",
     "hanzi": "舟",
     "pinyin": "zhōu",
-    "radical": "舟",
+    "radical": "舟（舟字旁）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "撇、撇、横折钩、点、横、点",
-    "word": "小舟、龙舟"
+    "word": "小舟（xiǎo zhōu）、龙舟（lóng zhōu）"
   },
   {
     "grade": "二年级上",
@@ -4517,11 +4517,11 @@
     "type": "识字",
     "hanzi": "钓",
     "pinyin": "diào",
-    "radical": "钅",
+    "radical": "钅（金字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇、横、横、横、竖提、竖、横折、横",
-    "word": "钓鱼、垂钓"
+    "word": "钓鱼（diào yú）、垂钓（chuí diào）"
   },
   {
     "grade": "二年级上",
@@ -4529,11 +4529,11 @@
     "type": "识字",
     "hanzi": "似",
     "pinyin": "sì",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、点、撇、点",
-    "word": "似乎、相似"
+    "word": "似乎（sì hū）、相似（xiāng sì）"
   },
   {
     "grade": "二年级上",
@@ -4541,11 +4541,11 @@
     "type": "识字",
     "hanzi": "庐",
     "pinyin": "lú",
-    "radical": "广",
+    "radical": "广（广字头）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、点、横、竖、横",
-    "word": "庐山、茅庐"
+    "word": "庐山（lú shān）、茅庐（máo lú）"
   },
   {
     "grade": "二年级上",
@@ -4553,11 +4553,11 @@
     "type": "识字",
     "hanzi": "笼",
     "pinyin": "lǒng",
-    "radical": "竹",
+    "radical": "竹（竹字头）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "撇、横、点、撇、横、点、横、撇、竖弯钩、撇、点",
-    "word": "笼罩、鸟笼"
+    "word": "笼罩（lǒng zhào）、鸟笼（niǎo lóng）"
   },
   {
     "grade": "二年级上",
@@ -4565,11 +4565,11 @@
     "type": "识字",
     "hanzi": "盖",
     "pinyin": "gài",
-    "radical": "皿",
+    "radical": "皿（皿字底）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "点、撇、横、横、竖、横、竖、横折、竖、竖、横",
-    "word": "盖子、覆盖"
+    "word": "盖子（gài zi）、覆盖（fù gài）"
   },
   {
     "grade": "二年级上",
@@ -4577,11 +4577,11 @@
     "type": "识字",
     "hanzi": "苍",
     "pinyin": "cāng",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、撇、捺、横、竖钩",
-    "word": "苍白、苍茫"
+    "word": "苍白（cāng bái）、苍茫（cāng máng）"
   },
   {
     "grade": "二年级上",
@@ -4589,11 +4589,11 @@
     "type": "识字",
     "hanzi": "茫",
     "pinyin": "máng",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、点、点、提、横、竖折、竖",
-    "word": "苍茫、迷茫"
+    "word": "苍茫（cāng máng）、迷茫（mí máng）"
   },
   {
     "grade": "二年级上",
@@ -4601,11 +4601,11 @@
     "type": "识字",
     "hanzi": "论",
     "pinyin": "lùn",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、捺、撇、竖弯钩",
-    "word": "议论、无论"
+    "word": "议论（yì lùn）、无论（wú lùn）"
   },
   {
     "grade": "二年级上",
@@ -4613,11 +4613,11 @@
     "type": "识字",
     "hanzi": "暗",
     "pinyin": "àn",
-    "radical": "日",
+    "radical": "日（日字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、点、横、点、撇、横、竖、横折、横、横",
-    "word": "黑暗、阴暗"
+    "word": "黑暗（hēi àn）、阴暗（yīn àn）"
   },
   {
     "grade": "二年级上",
@@ -4625,11 +4625,11 @@
     "type": "识字",
     "hanzi": "岸",
     "pinyin": "àn",
-    "radical": "山",
+    "radical": "山（山字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "竖、竖折、竖、横、撇、横、横、竖",
-    "word": "岸边、海岸"
+    "word": "岸边（àn biān）、海岸（hǎi àn）"
   },
   {
     "grade": "二年级上",
@@ -4637,11 +4637,11 @@
     "type": "识字",
     "hanzi": "街",
     "pinyin": "jiē",
-    "radical": "彳",
+    "radical": "彳（双人旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、撇、竖、横、竖、横、提、横、横、竖、横",
-    "word": "街道、大街"
+    "word": "街道（jiē dào）、大街（dà jiē）"
   },
   {
     "grade": "二年级上",
@@ -4649,11 +4649,11 @@
     "type": "识字",
     "hanzi": "梁",
     "pinyin": "liáng",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "点、点、提、横折钩、撇、点、点、横、竖、撇、捺",
-    "word": "桥梁、房梁"
+    "word": "桥梁（qiáo liáng）、房梁（fáng liáng）"
   },
   {
     "grade": "二年级上",
@@ -4661,11 +4661,11 @@
     "type": "识字",
     "hanzi": "甚",
     "pinyin": "shèn",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、横、横、横、撇、点、竖折",
-    "word": "甚至、甚好"
+    "word": "甚至（shèn zhì）、甚好（shèn hǎo）"
   },
   {
     "grade": "二年级上",
@@ -4673,11 +4673,11 @@
     "type": "识字",
     "hanzi": "至",
     "pinyin": "zhì",
-    "radical": "至",
+    "radical": "至（至字旁）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "横、撇折、点、横、竖、横",
-    "word": "至少、至于"
+    "word": "至少（zhì shǎo）、至于（zhì yú）"
   },
   {
     "grade": "二年级上",
@@ -4685,11 +4685,11 @@
     "type": "识字",
     "hanzi": "切",
     "pinyin": "qiè",
-    "radical": "刀",
+    "radical": "刀（刀字旁）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "横、竖提、横折钩、撇",
-    "word": "一切、亲切"
+    "word": "一切（yī qiè）、亲切（qīn qiè）"
   },
   {
     "grade": "二年级上",
@@ -4697,11 +4697,11 @@
     "type": "识字",
     "hanzi": "躲",
     "pinyin": "duǒ",
-    "radical": "身",
+    "radical": "身（身字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "撇、竖、横折钩、横、横、横、撇、撇、横撇、捺、横、竖、撇、捺",
-    "word": "躲开、躲藏"
+    "word": "躲开（duǒ kāi）、躲藏（duǒ cáng）"
   },
   {
     "grade": "二年级上",
@@ -4709,11 +4709,11 @@
     "type": "识字",
     "hanzi": "该",
     "pinyin": "gāi",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、横折提、点、横、撇折、撇、撇、点",
-    "word": "应该、该当"
+    "word": "应该（yīng gāi）、该当（gāi dāng）"
   },
   {
     "grade": "二年级上",
@@ -4721,11 +4721,11 @@
     "type": "识字",
     "hanzi": "悠",
     "pinyin": "yōu",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "撇、竖、竖、撇、横撇、捺、横、点、斜钩、点、点",
-    "word": "悠闲、悠久"
+    "word": "悠闲（yōu xián）、悠久（yōu jiǔ）"
   },
   {
     "grade": "二年级上",
@@ -4733,11 +4733,11 @@
     "type": "识字",
     "hanzi": "闲",
     "pinyin": "xián",
-    "radical": "门",
+    "radical": "门（门字框）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "点、竖、横折钩、横、竖、撇、捺",
-    "word": "空闲、清闲"
+    "word": "空闲（kòng xián）、清闲（qīng xián）"
   },
   {
     "grade": "二年级上",
@@ -4745,11 +4745,11 @@
     "type": "识字",
     "hanzi": "散",
     "pinyin": "sàn",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖、竖、横、竖、横折、横、撇、横、撇、捺",
-    "word": "散步、分散"
+    "word": "散步（sàn bù）、分散（fēn sàn）"
   },
   {
     "grade": "二年级上",
@@ -4757,11 +4757,11 @@
     "type": "识字",
     "hanzi": "失",
     "pinyin": "shī",
-    "radical": "大",
+    "radical": "大（大字旁）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "撇、横、横、撇、捺",
-    "word": "失去、消失"
+    "word": "失去（shī qù）、消失（xiāo shī）"
   },
   {
     "grade": "二年级上",
@@ -4769,11 +4769,11 @@
     "type": "识字",
     "hanzi": "堆",
     "pinyin": "duī",
-    "radical": "土",
+    "radical": "土（土字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、竖、提、撇、竖、点、横、横、横、竖、横",
-    "word": "土堆、堆积"
+    "word": "土堆（tǔ duī）、堆积（duī jī）"
   },
   {
     "grade": "二年级上",
@@ -4781,11 +4781,11 @@
     "type": "识字",
     "hanzi": "累",
     "pinyin": "lèi",
-    "radical": "糸",
+    "radical": "糸（绞丝旁）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、竖、横、撇折、撇折、点、竖钩、撇、点",
-    "word": "劳累、累了"
+    "word": "劳累（láo lèi）、累了（lèi le）"
   },
   {
     "grade": "二年级上",
@@ -4793,11 +4793,11 @@
     "type": "识字",
     "hanzi": "添",
     "pinyin": "tiān",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、横、撇、捺、竖钩、点、点、点",
-    "word": "添加、增添"
+    "word": "添加（tiān jiā）、增添（zēng tiān）"
   },
   {
     "grade": "二年级上",
@@ -4805,11 +4805,11 @@
     "type": "识字",
     "hanzi": "柴",
     "pinyin": "chái",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "竖、竖、提、撇、竖弯钩、横、竖、撇、捺",
-    "word": "柴火、木柴"
+    "word": "柴火（chái huǒ）、木柴（mù chái）"
   },
   {
     "grade": "二年级上",
@@ -4817,11 +4817,11 @@
     "type": "识字",
     "hanzi": "烧",
     "pinyin": "shāo",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、撇、撇、捺、横、斜钩、撇、横、撇、竖弯钩",
-    "word": "烧火、烧水"
+    "word": "烧火（shāo huǒ）、烧水（shāo shuǐ）"
   },
   {
     "grade": "二年级上",
@@ -4829,11 +4829,11 @@
     "type": "识字",
     "hanzi": "旺",
     "pinyin": "wàng",
-    "radical": "日",
+    "radical": "日（日字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、横、横、竖、横",
-    "word": "兴旺、旺盛"
+    "word": "兴旺（xīng wàng）、旺盛（wàng shèng）"
   },
   {
     "grade": "二年级上",
@@ -4841,11 +4841,11 @@
     "type": "识字",
     "hanzi": "闭",
     "pinyin": "bì",
-    "radical": "门",
+    "radical": "门（门字框）",
     "strokes": 6,
     "structure": "半包围",
     "strokeOrder": "点、竖、横折钩、横、竖钩、撇",
-    "word": "关闭、闭眼"
+    "word": "关闭（guān bì）、闭眼（bì yǎn）"
   },
   {
     "grade": "二年级上",
@@ -4853,11 +4853,11 @@
     "type": "识字",
     "hanzi": "哎",
     "pinyin": "āi",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、竖、竖、撇、捺",
-    "word": "哎呀、哎嘿"
+    "word": "哎呀（āi yā）、哎嘿（āi hēi）"
   },
   {
     "grade": "二年级上",
@@ -4865,11 +4865,11 @@
     "type": "识字",
     "hanzi": "旁",
     "pinyin": "páng",
-    "radical": "方",
+    "radical": "方（方字旁）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "点、横、点、撇、点、横钩、点、横、横折钩、撇",
-    "word": "旁边、身旁"
+    "word": "旁边（páng biān）、身旁（shēn páng）"
   },
   {
     "grade": "二年级上",
@@ -4877,11 +4877,11 @@
     "type": "识字",
     "hanzi": "冲",
     "pinyin": "chōng",
-    "radical": "冫",
+    "radical": "冫（两点水）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、提、竖、横折、横、竖",
-    "word": "冲动、冲上去"
+    "word": "冲动（chōng dòng）、冲上去（chōng shàng qù）"
   },
   {
     "grade": "二年级上",
@@ -4889,11 +4889,11 @@
     "type": "识字",
     "hanzi": "哇",
     "pinyin": "wā",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、竖、横、横、竖、横",
-    "word": "哇啦、好哇"
+    "word": "哇啦（wā lā）、好哇（hǎo wa）"
   },
   {
     "grade": "二年级上",
@@ -4901,11 +4901,11 @@
     "type": "识字",
     "hanzi": "终",
     "pinyin": "zhōng",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、撇、横撇、捺、横、点",
-    "word": "终于、终点"
+    "word": "终于（zhōng yú）、终点（zhōng diǎn）"
   },
   {
     "grade": "二年级上",
@@ -4913,11 +4913,11 @@
     "type": "识字",
     "hanzi": "浑",
     "pinyin": "hún",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "点、点、提、点、横撇、横、撇折、横、竖",
-    "word": "浑身、浑浊"
+    "word": "浑身（hún shēn）、浑浊（hún zhuó）"
   },
   {
     "grade": "二年级上",
@@ -4925,11 +4925,11 @@
     "type": "识字",
     "hanzi": "淋",
     "pinyin": "lín",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、竖、撇、点、横、竖、撇、捺",
-    "word": "淋雨、淋湿"
+    "word": "淋雨（lín yǔ）、淋湿（lín shī）"
   },
   {
     "grade": "二年级上",
@@ -4937,11 +4937,11 @@
     "type": "识字",
     "hanzi": "晒",
     "pinyin": "shài",
-    "radical": "日",
+    "radical": "日（日字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、横、竖、横折、撇、竖弯、横",
-    "word": "晒太阳、晒干"
+    "word": "晒太阳（shài tài yáng）、晒干（shài gān）"
   },
   {
     "grade": "二年级上",
@@ -4949,11 +4949,11 @@
     "type": "识字",
     "hanzi": "漱",
     "pinyin": "shù",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 14,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、竖、横折、横、竖、撇、点、撇、横撇、捺、点",
-    "word": "漱口、洗漱"
+    "word": "漱口（shù kǒu）、洗漱（xǐ shù）"
   },
   {
     "grade": "二年级上",
@@ -4961,11 +4961,11 @@
     "type": "识字",
     "hanzi": "饿",
     "pinyin": "è",
-    "radical": "饣",
+    "radical": "饣（食字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横钩、竖提、撇、横、竖钩、提、斜钩、撇、点",
-    "word": "饥饿、饿了"
+    "word": "饥饿（jī è）、饿了（è le）"
   },
   {
     "grade": "二年级上",
@@ -4973,11 +4973,11 @@
     "type": "识字",
     "hanzi": "沼",
     "pinyin": "zhǎo",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、横折、撇、竖、横折、横",
-    "word": "沼泽、沼气"
+    "word": "沼泽（zhǎo zé）、沼气（zhǎo qì）"
   },
   {
     "grade": "二年级上",
@@ -4985,11 +4985,11 @@
     "type": "识字",
     "hanzi": "泽",
     "pinyin": "zé",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、横撇、捺、横、横、竖",
-    "word": "光泽、色泽"
+    "word": "光泽（guāng zé）、色泽（sè zé）"
   },
   {
     "grade": "二年级上",
@@ -4997,11 +4997,11 @@
     "type": "识字",
     "hanzi": "宁",
     "pinyin": "níng",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、横、竖钩",
-    "word": "安宁、宁静"
+    "word": "安宁（ān níng）、宁静（níng jìng）"
   },
   {
     "grade": "二年级上",
@@ -5009,11 +5009,11 @@
     "type": "识字",
     "hanzi": "杠",
     "pinyin": "gàng",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、竖、横",
-    "word": "单杠、抬杠"
+    "word": "单杠（dān gàng）、抬杠（tái gàng）"
   },
   {
     "grade": "二年级上",
@@ -5021,11 +5021,11 @@
     "type": "识字",
     "hanzi": "杆",
     "pinyin": "gān",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、横、竖",
-    "word": "旗杆、杆子"
+    "word": "旗杆（qí gān）、杆子（gān zi）"
   },
   {
     "grade": "二年级上",
@@ -5033,11 +5033,11 @@
     "type": "识字",
     "hanzi": "栋",
     "pinyin": "dòng",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、撇折、竖钩、撇、点",
-    "word": "一栋、栋梁"
+    "word": "一栋（yī dòng）、栋梁（dòng liáng）"
   },
   {
     "grade": "二年级上",
@@ -5045,11 +5045,11 @@
     "type": "识字",
     "hanzi": "库",
     "pinyin": "kù",
-    "radical": "广",
+    "radical": "广（广字头）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、竖、横折、横、撇",
-    "word": "仓库、车库"
+    "word": "仓库（cāng kù）、车库（chē kù）"
   },
   {
     "grade": "二年级上",
@@ -5057,11 +5057,11 @@
     "type": "识字",
     "hanzi": "闸",
     "pinyin": "zhá",
-    "radical": "门",
+    "radical": "门（门字框）",
     "strokes": 8,
     "structure": "半包围",
     "strokeOrder": "点、竖、横折钩、竖、横折、横、横、竖",
-    "word": "闸门、水闸"
+    "word": "闸门（zhá mén）、水闸（shuǐ zhá）"
   },
   {
     "grade": "二年级上",
@@ -5069,11 +5069,11 @@
     "type": "识字",
     "hanzi": "羔",
     "pinyin": "gāo",
-    "radical": "灬",
+    "radical": "灬（四点底）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "点、撇、横、横、竖、横、点、点、点、点",
-    "word": "羊羔、羔羊"
+    "word": "羊羔（yáng gāo）、羔羊（gāo yáng）"
   },
   {
     "grade": "二年级上",
@@ -5081,11 +5081,11 @@
     "type": "识字",
     "hanzi": "蝗",
     "pinyin": "huáng",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、点、撇、竖、横折、横、横、横、竖、横、横",
-    "word": "蝗虫、蝗灾"
+    "word": "蝗虫（huáng chóng）、蝗灾（huáng zāi）"
   },
   {
     "grade": "二年级上",
@@ -5093,11 +5093,11 @@
     "type": "识字",
     "hanzi": "称",
     "pinyin": "chēng",
-    "radical": "禾",
+    "radical": "禾（禾木旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、点、撇、横钩、竖钩、撇、点",
-    "word": "称赞、称呼"
+    "word": "称赞（chēng zàn）、称呼（chēng hu）"
   },
   {
     "grade": "二年级上",
@@ -5105,11 +5105,11 @@
     "type": "识字",
     "hanzi": "赞",
     "pinyin": "zàn",
-    "radical": "贝",
+    "radical": "贝（贝字旁）",
     "strokes": 16,
     "structure": "上下",
     "strokeOrder": "撇、横、竖、横、撇、竖提、撇、横、竖、横折、撇、点、竖、横折、撇、点",
-    "word": "赞美、赞扬"
+    "word": "赞美（zàn měi）、赞扬（zàn yáng）"
   },
   {
     "grade": "二年级上",
@@ -5117,11 +5117,11 @@
     "type": "识字",
     "hanzi": "刺",
     "pinyin": "cì",
-    "radical": "刂",
+    "radical": "刂（立刀旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖、横折、竖、撇、点、竖、竖钩",
-    "word": "刺猬、尖刺"
+    "word": "刺猬（cì wei）、尖刺（jiān cì）"
   },
   {
     "grade": "二年级上",
@@ -5129,11 +5129,11 @@
     "type": "识字",
     "hanzi": "猬",
     "pinyin": "wèi",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、竖、横折、横、竖、横折、横、横、竖、横",
-    "word": "刺猬"
+    "word": "刺猬（cì wei）、刺猬（cì wei）"
   },
   {
     "grade": "二年级上",
@@ -5141,11 +5141,11 @@
     "type": "识字",
     "hanzi": "板",
     "pinyin": "bǎn",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、撇、撇、横撇、捺",
-    "word": "木板、板凳"
+    "word": "木板（mù bǎn）、板凳（bǎn dèng）"
   },
   {
     "grade": "二年级上",
@@ -5153,11 +5153,11 @@
     "type": "识字",
     "hanzi": "凳",
     "pinyin": "dèng",
-    "radical": "几",
+    "radical": "几（几字旁）",
     "strokes": 14,
     "structure": "上下",
     "strokeOrder": "横撇、点、撇、撇、捺、横、竖、横折、横、点、撇、横、撇、捺",
-    "word": "凳子、板凳"
+    "word": "凳子（dèng zi）、板凳（bǎn dèng）"
   },
   {
     "grade": "二年级上",
@@ -5165,11 +5165,11 @@
     "type": "识字",
     "hanzi": "但",
     "pinyin": "dàn",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、竖、横折、横、横、横",
-    "word": "但是、不但"
+    "word": "但是（dàn shì）、不但（bù dàn）"
   },
   {
     "grade": "二年级上",
@@ -5177,11 +5177,11 @@
     "type": "识字",
     "hanzi": "极",
     "pinyin": "jí",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、撇、横折折撇、捺",
-    "word": "极小、积极"
+    "word": "极小（jí xiǎo）、积极（jī jí）"
   },
   {
     "grade": "二年级上",
@@ -5189,11 +5189,11 @@
     "type": "识字",
     "hanzi": "傍",
     "pinyin": "bàng",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、竖、点、横、点、撇、点、横钩、点、横、横折钩、撇",
-    "word": "傍晚、依傍"
+    "word": "傍晚（bàng wǎn）、依傍（yī bàng）"
   },
   {
     "grade": "二年级上",
@@ -5201,11 +5201,11 @@
     "type": "识字",
     "hanzi": "苹",
     "pinyin": "píng",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、横、竖、撇、横、竖",
-    "word": "苹果"
+    "word": "苹果（píng guǒ）、苹果（píng guǒ）"
   },
   {
     "grade": "二年级上",
@@ -5213,11 +5213,11 @@
     "type": "识字",
     "hanzi": "泄",
     "pinyin": "xiè",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、竖、竖、横折、竖",
-    "word": "泄气、泄露"
+    "word": "泄气（xiè qì）、泄露（xiè lòu）"
   },
   {
     "grade": "二年级上",
@@ -5225,11 +5225,11 @@
     "type": "识字",
     "hanzi": "接",
     "pinyin": "jiē",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、横、点、撇、横、撇、捺、横",
-    "word": "接受、接住"
+    "word": "接受（jiē shòu）、接住（jiē zhù）"
   },
   {
     "grade": "二年级上",
@@ -5237,11 +5237,11 @@
     "type": "识字",
     "hanzi": "除",
     "pinyin": "chú",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横折折折钩、竖、撇、捺、横、横、竖钩、撇、点",
-    "word": "消除、除法"
+    "word": "消除（xiāo chú）、除法（chú fǎ）"
   },
   {
     "grade": "二年级上",
@@ -5249,11 +5249,11 @@
     "type": "识字",
     "hanzi": "疲",
     "pinyin": "pí",
-    "radical": "疒",
+    "radical": "疒（病字头）",
     "strokes": 10,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、点、提、横撇、撇、竖、横撇、捺",
-    "word": "疲劳、疲惫"
+    "word": "疲劳（pí láo）、疲惫（pí bèi）"
   },
   {
     "grade": "二年级上",
@@ -5261,11 +5261,11 @@
     "type": "识字",
     "hanzi": "劳",
     "pinyin": "láo",
-    "radical": "力",
+    "radical": "力（力字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、点、横撇、横折钩、撇",
-    "word": "劳动、劳累"
+    "word": "劳动（láo dòng）、劳累（láo lèi）"
   },
   {
     "grade": "二年级上",
@@ -5273,11 +5273,11 @@
     "type": "识字",
     "hanzi": "筝",
     "pinyin": "zhēng",
-    "radical": "竹",
+    "radical": "竹（竹字头）",
     "strokes": 12,
     "structure": "上下",
     "strokeOrder": "撇、横、点、撇、横、点、横、竖、横、撇、横钩、竖钩",
-    "word": "风筝"
+    "word": "风筝（fēng zheng）、风筝（fēng zheng）"
   },
   {
     "grade": "二年级上",
@@ -5285,11 +5285,11 @@
     "type": "识字",
     "hanzi": "鼠",
     "pinyin": "shǔ",
-    "radical": "鼠",
+    "radical": "鼠（鼠字旁）",
     "strokes": 13,
     "structure": "独体",
     "strokeOrder": "撇、竖、横、横折、横、横、竖提、点、点、竖提、点、点、斜钩",
-    "word": "老鼠、松鼠"
+    "word": "老鼠（lǎo shǔ）、松鼠（sōng shǔ）"
   },
   {
     "grade": "二年级上",
@@ -5297,11 +5297,11 @@
     "type": "识字",
     "hanzi": "折",
     "pinyin": "zhé",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇、撇、横、竖",
-    "word": "折断、折纸"
+    "word": "折断（zhé duàn）、折纸（zhé zhǐ）"
   },
   {
     "grade": "二年级上",
@@ -5309,11 +5309,11 @@
     "type": "识字",
     "hanzi": "漂",
     "pinyin": "piào",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 14,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、竖、横折、竖、竖、横、横、横、竖、撇、捺",
-    "word": "漂亮、漂流"
+    "word": "漂亮（piào liang）、漂流（piāo liú）"
   },
   {
     "grade": "二年级上",
@@ -5321,11 +5321,11 @@
     "type": "识字",
     "hanzi": "扎",
     "pinyin": "zhā",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、竖弯钩",
-    "word": "扎风筝、扎实"
+    "word": "扎风筝（zhā fēng zheng）、扎实（zhā shi）"
   },
   {
     "grade": "二年级上",
@@ -5333,11 +5333,11 @@
     "type": "识字",
     "hanzi": "乘",
     "pinyin": "chéng",
-    "radical": "丿",
+    "radical": "丿（撇）",
     "strokes": 10,
     "structure": "独体",
     "strokeOrder": "撇、横、竖、竖、横、提、撇、竖弯钩、撇、捺",
-    "word": "乘车、乘法"
+    "word": "乘车（chéng chē）、乘法（chéng fǎ）"
   },
   {
     "grade": "二年级上",
@@ -5345,11 +5345,11 @@
     "type": "识字",
     "hanzi": "抓",
     "pinyin": "zhuā",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇、撇、竖、捺",
-    "word": "抓住、抓紧"
+    "word": "抓住（zhuā zhù）、抓紧（zhuā jǐn）"
   },
   {
     "grade": "二年级上",
@@ -5357,11 +5357,11 @@
     "type": "识字",
     "hanzi": "线",
     "pinyin": "xiàn",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、横、横、斜钩、撇、点",
-    "word": "线条、毛线"
+    "word": "线条（xiàn tiáo）、毛线（máo xiàn）"
   },
   {
     "grade": "二年级上",
@@ -5369,11 +5369,11 @@
     "type": "识字",
     "hanzi": "莓",
     "pinyin": "méi",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、撇、横、竖、横、竖、撇、捺",
-    "word": "草莓"
+    "word": "草莓（cǎo méi）、草莓（cǎo méi）"
   },
   {
     "grade": "二年级上",
@@ -5381,11 +5381,11 @@
     "type": "识字",
     "hanzi": "俩",
     "pinyin": "liǎ",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、竖、横折、撇、点、撇、横折钩",
-    "word": "咱俩、我俩"
+    "word": "咱俩（zán liǎ）、我俩（wǒ liǎ）"
   },
   {
     "grade": "二年级上",
@@ -5393,11 +5393,11 @@
     "type": "识字",
     "hanzi": "架",
     "pinyin": "jià",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "横折钩、撇、竖、横折、横、横、竖、撇、捺",
-    "word": "架子、书架"
+    "word": "架子（jià zi）、书架（shū jià）"
   },
   {
     "grade": "二年级上",
@@ -5405,11 +5405,11 @@
     "type": "识字",
     "hanzi": "受",
     "pinyin": "shòu",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、点、点、撇、点、横钩、横撇、捺",
-    "word": "接受、难受"
+    "word": "接受（jiē shòu）、难受（nán shòu）"
   },
   {
     "grade": "二年级上",
@@ -5417,11 +5417,11 @@
     "type": "识字",
     "hanzi": "愿",
     "pinyin": "yuàn",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 14,
     "structure": "半包围",
     "strokeOrder": "横、撇、撇、竖、横折、横、横、竖钩、撇、点、点、斜钩、点、点",
-    "word": "愿意、心愿"
+    "word": "愿意（yuàn yì）、心愿（xīn yuàn）"
   },
   {
     "grade": "二年级上",
@@ -5429,11 +5429,11 @@
     "type": "识字",
     "hanzi": "朝",
     "pinyin": "cháo",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖、竖、横折、横、横、横、竖、撇、横折钩、横、横",
-    "word": "朝向、朝代"
+    "word": "朝向（cháo xiàng）、朝代（cháo dài）"
   },
   {
     "grade": "二年级上",
@@ -5441,11 +5441,11 @@
     "type": "识字",
     "hanzi": "取",
     "pinyin": "qǔ",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖、竖、横、横、提、横撇、捺",
-    "word": "取得、争取"
+    "word": "取得（qǔ dé）、争取（zhēng qǔ）"
   },
   {
     "grade": "二年级上",
@@ -5453,11 +5453,11 @@
     "type": "识字",
     "hanzi": "撞",
     "pinyin": "zhuàng",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、横、点、撇、横、竖、横折、横、横、竖、横、横",
-    "word": "碰撞、撞倒"
+    "word": "碰撞（pèng zhuàng）、撞倒（zhuàng dǎo）"
   },
   {
     "grade": "二年级上",
@@ -5465,11 +5465,11 @@
     "type": "识字",
     "hanzi": "怨",
     "pinyin": "yuàn",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "撇、横撇、竖、横折、横、撇、竖弯钩、点、斜钩",
-    "word": "抱怨、怨恨"
+    "word": "抱怨（bào yuàn）、怨恨（yuàn hèn）"
   },
   {
     "grade": "二年级上",
@@ -5477,11 +5477,11 @@
     "type": "识字",
     "hanzi": "软",
     "pinyin": "ruǎn",
-    "radical": "车",
+    "radical": "车（车字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、撇折、竖、提、撇、横钩、撇、捺",
-    "word": "柔软、软弱"
+    "word": "柔软（róu ruǎn）、软弱（ruǎn ruò）"
   },
   {
     "grade": "二年级上",
@@ -5489,11 +5489,11 @@
     "type": "识字",
     "hanzi": "呜",
     "pinyin": "wū",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、撇、横折钩、竖折折钩、横",
-    "word": "呜咽、呜呜"
+    "word": "呜咽（wū yè）、呜呜（wū wū）"
   },
   {
     "grade": "二年级上",
@@ -5501,11 +5501,11 @@
     "type": "识字",
     "hanzi": "慈",
     "pinyin": "cí",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 13,
     "structure": "上下",
     "strokeOrder": "点、撇、横、撇、竖、横折、横、点、斜钩、点、点、卧钩、点",
-    "word": "慈祥、慈爱"
+    "word": "慈祥（cí xiáng）、慈爱（cí ài）"
   },
   {
     "grade": "二年级上",
@@ -5513,11 +5513,11 @@
     "type": "识字",
     "hanzi": "祥",
     "pinyin": "xiáng",
-    "radical": "礻",
+    "radical": "礻（示字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、横钩、竖、点、点、撇、横、横、横、竖",
-    "word": "吉祥、祥和"
+    "word": "吉祥（jí xiáng）、祥和（xiáng hé）"
   },
   {
     "grade": "二年级上",
@@ -5525,11 +5525,11 @@
     "type": "识字",
     "hanzi": "量",
     "pinyin": "liàng",
-    "radical": "里",
+    "radical": "里（里字旁）",
     "strokes": 12,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、横、横、竖、横折、横、横、竖、横、横",
-    "word": "力量、重量"
+    "word": "力量（lì liàng）、重量（zhòng liàng）"
   },
   {
     "grade": "二年级上",
@@ -5537,11 +5537,11 @@
     "type": "识字",
     "hanzi": "跌",
     "pinyin": "diē",
-    "radical": "足",
+    "radical": "足（足字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、竖、提、撇、横、横、撇、捺",
-    "word": "跌倒、下跌"
+    "word": "跌倒（diē dǎo）、下跌（xià diē）"
   },
   {
     "grade": "二年级上",
@@ -5549,11 +5549,11 @@
     "type": "识字",
     "hanzi": "摔",
     "pinyin": "shuāi",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 14,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、横、撇折、撇折、点、点、提、撇、点、横、竖",
-    "word": "摔倒、摔碎"
+    "word": "摔倒（shuāi dǎo）、摔碎（shuāi suì）"
   },
   {
     "grade": "二年级上",
@@ -5561,11 +5561,11 @@
     "type": "识字",
     "hanzi": "擦",
     "pinyin": "cā",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 17,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、点、横撇、撇、横撇、点、点、横撇、捺、横、横、竖钩、撇、点",
-    "word": "擦桌子、擦干"
+    "word": "擦桌子（cā zhuō zi）、擦干（cā gān）"
   },
   {
     "grade": "二年级上",
@@ -5573,11 +5573,11 @@
     "type": "识字",
     "hanzi": "咱",
     "pinyin": "zán",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、撇、竖、横折、横、横、横",
-    "word": "咱们、咱家"
+    "word": "咱们（zán men）、咱家（zán jiā）"
   },
   {
     "grade": "二年级上",
@@ -5585,11 +5585,11 @@
     "type": "识字",
     "hanzi": "推",
     "pinyin": "tuī",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇、竖、点、横、横、横、竖、横",
-    "word": "推开、推动"
+    "word": "推开（tuī kāi）、推动（tuī dòng）"
   },
   {
     "grade": "二年级上",
@@ -5597,11 +5597,11 @@
     "type": "识字",
     "hanzi": "驶",
     "pinyin": "shǐ",
-    "radical": "马",
+    "radical": "马（马字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横折、竖折折钩、提、竖、横折、横、撇、捺",
-    "word": "行驶、驾驶"
+    "word": "行驶（xíng shǐ）、驾驶（jià shǐ）"
   },
   {
     "grade": "二年级上",
@@ -5609,11 +5609,11 @@
     "type": "识字",
     "hanzi": "坚",
     "pinyin": "jiān",
-    "radical": "土",
+    "radical": "土（土字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "竖、竖、横撇、捺、横、竖、横",
-    "word": "坚强、坚定"
+    "word": "坚强（jiān qiáng）、坚定（jiān dìng）"
   },
   {
     "grade": "二年级上",
@@ -5621,11 +5621,11 @@
     "type": "识字",
     "hanzi": "硬",
     "pinyin": "yìng",
-    "radical": "石",
+    "radical": "石（石字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、撇、竖、横折、横、横、竖、横折、横、横、撇、捺",
-    "word": "坚硬、硬件"
+    "word": "坚硬（jiān yìng）、硬件（yìng jiàn）"
   },
   {
     "grade": "二年级上",
@@ -5633,11 +5633,11 @@
     "type": "识字",
     "hanzi": "狼",
     "pinyin": "láng",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、点、横折、横、横、竖提、撇、捺",
-    "word": "狼狗、野狼"
+    "word": "狼狗（láng gǒu）、野狼（yě láng）"
   },
   {
     "grade": "二年级上",
@@ -5645,11 +5645,11 @@
     "type": "识字",
     "hanzi": "猩",
     "pinyin": "xīng",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、竖、横折、横、横、撇、横、横、竖、横",
-    "word": "猩猩"
+    "word": "猩猩（xīng xing）、猩猩（xīng xing）"
   },
   {
     "grade": "二年级上",
@@ -5657,11 +5657,11 @@
     "type": "识字",
     "hanzi": "鹤",
     "pinyin": "hè",
-    "radical": "鸟",
+    "radical": "鸟（鸟字旁）",
     "strokes": 15,
     "structure": "左右",
     "strokeOrder": "点、横钩、撇、竖、点、横、横、横、竖、横、撇、横折钩、点、竖折折钩、横",
-    "word": "仙鹤、白鹤"
+    "word": "仙鹤（xiān hè）、白鹤（bái hè）"
   },
   {
     "grade": "二年级上",
@@ -5669,11 +5669,11 @@
     "type": "识字",
     "hanzi": "蛇",
     "pinyin": "shé",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、点、点、点、横撇、撇、竖弯钩",
-    "word": "毒蛇、蛇皮"
+    "word": "毒蛇（dú shé）、蛇皮（shé pí）"
   },
   {
     "grade": "二年级上",
@@ -5681,11 +5681,11 @@
     "type": "识字",
     "hanzi": "鸽",
     "pinyin": "gē",
-    "radical": "鸟",
+    "radical": "鸟（鸟字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、捺、横、竖、横折、横、撇、横折钩、点、竖折折钩、横",
-    "word": "鸽子、白鸽"
+    "word": "鸽子（gē zi）、白鸽（bái gē）"
   },
   {
     "grade": "二年级上",
@@ -5693,11 +5693,11 @@
     "type": "识字",
     "hanzi": "蚕",
     "pinyin": "cán",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "横、横、撇、捺、竖、横折、横、竖、横、点",
-    "word": "蚕丝、蚕宝宝"
+    "word": "蚕丝（cán sī）、蚕宝宝（cán bǎo bao）"
   },
   {
     "grade": "二年级上",
@@ -5705,11 +5705,11 @@
     "type": "识字",
     "hanzi": "蚯",
     "pinyin": "qiū",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、点、撇、竖、横、竖、横",
-    "word": "蚯蚓"
+    "word": "蚯蚓（qiū yǐn）、蚯蚓（qiū yǐn）"
   },
   {
     "grade": "二年级上",
@@ -5717,11 +5717,11 @@
     "type": "识字",
     "hanzi": "蚓",
     "pinyin": "yǐn",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、点、横折、横、竖折折钩、竖",
-    "word": "蚯蚓"
+    "word": "蚯蚓（qiū yǐn）、蚯蚓（qiū yǐn）"
   },
   {
     "grade": "二年级上",
@@ -5729,11 +5729,11 @@
     "type": "识字",
     "hanzi": "骆",
     "pinyin": "luò",
-    "radical": "马",
+    "radical": "马（马字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横折、竖折折钩、提、撇、横撇、捺、竖、横折、横",
-    "word": "骆驼"
+    "word": "骆驼（luò tuo）、骆驼（luò tuo）"
   },
   {
     "grade": "二年级上",
@@ -5741,11 +5741,11 @@
     "type": "识字",
     "hanzi": "驼",
     "pinyin": "tuó",
-    "radical": "马",
+    "radical": "马（马字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横折、竖折折钩、提、点、点、撇、撇、竖弯钩",
-    "word": "骆驼、驼峰"
+    "word": "骆驼（luò tuo）、驼峰（tuó fēng）"
   },
   {
     "grade": "二年级上",
@@ -5753,11 +5753,11 @@
     "type": "识字",
     "hanzi": "狮",
     "pinyin": "shī",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、竖、撇、横撇、竖、横折钩、竖",
-    "word": "狮子、雄狮"
+    "word": "狮子（shī zi）、雄狮（xióng shī）"
   },
   {
     "grade": "二年级上",
@@ -5765,11 +5765,11 @@
     "type": "写字",
     "hanzi": "两",
     "pinyin": "liǎng",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 7,
     "structure": "独体",
     "strokeOrder": "横、竖、横折钩、撇、点、撇、点",
-    "word": "两个、两边"
+    "word": "两个（liǎng gè）、两边（liǎng biān）"
   },
   {
     "grade": "二年级上",
@@ -5777,11 +5777,11 @@
     "type": "写字",
     "hanzi": "条",
     "pinyin": "tiáo",
-    "radical": "夂",
+    "radical": "夂（折文旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "撇、横撇、捺、横、竖、撇、点",
-    "word": "一条、条件"
+    "word": "一条（yī tiáo）、条件（tiáo jiàn）"
   },
   {
     "grade": "二年级上",
@@ -5789,11 +5789,11 @@
     "type": "写字",
     "hanzi": "哪",
     "pinyin": "nǎ",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横折、横、横、撇、横折折钩、竖",
-    "word": "哪里、哪儿"
+    "word": "哪里（nǎ lǐ）、哪儿（nǎr）"
   },
   {
     "grade": "二年级上",
@@ -5801,11 +5801,11 @@
     "type": "写字",
     "hanzi": "宽",
     "pinyin": "kuān",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、横、竖、竖、竖、竖、撇、竖弯钩",
-    "word": "宽广、宽阔"
+    "word": "宽广（kuān guǎng）、宽阔（kuān kuò）"
   },
   {
     "grade": "二年级上",
@@ -5813,11 +5813,11 @@
     "type": "写字",
     "hanzi": "那",
     "pinyin": "nà",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横折钩、横、横、撇、横折折折钩、竖",
-    "word": "那里、那么"
+    "word": "那里（nà lǐ）、那么（nà me）"
   },
   {
     "grade": "二年级上",
@@ -5825,11 +5825,11 @@
     "type": "写字",
     "hanzi": "短",
     "pinyin": "duǎn",
-    "radical": "矢",
+    "radical": "矢（矢字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "撇、横、横、撇、点、横、竖、横折、横、点、撇、横",
-    "word": "长短、短处"
+    "word": "长短（cháng duǎn）、短处（duǎn chù）"
   },
   {
     "grade": "二年级上",
@@ -5837,11 +5837,11 @@
     "type": "写字",
     "hanzi": "孩",
     "pinyin": "hái",
-    "radical": "子",
+    "radical": "子（子字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横撇、竖钩、提、点、横、撇折、撇、撇、点",
-    "word": "孩子、小孩"
+    "word": "孩子（hái zi）、小孩（xiǎo hái）"
   },
   {
     "grade": "二年级上",
@@ -5849,11 +5849,11 @@
     "type": "写字",
     "hanzi": "成",
     "pinyin": "chéng",
-    "radical": "戈",
+    "radical": "戈（戈字旁）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "横、撇、横折钩、斜钩、撇、点",
-    "word": "成功、成为"
+    "word": "成功（chéng gōng）、成为（chéng wéi）"
   },
   {
     "grade": "二年级上",
@@ -5861,11 +5861,11 @@
     "type": "写字",
     "hanzi": "升",
     "pinyin": "shēng",
-    "radical": "丿",
+    "radical": "丿（撇）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "撇、横、撇、竖",
-    "word": "上升、升高"
+    "word": "上升（shàng shēng）、升高（shēng gāo）"
   },
   {
     "grade": "二年级上",
@@ -5873,11 +5873,11 @@
     "type": "写字",
     "hanzi": "连",
     "pinyin": "lián",
-    "radical": "辶",
+    "radical": "辶（走之底）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "横、撇折、横、竖、点、横折折撇、捺",
-    "word": "连忙、连接"
+    "word": "连忙（lián máng）、连接（lián jiē）"
   },
   {
     "grade": "二年级上",
@@ -5885,11 +5885,11 @@
     "type": "写字",
     "hanzi": "起",
     "pinyin": "qǐ",
-    "radical": "走",
+    "radical": "走（走字旁）",
     "strokes": 10,
     "structure": "半包围",
     "strokeOrder": "横、竖、横、竖、横、撇、捺、横折、横、竖弯钩",
-    "word": "起来、起立"
+    "word": "起来（qǐ lái）、起立（qǐ lì）"
   },
   {
     "grade": "二年级上",
@@ -5897,11 +5897,11 @@
     "type": "写字",
     "hanzi": "海",
     "pinyin": "hǎi",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、点、提、撇、横、竖折、横折钩、点、横、点",
-    "word": "大海、海洋"
+    "word": "大海（dà hǎi）、海洋（hǎi yáng）"
   },
   {
     "grade": "二年级上",
@@ -5909,11 +5909,11 @@
     "type": "写字",
     "hanzi": "洋",
     "pinyin": "yáng",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "点、点、提、点、撇、横、横、横、竖",
-    "word": "海洋、洋气"
+    "word": "海洋（hǎi yáng）、洋气（yáng qì）"
   },
   {
     "grade": "二年级上",
@@ -5921,11 +5921,11 @@
     "type": "写字",
     "hanzi": "许",
     "pinyin": "xǔ",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、横、横、竖",
-    "word": "许多、也许"
+    "word": "许多（xǔ duō）、也许（yě xǔ）"
   },
   {
     "grade": "二年级上",
@@ -5933,11 +5933,11 @@
     "type": "写字",
     "hanzi": "作",
     "pinyin": "zuò",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、横、竖、横、横",
-    "word": "工作、作业"
+    "word": "工作（gōng zuò）、作业（zuò yè）"
   },
   {
     "grade": "二年级上",
@@ -5945,11 +5945,11 @@
     "type": "写字",
     "hanzi": "办",
     "pinyin": "bàn",
-    "radical": "力",
+    "radical": "力（力字旁）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "横折钩、撇、点、点",
-    "word": "办法、办公"
+    "word": "办法（bàn fǎ）、办公（bàn gōng）"
   },
   {
     "grade": "二年级上",
@@ -5957,11 +5957,11 @@
     "type": "写字",
     "hanzi": "法",
     "pinyin": "fǎ",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、竖、横、撇折、点",
-    "word": "方法、法律"
+    "word": "方法（fāng fǎ）、法律（fǎ lǜ）"
   },
   {
     "grade": "二年级上",
@@ -5969,11 +5969,11 @@
     "type": "写字",
     "hanzi": "如",
     "pinyin": "rú",
-    "radical": "女",
+    "radical": "女（女字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇点、撇、横、竖、横折、横",
-    "word": "如果、比如"
+    "word": "如果（rú guǒ）、比如（bǐ rú）"
   },
   {
     "grade": "二年级上",
@@ -5981,11 +5981,11 @@
     "type": "写字",
     "hanzi": "已",
     "pinyin": "yǐ",
-    "radical": "己",
+    "radical": "己（己字旁）",
     "strokes": 3,
     "structure": "独体",
     "strokeOrder": "横折、横、竖弯钩",
-    "word": "已经、早已"
+    "word": "已经（yǐ jīng）、早已（zǎo yǐ）"
   },
   {
     "grade": "二年级上",
@@ -5993,11 +5993,11 @@
     "type": "写字",
     "hanzi": "经",
     "pinyin": "jīng",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、横撇、点、横、竖、横",
-    "word": "已经、经过"
+    "word": "已经（yǐ jīng）、经过（jīng guò）"
   },
   {
     "grade": "二年级上",
@@ -6005,11 +6005,11 @@
     "type": "写字",
     "hanzi": "别",
     "pinyin": "bié",
-    "radical": "刂",
+    "radical": "刂（立刀旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、撇、竖、竖钩",
-    "word": "别人、分别"
+    "word": "别人（bié rén）、分别（fēn bié）"
   },
   {
     "grade": "二年级上",
@@ -6017,11 +6017,11 @@
     "type": "写字",
     "hanzi": "轻",
     "pinyin": "qīng",
-    "radical": "车",
+    "radical": "车（车字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横、撇折、竖、提、横撇、点、横、竖、横",
-    "word": "轻轻、轻松"
+    "word": "轻轻（qīng qīng）、轻松（qīng sōng）"
   },
   {
     "grade": "二年级上",
@@ -6029,11 +6029,11 @@
     "type": "写字",
     "hanzi": "发",
     "pinyin": "fā",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "撇折、撇、横撇、捺、点",
-    "word": "发现、发生"
+    "word": "发现（fā xiàn）、发生（fā shēng）"
   },
   {
     "grade": "二年级上",
@@ -6041,11 +6041,11 @@
     "type": "写字",
     "hanzi": "胆",
     "pinyin": "dǎn",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、横折钩、横、横、竖、横折、横、横、横",
-    "word": "胆子、胆量"
+    "word": "胆子（dǎn zi）、胆量（dǎn liàng）"
   },
   {
     "grade": "二年级上",
@@ -6053,11 +6053,11 @@
     "type": "写字",
     "hanzi": "肚",
     "pinyin": "dù",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、横折钩、横、横、横、竖、横",
-    "word": "肚子、肚皮"
+    "word": "肚子（dù zi）、肚皮（dù pí）"
   },
   {
     "grade": "二年级上",
@@ -6065,11 +6065,11 @@
     "type": "写字",
     "hanzi": "更",
     "pinyin": "gèng",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 7,
     "structure": "独体",
     "strokeOrder": "横、竖、横折、横、撇、捺、撇",
-    "word": "更加、更好"
+    "word": "更加（gèng jiā）、更好（gèng hǎo）"
   },
   {
     "grade": "二年级上",
@@ -6077,11 +6077,11 @@
     "type": "写字",
     "hanzi": "识",
     "pinyin": "shí",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、横折提、竖、横折、横、撇、点",
-    "word": "认识、知识"
+    "word": "认识（rèn shi）、知识（zhī shi）"
   },
   {
     "grade": "二年级上",
@@ -6089,11 +6089,11 @@
     "type": "写字",
     "hanzi": "转",
     "pinyin": "zhuǎn",
-    "radical": "车",
+    "radical": "车（车字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、撇折、竖、提、横、横、竖折撇、点",
-    "word": "转身、转动"
+    "word": "转身（zhuǎn shēn）、转动（zhuàn dòng）"
   },
   {
     "grade": "二年级上",
@@ -6101,11 +6101,11 @@
     "type": "写字",
     "hanzi": "夹",
     "pinyin": "jiā",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "横、点、撇、横、撇、捺",
-    "word": "夹子、夹住"
+    "word": "夹子（jiā zi）、夹住（jiā zhù）"
   },
   {
     "grade": "二年级上",
@@ -6113,11 +6113,11 @@
     "type": "写字",
     "hanzi": "处",
     "pinyin": "chù",
-    "radical": "夂",
+    "radical": "夂（折文旁）",
     "strokes": 5,
     "structure": "半包围",
     "strokeOrder": "撇、横撇、捺、竖、点",
-    "word": "到处、处处"
+    "word": "到处（dào chù）、处处（chù chù）"
   },
   {
     "grade": "二年级上",
@@ -6125,11 +6125,11 @@
     "type": "写字",
     "hanzi": "块",
     "pinyin": "kuài",
-    "radical": "土",
+    "radical": "土（土字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、提、横折、横、撇、捺",
-    "word": "一块、石块"
+    "word": "一块（yī kuài）、石块（shí kuài）"
   },
   {
     "grade": "二年级上",
@@ -6137,11 +6137,11 @@
     "type": "写字",
     "hanzi": "座",
     "pinyin": "zuò",
-    "radical": "广",
+    "radical": "广（广字头）",
     "strokes": 10,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、撇、点、撇、点、横、竖、横",
-    "word": "座位、一座山"
+    "word": "座位（zuò wèi）、一座山（yī zuò shān）"
   },
   {
     "grade": "二年级上",
@@ -6149,11 +6149,11 @@
     "type": "写字",
     "hanzi": "园",
     "pinyin": "yuán",
-    "radical": "囗",
+    "radical": "囗（国字框）",
     "strokes": 7,
     "structure": "全包围",
     "strokeOrder": "竖、横折、横、横、撇、竖弯钩、横",
-    "word": "花园、公园"
+    "word": "花园（huā yuán）、公园（gōng yuán）"
   },
   {
     "grade": "二年级上",
@@ -6161,11 +6161,11 @@
     "type": "写字",
     "hanzi": "群",
     "pinyin": "qún",
-    "radical": "羊",
+    "radical": "羊（羊字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "横折、横、横、撇、竖、横折、横、点、撇、横、横、横、竖",
-    "word": "一群、群众"
+    "word": "一群（yī qún）、群众（qún zhòng）"
   },
   {
     "grade": "二年级上",
@@ -6173,11 +6173,11 @@
     "type": "写字",
     "hanzi": "队",
     "pinyin": "duì",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "横折折折钩、竖、撇、捺",
-    "word": "队伍、队长"
+    "word": "队伍（duì wu）、队长（duì zhǎng）"
   },
   {
     "grade": "二年级上",
@@ -6185,11 +6185,11 @@
     "type": "写字",
     "hanzi": "领",
     "pinyin": "lǐng",
-    "radical": "页",
+    "radical": "页（页字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、点、点、横撇、点、横、撇、竖、横折、撇、点",
-    "word": "带领、领先"
+    "word": "带领（dài lǐng）、领先（lǐng xiān）"
   },
   {
     "grade": "二年级上",
@@ -6197,11 +6197,11 @@
     "type": "写字",
     "hanzi": "树",
     "pinyin": "shù",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横撇、点、横、竖钩、点",
-    "word": "树木、大树"
+    "word": "树木（shù mù）、大树（dà shù）"
   },
   {
     "grade": "二年级上",
@@ -6209,11 +6209,11 @@
     "type": "写字",
     "hanzi": "之",
     "pinyin": "zhī",
-    "radical": "丶",
+    "radical": "丶（点）",
     "strokes": 3,
     "structure": "独体",
     "strokeOrder": "点、横撇、捺",
-    "word": "之前、之后"
+    "word": "之前（zhī qián）、之后（zhī hòu）"
   },
   {
     "grade": "二年级上",
@@ -6221,11 +6221,11 @@
     "type": "写字",
     "hanzi": "杨",
     "pinyin": "yáng",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横折折折钩、撇、撇",
-    "word": "杨树、杨柳"
+    "word": "杨树（yáng shù）、杨柳（yáng liǔ）"
   },
   {
     "grade": "二年级上",
@@ -6233,11 +6233,11 @@
     "type": "写字",
     "hanzi": "松",
     "pinyin": "sōng",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、撇、捺、撇、点",
-    "word": "松树、放松"
+    "word": "松树（sōng shù）、放松（fàng sōng）"
   },
   {
     "grade": "二年级上",
@@ -6245,11 +6245,11 @@
     "type": "写字",
     "hanzi": "柏",
     "pinyin": "bǎi",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、撇、竖、横折、横、横",
-    "word": "柏树、松柏"
+    "word": "柏树（bǎi shù）、松柏（sōng bǎi）"
   },
   {
     "grade": "二年级上",
@@ -6257,11 +6257,11 @@
     "type": "写字",
     "hanzi": "化",
     "pinyin": "huà",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、竖弯钩",
-    "word": "变化、化学"
+    "word": "变化（biàn huà）、化学（huà xué）"
   },
   {
     "grade": "二年级上",
@@ -6269,11 +6269,11 @@
     "type": "写字",
     "hanzi": "金",
     "pinyin": "jīn",
-    "radical": "金",
+    "radical": "金（金字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、捺、横、横、竖、点、撇、横",
-    "word": "金色、金子"
+    "word": "金色（jīn sè）、金子（jīn zi）"
   },
   {
     "grade": "二年级上",
@@ -6281,11 +6281,11 @@
     "type": "写字",
     "hanzi": "桂",
     "pinyin": "guì",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、竖、横、横、竖、横",
-    "word": "桂花、桂树"
+    "word": "桂花（guì huā）、桂树（guì shù）"
   },
   {
     "grade": "二年级上",
@@ -6293,11 +6293,11 @@
     "type": "写字",
     "hanzi": "拍",
     "pinyin": "pāi",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇、竖、横折、横、横",
-    "word": "拍手、拍打"
+    "word": "拍手（pāi shǒu）、拍打（pāi dǎ）"
   },
   {
     "grade": "二年级上",
@@ -6305,11 +6305,11 @@
     "type": "写字",
     "hanzi": "世",
     "pinyin": "shì",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "横、竖、竖、横、竖折",
-    "word": "世界、世纪"
+    "word": "世界（shì jiè）、世纪（shì jì）"
   },
   {
     "grade": "二年级上",
@@ -6317,11 +6317,11 @@
     "type": "写字",
     "hanzi": "界",
     "pinyin": "jiè",
-    "radical": "田",
+    "radical": "田（田字旁）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、竖、横、撇、捺、撇、竖",
-    "word": "世界、边界"
+    "word": "世界（shì jiè）、边界（biān jiè）"
   },
   {
     "grade": "二年级上",
@@ -6329,11 +6329,11 @@
     "type": "写字",
     "hanzi": "彩",
     "pinyin": "cǎi",
-    "radical": "彡",
+    "radical": "彡（三撇）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、点、点、撇、横、竖、撇、点、撇、撇、撇",
-    "word": "彩色、彩虹"
+    "word": "彩色（cǎi sè）、彩虹（cǎi hóng）"
   },
   {
     "grade": "二年级上",
@@ -6341,11 +6341,11 @@
     "type": "写字",
     "hanzi": "丛",
     "pinyin": "cóng",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 4,
     "structure": "上下",
     "strokeOrder": "撇、点、撇、横",
-    "word": "草丛、丛林"
+    "word": "草丛（cǎo cóng）、丛林（cóng lín）"
   },
   {
     "grade": "二年级上",
@@ -6353,11 +6353,11 @@
     "type": "写字",
     "hanzi": "休",
     "pinyin": "xiū",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、竖、撇、捺",
-    "word": "休息、休学"
+    "word": "休息（xiū xi）、休学（xiū xué）"
   },
   {
     "grade": "二年级上",
@@ -6365,11 +6365,11 @@
     "type": "写字",
     "hanzi": "朋",
     "pinyin": "péng",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇、横折钩、横、横、撇、横折钩、横、横",
-    "word": "朋友、亲朋"
+    "word": "朋友（péng you）、亲朋（qīn péng）"
   },
   {
     "grade": "二年级上",
@@ -6377,11 +6377,11 @@
     "type": "写字",
     "hanzi": "友",
     "pinyin": "yǒu",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "横、撇、横撇、捺",
-    "word": "友好、友人"
+    "word": "友好（yǒu hǎo）、友人（yǒu rén）"
   },
   {
     "grade": "二年级上",
@@ -6389,11 +6389,11 @@
     "type": "写字",
     "hanzi": "保",
     "pinyin": "bǎo",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、竖、竖、横折、横、横、竖、撇、捺",
-    "word": "保护、保卫"
+    "word": "保护（bǎo hù）、保卫（bǎo wèi）"
   },
   {
     "grade": "二年级上",
@@ -6401,11 +6401,11 @@
     "type": "写字",
     "hanzi": "护",
     "pinyin": "hù",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、横折、横、撇",
-    "word": "爱护、护士"
+    "word": "爱护（ài hù）、护士（hù shi）"
   },
   {
     "grade": "二年级上",
@@ -6413,11 +6413,11 @@
     "type": "写字",
     "hanzi": "季",
     "pinyin": "jì",
-    "radical": "禾",
+    "radical": "禾（禾木旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、横、竖、撇、捺、横撇、竖钩、横",
-    "word": "季节、四季"
+    "word": "季节（jì jié）、四季（sì jì）"
   },
   {
     "grade": "二年级上",
@@ -6425,11 +6425,11 @@
     "type": "写字",
     "hanzi": "肥",
     "pinyin": "féi",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇、横折钩、横、横、横折、竖、横、竖弯钩",
-    "word": "肥胖、肥料"
+    "word": "肥胖（féi pàng）、肥料（féi liào）"
   },
   {
     "grade": "二年级上",
@@ -6437,11 +6437,11 @@
     "type": "写字",
     "hanzi": "农",
     "pinyin": "nóng",
-    "radical": "冖",
+    "radical": "冖（秃宝盖）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "点、横钩、撇、竖提、撇、捺",
-    "word": "农民、农村"
+    "word": "农民（nóng mín）、农村（nóng cūn）"
   },
   {
     "grade": "二年级上",
@@ -6449,11 +6449,11 @@
     "type": "写字",
     "hanzi": "事",
     "pinyin": "shì",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 8,
     "structure": "独体",
     "strokeOrder": "横、竖、横折、横、横折、横、横、竖钩",
-    "word": "事情、故事"
+    "word": "事情（shì qing）、故事（gù shi）"
   },
   {
     "grade": "二年级上",
@@ -6461,11 +6461,11 @@
     "type": "写字",
     "hanzi": "谷",
     "pinyin": "gǔ",
-    "radical": "谷",
+    "radical": "谷（谷字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "撇、点、撇、捺、竖、横折、横",
-    "word": "谷子、山谷"
+    "word": "谷子（gǔ zi）、山谷（shān gǔ）"
   },
   {
     "grade": "二年级上",
@@ -6473,11 +6473,11 @@
     "type": "写字",
     "hanzi": "体",
     "pinyin": "tǐ",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、竖、撇、捺、横",
-    "word": "身体、体育"
+    "word": "身体（shēn tǐ）、体育（tǐ yù）"
   },
   {
     "grade": "二年级上",
@@ -6485,11 +6485,11 @@
     "type": "写字",
     "hanzi": "虽",
     "pinyin": "suī",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、竖、横折、横、点、撇、竖弯钩",
-    "word": "虽然、虽说"
+    "word": "虽然（suī rán）、虽说（suī shuō）"
   },
   {
     "grade": "二年级上",
@@ -6497,11 +6497,11 @@
     "type": "写字",
     "hanzi": "辛",
     "pinyin": "xīn",
-    "radical": "辛",
+    "radical": "辛（辛字旁）",
     "strokes": 7,
     "structure": "独体",
     "strokeOrder": "点、横、点、撇、横、横、竖",
-    "word": "辛苦、辛劳"
+    "word": "辛苦（xīn kǔ）、辛劳（xīn láo）"
   },
   {
     "grade": "二年级上",
@@ -6509,11 +6509,11 @@
     "type": "写字",
     "hanzi": "苦",
     "pinyin": "kǔ",
-    "radical": "艹",
+    "radical": "艹（草字头）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、横、竖、竖、横折、横",
-    "word": "吃苦、苦瓜"
+    "word": "吃苦（chī kǔ）、苦瓜（kǔ guā）"
   },
   {
     "grade": "二年级上",
@@ -6521,11 +6521,11 @@
     "type": "写字",
     "hanzi": "初",
     "pinyin": "chū",
-    "radical": "衤",
+    "radical": "衤（衣字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、横钩、竖、撇、点、横折钩、撇",
-    "word": "初中、初次"
+    "word": "初中（chū zhōng）、初次（chū cì）"
   },
   {
     "grade": "二年级上",
@@ -6533,11 +6533,11 @@
     "type": "写字",
     "hanzi": "丑",
     "pinyin": "chǒu",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "横折、竖、横、横",
-    "word": "丑陋、丑角"
+    "word": "丑陋（chǒu lòu）、丑角（chǒu jué）"
   },
   {
     "grade": "二年级上",
@@ -6545,11 +6545,11 @@
     "type": "写字",
     "hanzi": "诚",
     "pinyin": "chéng",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、横折提、横、撇、横折钩、斜钩、撇、点",
-    "word": "诚实、真诚"
+    "word": "诚实（chéng shí）、真诚（zhēn chéng）"
   },
   {
     "grade": "二年级上",
@@ -6557,11 +6557,11 @@
     "type": "写字",
     "hanzi": "丽",
     "pinyin": "lì",
-    "radical": "一",
+    "radical": "一（横）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、横折、点、竖、横折、横",
-    "word": "美丽、华丽"
+    "word": "美丽（měi lì）、华丽（huá lì）"
   },
   {
     "grade": "二年级上",
@@ -6569,11 +6569,11 @@
     "type": "写字",
     "hanzi": "提",
     "pinyin": "tí",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、竖、横折、横、横、竖、横、撇、捺、横",
-    "word": "提高、提问"
+    "word": "提高（tí gāo）、提问（tí wèn）"
   },
   {
     "grade": "二年级上",
@@ -6581,11 +6581,11 @@
     "type": "写字",
     "hanzi": "吗",
     "pinyin": "ma",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横折、竖折折钩、横",
-    "word": "好吗、是吗"
+    "word": "好吗（hǎo ma）、是吗（shì ma）"
   },
   {
     "grade": "二年级上",
@@ -6593,11 +6593,11 @@
     "type": "写字",
     "hanzi": "圆",
     "pinyin": "yuán",
-    "radical": "囗",
+    "radical": "囗（国字框）",
     "strokes": 10,
     "structure": "全包围",
     "strokeOrder": "竖、横折、竖、横折、横、竖、横折、撇、点、横",
-    "word": "圆形、圆心"
+    "word": "圆形（yuán xíng）、圆心（yuán xīn）"
   },
   {
     "grade": "二年级上",
@@ -6605,11 +6605,11 @@
     "type": "写字",
     "hanzi": "哥",
     "pinyin": "gē",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "横、竖、横折、横、竖、横、竖、横折、横、竖钩",
-    "word": "哥哥、大哥"
+    "word": "哥哥（gē ge）、大哥（dà gē）"
   },
   {
     "grade": "二年级上",
@@ -6617,11 +6617,11 @@
     "type": "写字",
     "hanzi": "秋",
     "pinyin": "qiū",
-    "radical": "禾",
+    "radical": "禾（禾木旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、捺、点、撇、撇、捺",
-    "word": "秋天、秋季"
+    "word": "秋天（qiū tiān）、秋季（qiū jì）"
   },
   {
     "grade": "二年级上",
@@ -6629,11 +6629,11 @@
     "type": "写字",
     "hanzi": "挂",
     "pinyin": "guà",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、横、竖、横、横、竖、横",
-    "word": "挂起、挂号"
+    "word": "挂起（guà qǐ）、挂号（guà hào）"
   },
   {
     "grade": "二年级上",
@@ -6641,11 +6641,11 @@
     "type": "写字",
     "hanzi": "啊",
     "pinyin": "a",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、竖、横折、横、竖、横折、横",
-    "word": "好啊、是啊"
+    "word": "好啊（hǎo a）、是啊（shì a）"
   },
   {
     "grade": "二年级上",
@@ -6653,11 +6653,11 @@
     "type": "写字",
     "hanzi": "宝",
     "pinyin": "bǎo",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、横、横、竖、横、点",
-    "word": "宝贝、宝石"
+    "word": "宝贝（bǎo bèi）、宝石（bǎo shí）"
   },
   {
     "grade": "二年级上",
@@ -6665,11 +6665,11 @@
     "type": "写字",
     "hanzi": "活",
     "pinyin": "huó",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "点、点、提、撇、横、竖、竖、横折、横",
-    "word": "生活、活动"
+    "word": "生活（shēng huó）、活动（huó dòng）"
   },
   {
     "grade": "二年级上",
@@ -6677,11 +6677,11 @@
     "type": "写字",
     "hanzi": "些",
     "pinyin": "xiē",
-    "radical": "止",
+    "radical": "止（止字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "竖、横、竖、提、撇、竖弯钩、横、横",
-    "word": "一些、这些"
+    "word": "一些（yī xiē）、这些（zhè xiē）"
   },
   {
     "grade": "二年级上",
@@ -6689,11 +6689,11 @@
     "type": "写字",
     "hanzi": "总",
     "pinyin": "zǒng",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "点、撇、竖、横折、横、点、斜钩、点、点",
-    "word": "总是、总共"
+    "word": "总是（zǒng shì）、总共（zǒng gòng）"
   },
   {
     "grade": "二年级上",
@@ -6701,11 +6701,11 @@
     "type": "写字",
     "hanzi": "给",
     "pinyin": "gěi",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、撇、捺、横、竖、横折、横",
-    "word": "送给、给予"
+    "word": "送给（sòng gěi）、给予（jǐ yǔ）"
   },
   {
     "grade": "二年级上",
@@ -6713,11 +6713,11 @@
     "type": "写字",
     "hanzi": "诉",
     "pinyin": "sù",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、撇、横、竖、点",
-    "word": "告诉、诉说"
+    "word": "告诉（gào su）、诉说（sù shuō）"
   },
   {
     "grade": "二年级上",
@@ -6725,11 +6725,11 @@
     "type": "写字",
     "hanzi": "曲",
     "pinyin": "qǔ",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "竖、横折、横、竖、竖、横",
-    "word": "歌曲、曲线"
+    "word": "歌曲（gē qǔ）、曲线（qū xiàn）"
   },
   {
     "grade": "二年级上",
@@ -6737,11 +6737,11 @@
     "type": "写字",
     "hanzi": "名",
     "pinyin": "míng",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "撇、横撇、点、竖、横折、横",
-    "word": "名字、名气"
+    "word": "名字（míng zi）、名气（míng qì）"
   },
   {
     "grade": "二年级上",
@@ -6749,11 +6749,11 @@
     "type": "写字",
     "hanzi": "香",
     "pinyin": "xiāng",
-    "radical": "香",
+    "radical": "香（香字旁）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "撇、横、竖、撇、捺、竖、横折、横、横",
-    "word": "香味、香气"
+    "word": "香味（xiāng wèi）、香气（xiāng qì）"
   },
   {
     "grade": "二年级上",
@@ -6761,11 +6761,11 @@
     "type": "写字",
     "hanzi": "数",
     "pinyin": "shǔ",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "点、撇、横、竖、撇、点、撇点、撇、横、撇、横、撇、捺",
-    "word": "数数、数学"
+    "word": "数数（shǔ shù）、数学（shù xué）"
   },
   {
     "grade": "二年级上",
@@ -6773,11 +6773,11 @@
     "type": "写字",
     "hanzi": "晚",
     "pinyin": "wǎn",
-    "radical": "日",
+    "radical": "日（日字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、撇、横撇、竖、横折、横、撇、竖弯钩",
-    "word": "晚上、夜晚"
+    "word": "晚上（wǎn shang）、夜晚（yè wǎn）"
   },
   {
     "grade": "二年级上",
@@ -6785,11 +6785,11 @@
     "type": "写字",
     "hanzi": "奶",
     "pinyin": "nǎi",
-    "radical": "女",
+    "radical": "女（女字旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇点、撇、横、横折折折钩、撇",
-    "word": "奶奶、牛奶"
+    "word": "奶奶（nǎi nai）、牛奶（niú nǎi）"
   },
   {
     "grade": "二年级上",
@@ -6797,11 +6797,11 @@
     "type": "写字",
     "hanzi": "您",
     "pinyin": "nín",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "撇、横钩、竖、撇、捺、点、斜钩、点、点、卧钩、点",
-    "word": "您好、您请"
+    "word": "您好（nín hǎo）、您请（nín qǐng）"
   },
   {
     "grade": "二年级上",
@@ -6809,11 +6809,11 @@
     "type": "写字",
     "hanzi": "爷",
     "pinyin": "yé",
-    "radical": "父",
+    "radical": "父（父字旁）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "撇、点、撇、捺、横折钩、竖",
-    "word": "爷爷、大爷"
+    "word": "爷爷（yé ye）、大爷（dà ye）"
   },
   {
     "grade": "二年级上",
@@ -6821,11 +6821,11 @@
     "type": "写字",
     "hanzi": "很",
     "pinyin": "hěn",
-    "radical": "彳",
+    "radical": "彳（双人旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、撇、竖、横折、横、横、竖提、撇、捺",
-    "word": "很好、很多"
+    "word": "很好（hěn hǎo）、很多（hěn duō）"
   },
   {
     "grade": "二年级上",
@@ -6833,11 +6833,11 @@
     "type": "写字",
     "hanzi": "变",
     "pinyin": "biàn",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "点、横、竖、竖、撇、点、横撇、捺",
-    "word": "变化、变成"
+    "word": "变化（biàn huà）、变成（biàn chéng）"
   },
   {
     "grade": "二年级上",
@@ -6845,11 +6845,11 @@
     "type": "写字",
     "hanzi": "勺",
     "pinyin": "sháo",
-    "radical": "勹",
+    "radical": "勹（包字头）",
     "strokes": 3,
     "structure": "半包围",
     "strokeOrder": "撇、横折钩、点",
-    "word": "勺子、饭勺"
+    "word": "勺子（sháo zi）、饭勺（fàn sháo）"
   },
   {
     "grade": "二年级上",
@@ -6857,11 +6857,11 @@
     "type": "写字",
     "hanzi": "张",
     "pinyin": "zhāng",
-    "radical": "弓",
+    "radical": "弓（弓字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横折、横、竖折折钩、撇、横、竖提、捺",
-    "word": "张开、纸张"
+    "word": "张开（zhāng kāi）、纸张（zhǐ zhāng）"
   },
   {
     "grade": "二年级上",
@@ -6869,11 +6869,11 @@
     "type": "写字",
     "hanzi": "汉",
     "pinyin": "hàn",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "点、点、提、横撇、捺",
-    "word": "汉字、汉族"
+    "word": "汉字（hàn zì）、汉族（hàn zú）"
   },
   {
     "grade": "二年级上",
@@ -6881,11 +6881,11 @@
     "type": "写字",
     "hanzi": "图",
     "pinyin": "tú",
-    "radical": "囗",
+    "radical": "囗（国字框）",
     "strokes": 8,
     "structure": "全包围",
     "strokeOrder": "竖、横折、撇、横撇、捺、点、点、横",
-    "word": "图画、地图"
+    "word": "图画（tú huà）、地图（dì tú）"
   },
   {
     "grade": "二年级上",
@@ -6893,11 +6893,11 @@
     "type": "写字",
     "hanzi": "泥",
     "pinyin": "ní",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、提、横折、横、撇、撇、竖弯钩",
-    "word": "泥土、泥巴"
+    "word": "泥土（ní tǔ）、泥巴（ní ba）"
   },
   {
     "grade": "二年级上",
@@ -6905,11 +6905,11 @@
     "type": "写字",
     "hanzi": "铁",
     "pinyin": "tiě",
-    "radical": "钅",
+    "radical": "钅（金字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横、横、横、竖提、撇、横、横、撇、捺",
-    "word": "钢铁、铁钉"
+    "word": "钢铁（gāng tiě）、铁钉（tiě dīng）"
   },
   {
     "grade": "二年级上",
@@ -6917,11 +6917,11 @@
     "type": "写字",
     "hanzi": "环",
     "pinyin": "huán",
-    "radical": "王",
+    "radical": "王（王字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、横、竖、提、横、撇、竖、点",
-    "word": "环境、圆环"
+    "word": "环境（huán jìng）、圆环（yuán huán）"
   },
   {
     "grade": "二年级上",
@@ -6929,11 +6929,11 @@
     "type": "写字",
     "hanzi": "依",
     "pinyin": "yī",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇、竖、点、横、撇、竖提、撇、捺",
-    "word": "依靠、依然"
+    "word": "依靠（yī kào）、依然（yī rán）"
   },
   {
     "grade": "二年级上",
@@ -6941,11 +6941,11 @@
     "type": "写字",
     "hanzi": "尽",
     "pinyin": "jìn",
-    "radical": "尸",
+    "radical": "尸（尸字头）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "横折、横、撇、捺、点、点",
-    "word": "尽力、尽头"
+    "word": "尽力（jìn lì）、尽头（jìn tóu）"
   },
   {
     "grade": "二年级上",
@@ -6953,11 +6953,11 @@
     "type": "写字",
     "hanzi": "穷",
     "pinyin": "qióng",
-    "radical": "穴",
+    "radical": "穴（穴宝盖）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、撇、点、横折钩、撇",
-    "word": "穷人、穷尽"
+    "word": "穷人（qióng rén）、穷尽（qióng jìn）"
   },
   {
     "grade": "二年级上",
@@ -6965,11 +6965,11 @@
     "type": "写字",
     "hanzi": "层",
     "pinyin": "céng",
-    "radical": "尸",
+    "radical": "尸（尸字头）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "横折、横、撇、横、横、撇折、点",
-    "word": "一层、楼层"
+    "word": "一层（yī céng）、楼层（lóu céng）"
   },
   {
     "grade": "二年级上",
@@ -6977,11 +6977,11 @@
     "type": "写字",
     "hanzi": "照",
     "pinyin": "zhào",
-    "radical": "灬",
+    "radical": "灬（四点底）",
     "strokes": 13,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、横、横折、撇、竖弯钩、点、点、点、点、横、竖",
-    "word": "照亮、日照"
+    "word": "照亮（zhào liàng）、日照（rì zhào）"
   },
   {
     "grade": "二年级上",
@@ -6989,11 +6989,11 @@
     "type": "写字",
     "hanzi": "炉",
     "pinyin": "lú",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、撇、撇、捺、点、横折、横、横",
-    "word": "火炉、香炉"
+    "word": "火炉（huǒ lú）、香炉（xiāng lú）"
   },
   {
     "grade": "二年级上",
@@ -7001,11 +7001,11 @@
     "type": "写字",
     "hanzi": "烟",
     "pinyin": "yān",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、撇、撇、捺、竖、横折、横、撇、点、横",
-    "word": "烟火、烟雾"
+    "word": "烟火（yān huǒ）、烟雾（yān wù）"
   },
   {
     "grade": "二年级上",
@@ -7013,11 +7013,11 @@
     "type": "写字",
     "hanzi": "川",
     "pinyin": "chuān",
-    "radical": "丿",
+    "radical": "丿（撇）",
     "strokes": 3,
     "structure": "独体",
     "strokeOrder": "撇、竖、竖",
-    "word": "山川、四川"
+    "word": "山川（shān chuān）、四川（sì chuān）"
   },
   {
     "grade": "二年级上",
@@ -7025,11 +7025,11 @@
     "type": "写字",
     "hanzi": "直",
     "pinyin": "zhí",
-    "radical": "十",
+    "radical": "十（十字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "横、竖、竖、横折、横、横、横、横",
-    "word": "直接、直线"
+    "word": "直接（zhí jiē）、直线（zhí xiàn）"
   },
   {
     "grade": "二年级上",
@@ -7037,11 +7037,11 @@
     "type": "写字",
     "hanzi": "银",
     "pinyin": "yín",
-    "radical": "钅",
+    "radical": "钅（金字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、横、横、横、竖提、横折、横、横、竖提、撇、捺",
-    "word": "银色、金银"
+    "word": "银色（yín sè）、金银（jīn yín）"
   },
   {
     "grade": "二年级上",
@@ -7049,11 +7049,11 @@
     "type": "写字",
     "hanzi": "仙",
     "pinyin": "xiān",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇、竖、竖、竖折、竖",
-    "word": "仙女、神仙"
+    "word": "仙女（xiān nǚ）、神仙（shén xiān）"
   },
   {
     "grade": "二年级上",
@@ -7061,11 +7061,11 @@
     "type": "写字",
     "hanzi": "顶",
     "pinyin": "dǐng",
-    "radical": "页",
+    "radical": "页（页字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖钩、横、撇、竖、横折、撇、点",
-    "word": "山顶、头顶"
+    "word": "山顶（shān dǐng）、头顶（tóu dǐng）"
   },
   {
     "grade": "二年级上",
@@ -7073,11 +7073,11 @@
     "type": "写字",
     "hanzi": "巨",
     "pinyin": "jù",
-    "radical": "匚",
+    "radical": "匚（区字框）",
     "strokes": 4,
     "structure": "半包围",
     "strokeOrder": "横、横折、横、竖折",
-    "word": "巨大、巨人"
+    "word": "巨大（jù dà）、巨人（jù rén）"
   },
   {
     "grade": "二年级上",
@@ -7085,11 +7085,11 @@
     "type": "写字",
     "hanzi": "位",
     "pinyin": "wèi",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、点、横、点、撇、横",
-    "word": "位置、一位"
+    "word": "位置（wèi zhì）、一位（yī wèi）"
   },
   {
     "grade": "二年级上",
@@ -7097,11 +7097,11 @@
     "type": "写字",
     "hanzi": "闪",
     "pinyin": "shǎn",
-    "radical": "门",
+    "radical": "门（门字框）",
     "strokes": 5,
     "structure": "半包围",
     "strokeOrder": "点、竖、横折钩、撇、点",
-    "word": "闪光、闪电"
+    "word": "闪光（shǎn guāng）、闪电（shǎn diàn）"
   },
   {
     "grade": "二年级上",
@@ -7109,11 +7109,11 @@
     "type": "写字",
     "hanzi": "狗",
     "pinyin": "gǒu",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、撇、横折钩、竖、横折、横",
-    "word": "小狗、狗熊"
+    "word": "小狗（xiǎo gǒu）、狗熊（gǒu xióng）"
   },
   {
     "grade": "二年级上",
@@ -7121,11 +7121,11 @@
     "type": "写字",
     "hanzi": "形",
     "pinyin": "xíng",
-    "radical": "彡",
+    "radical": "彡（三撇）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、横、撇、竖、撇、撇、撇",
-    "word": "形状、图形"
+    "word": "形状（xíng zhuàng）、图形（tú xíng）"
   },
   {
     "grade": "二年级上",
@@ -7133,11 +7133,11 @@
     "type": "写字",
     "hanzi": "状",
     "pinyin": "zhuàng",
-    "radical": "犬",
+    "radical": "犬（犬字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、横、竖、横、撇、捺、点",
-    "word": "状况、奖状"
+    "word": "状况（zhuàng kuàng）、奖状（jiǎng zhuàng）"
   },
   {
     "grade": "二年级上",
@@ -7145,11 +7145,11 @@
     "type": "写字",
     "hanzi": "湖",
     "pinyin": "hú",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "点、点、提、横、竖、竖、横折、横、撇、横、竖、钩",
-    "word": "湖水、湖泊"
+    "word": "湖水（hú shuǐ）、湖泊（hú pō）"
   },
   {
     "grade": "二年级上",
@@ -7157,11 +7157,11 @@
     "type": "写字",
     "hanzi": "区",
     "pinyin": "qū",
-    "radical": "匚",
+    "radical": "匚（区字框）",
     "strokes": 4,
     "structure": "半包围",
     "strokeOrder": "横、撇、点、竖折",
-    "word": "区别、小区"
+    "word": "区别（qū bié）、小区（xiǎo qū）"
   },
   {
     "grade": "二年级上",
@@ -7169,11 +7169,11 @@
     "type": "写字",
     "hanzi": "胜",
     "pinyin": "shèng",
-    "radical": "月",
+    "radical": "月（月字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、横折钩、横、横、撇、横、横、竖、横",
-    "word": "胜利、名胜"
+    "word": "胜利（shèng lì）、名胜（míng shèng）"
   },
   {
     "grade": "二年级上",
@@ -7181,11 +7181,11 @@
     "type": "写字",
     "hanzi": "岛",
     "pinyin": "dǎo",
-    "radical": "山",
+    "radical": "山（山字旁）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "撇、横折钩、点、竖折折钩、竖、竖折、竖",
-    "word": "小岛、海岛"
+    "word": "小岛（xiǎo dǎo）、海岛（hǎi dǎo）"
   },
   {
     "grade": "二年级上",
@@ -7193,11 +7193,11 @@
     "type": "写字",
     "hanzi": "弯",
     "pinyin": "wān",
-    "radical": "弓",
+    "radical": "弓（弓字旁）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "点、横、竖、竖、撇、点、横折、横、竖折折钩",
-    "word": "弯曲、弯腰"
+    "word": "弯曲（wān qū）、弯腰（wān yāo）"
   },
   {
     "grade": "二年级上",
@@ -7205,11 +7205,11 @@
     "type": "写字",
     "hanzi": "现",
     "pinyin": "xiàn",
-    "radical": "王",
+    "radical": "王（王字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、横、竖、提、竖、横折、撇、竖弯钩",
-    "word": "现在、发现"
+    "word": "现在（xiàn zài）、发现（fā xiàn）"
   },
   {
     "grade": "二年级上",
@@ -7217,11 +7217,11 @@
     "type": "写字",
     "hanzi": "就",
     "pinyin": "jiù",
-    "radical": "尢",
+    "radical": "尢（尤字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "点、横、竖、横折、横、竖钩、撇、点、横、撇、竖弯钩、点",
-    "word": "就是、就业"
+    "word": "就是（jiù shì）、就业（jiù yè）"
   },
   {
     "grade": "二年级上",
@@ -7229,11 +7229,11 @@
     "type": "写字",
     "hanzi": "外",
     "pinyin": "wài",
-    "radical": "夕",
+    "radical": "夕（夕字旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇、横撇、点、竖、点",
-    "word": "外面、外国"
+    "word": "外面（wài miàn）、外国（wài guó）"
   },
   {
     "grade": "二年级上",
@@ -7241,11 +7241,11 @@
     "type": "写字",
     "hanzi": "份",
     "pinyin": "fèn",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、捺、横折钩、撇",
-    "word": "一份、份额"
+    "word": "一份（yī fèn）、份额（fèn é）"
   },
   {
     "grade": "二年级上",
@@ -7253,11 +7253,11 @@
     "type": "写字",
     "hanzi": "枝",
     "pinyin": "zhī",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、竖、横撇、捺",
-    "word": "树枝、枝叶"
+    "word": "树枝（shù zhī）、枝叶（zhī yè）"
   },
   {
     "grade": "二年级上",
@@ -7265,11 +7265,11 @@
     "type": "写字",
     "hanzi": "客",
     "pinyin": "kè",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、撇、横撇、捺、竖、横折、横",
-    "word": "客人、客气"
+    "word": "客人（kè rén）、客气（kè qi）"
   },
   {
     "grade": "二年级上",
@@ -7277,11 +7277,11 @@
     "type": "写字",
     "hanzi": "城",
     "pinyin": "chéng",
-    "radical": "土",
+    "radical": "土（土字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "横、竖、提、横、撇、横折钩、斜钩、撇、点",
-    "word": "城市、长城"
+    "word": "城市（chéng shì）、长城（cháng chéng）"
   },
   {
     "grade": "二年级上",
@@ -7289,11 +7289,11 @@
     "type": "写字",
     "hanzi": "市",
     "pinyin": "shì",
-    "radical": "巾",
+    "radical": "巾（巾字旁）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "点、横、竖、横折钩、竖",
-    "word": "市区、市民"
+    "word": "市区（shì qū）、市民（shì mín）"
   },
   {
     "grade": "二年级上",
@@ -7301,11 +7301,11 @@
     "type": "写字",
     "hanzi": "孔",
     "pinyin": "kǒng",
-    "radical": "子",
+    "radical": "子（子字旁）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "横撇、竖钩、提、竖弯钩",
-    "word": "孔雀、小孔"
+    "word": "孔雀（kǒng què）、小孔（xiǎo kǒng）"
   },
   {
     "grade": "二年级上",
@@ -7313,11 +7313,11 @@
     "type": "写字",
     "hanzi": "钉",
     "pinyin": "dīng",
-    "radical": "钅",
+    "radical": "钅（金字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、横、横、横、竖提、横、竖钩",
-    "word": "钉子、铁钉"
+    "word": "钉子（dīng zi）、铁钉（tiě dīng）"
   },
   {
     "grade": "二年级上",
@@ -7325,11 +7325,11 @@
     "type": "写字",
     "hanzi": "味",
     "pinyin": "wèi",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、横、竖、撇、捺",
-    "word": "味道、香味"
+    "word": "味道（wèi dào）、香味（xiāng wèi）"
   },
   {
     "grade": "二年级上",
@@ -7337,11 +7337,11 @@
     "type": "写字",
     "hanzi": "号",
     "pinyin": "hào",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、横、竖折折钩",
-    "word": "号码、口号"
+    "word": "号码（hào mǎ）、口号（kǒu hào）"
   },
   {
     "grade": "二年级上",
@@ -7349,11 +7349,11 @@
     "type": "写字",
     "hanzi": "丰",
     "pinyin": "fēng",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "横、横、横、竖",
-    "word": "丰收、丰富"
+    "word": "丰收（fēng shōu）、丰富（fēng fù）"
   },
   {
     "grade": "二年级上",
@@ -7361,11 +7361,11 @@
     "type": "写字",
     "hanzi": "观",
     "pinyin": "guān",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横撇、点、竖、横折、撇、竖弯钩",
-    "word": "观看、观察"
+    "word": "观看（guān kàn）、观察（guān chá）"
   },
   {
     "grade": "二年级上",
@@ -7373,11 +7373,11 @@
     "type": "写字",
     "hanzi": "呀",
     "pinyin": "ya",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、撇折、竖钩、撇",
-    "word": "好呀、哎呀"
+    "word": "好呀（hǎo ya）、哎呀（āi yā）"
   },
   {
     "grade": "二年级上",
@@ -7385,11 +7385,11 @@
     "type": "写字",
     "hanzi": "观",
     "pinyin": "guān",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横撇、点、竖、横折、撇、竖弯钩",
-    "word": "观看、观众"
+    "word": "观看（guān kàn）、观众（guān zhòng）"
   },
   {
     "grade": "二年级上",
@@ -7397,11 +7397,11 @@
     "type": "写字",
     "hanzi": "呀",
     "pinyin": "ya",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横、撇折、竖钩、撇",
-    "word": "好呀、哎呀"
+    "word": "好呀（hǎo ya）、哎呀（āi yā）"
   },
   {
     "grade": "二年级上",
@@ -7409,11 +7409,11 @@
     "type": "写字",
     "hanzi": "答",
     "pinyin": "dá",
-    "radical": "竹",
+    "radical": "竹（竹字头）",
     "strokes": 12,
     "structure": "上下",
     "strokeOrder": "撇、横、点、撇、横、点、撇、捺、横、竖、横折、横",
-    "word": "回答、答案"
+    "word": "回答（huí dá）、答案（dá àn）"
   },
   {
     "grade": "二年级上",
@@ -7421,11 +7421,11 @@
     "type": "写字",
     "hanzi": "话",
     "pinyin": "huà",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、横、竖、竖、横折、横",
-    "word": "说话、话语"
+    "word": "说话（shuō huà）、话语（huà yǔ）"
   },
   {
     "grade": "二年级上",
@@ -7433,11 +7433,11 @@
     "type": "写字",
     "hanzi": "抬",
     "pinyin": "tái",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇折、点、竖、横折、横",
-    "word": "抬头、抬高"
+    "word": "抬头（tái tóu）、抬高（tái gāo）"
   },
   {
     "grade": "二年级上",
@@ -7445,11 +7445,11 @@
     "type": "写字",
     "hanzi": "能",
     "pinyin": "néng",
-    "radical": "厶",
+    "radical": "厶（私字头）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇折、点、竖、横折钩、横、横、撇、竖弯钩、撇、竖弯钩",
-    "word": "能力、能够"
+    "word": "能力（néng lì）、能够（néng gòu）"
   },
   {
     "grade": "二年级上",
@@ -7457,26 +7457,23 @@
     "type": "写字",
     "hanzi": "信",
     "pinyin": "xìn",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、竖、点、横、横、横、竖、横折、横",
-    "word": "相信、信心"
+    "word": "相信（xiāng xìn）、信心（xìn xīn）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "五单元12课",
     "type": "写字",
     "hanzi": "阵",
     "pinyin": "zhèn",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横折折折钩、竖、横、撇折、横、竖",
-    "word": "一阵、阵地"
+    "word": "一阵（yī zhèn）、阵地（zhèn dì）"
   },
   {
     "grade": "二年级上",
@@ -7484,11 +7481,11 @@
     "type": "写字",
     "hanzi": "做",
     "pinyin": "zuò",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、竖、竖、横折、横、撇、横、撇、捺",
-    "word": "做事、做工"
+    "word": "做事（zuò shì）、做工（zuò gōng）"
   },
   {
     "grade": "二年级上",
@@ -7496,11 +7493,11 @@
     "type": "写字",
     "hanzi": "冻",
     "pinyin": "dòng",
-    "radical": "冫",
+    "radical": "冫（两点水）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、提、横、竖、横折、竖、撇、捺",
-    "word": "冷冻、冰冻"
+    "word": "冷冻（lěng dòng）、冰冻（bīng dòng）"
   },
   {
     "grade": "二年级上",
@@ -7508,11 +7505,11 @@
     "type": "写字",
     "hanzi": "第",
     "pinyin": "dì",
-    "radical": "竹",
+    "radical": "竹（竹字头）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "撇、横、点、撇、横、点、横折、横、竖折折钩、竖、撇",
-    "word": "第一、门第"
+    "word": "第一（dì yī）、门第（mén dì）"
   },
   {
     "grade": "二年级上",
@@ -7520,11 +7517,11 @@
     "type": "写字",
     "hanzi": "像",
     "pinyin": "xiàng",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、横撇、竖、横折、横、撇、弯钩、撇、撇、撇、捺",
-    "word": "好像、画像"
+    "word": "好像（hǎo xiàng）、画像（huà xiàng）"
   },
   {
     "grade": "二年级上",
@@ -7532,11 +7529,11 @@
     "type": "写字",
     "hanzi": "冷",
     "pinyin": "lěng",
-    "radical": "冫",
+    "radical": "冫（两点水）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、提、撇、捺、点、横撇、点",
-    "word": "寒冷、冷静"
+    "word": "寒冷（hán lěng）、冷静（lěng jìng）"
   },
   {
     "grade": "二年级上",
@@ -7544,11 +7541,11 @@
     "type": "写字",
     "hanzi": "冰",
     "pinyin": "bīng",
-    "radical": "冫",
+    "radical": "冫（两点水）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、提、竖钩、横撇、撇、捺",
-    "word": "冰雪、冰块"
+    "word": "冰雪（bīng xuě）、冰块（bīng kuài）"
   },
   {
     "grade": "二年级上",
@@ -7556,26 +7553,23 @@
     "type": "写字",
     "hanzi": "亮",
     "pinyin": "liàng",
-    "radical": "亠",
+    "radical": "亠（京字头）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "点、横、竖、横折、横、点、横钩、撇、横弯钩",
-    "word": "明亮、光亮"
+    "word": "明亮（míng liàng）、光亮（guāng liàng）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "五单元13课",
     "type": "写字",
     "hanzi": "种",
     "pinyin": "zhòng",
-    "radical": "禾",
+    "radical": "禾（禾木旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、捺、竖、横折、横、竖",
-    "word": "种地、种子"
+    "word": "种地（zhòng dì）、种子（zhǒng zi）"
   },
   {
     "grade": "二年级上",
@@ -7583,11 +7577,11 @@
     "type": "写字",
     "hanzi": "棵",
     "pinyin": "kē",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、竖、横折、横、横、横、竖、撇、捺",
-    "word": "一棵、棵数"
+    "word": "一棵（yī kē）、棵数（kē shù）"
   },
   {
     "grade": "二年级上",
@@ -7595,11 +7589,11 @@
     "type": "写字",
     "hanzi": "以",
     "pinyin": "yǐ",
-    "radical": "人",
+    "radical": "人（人字头）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "竖提、点、撇、点",
-    "word": "以后、以为"
+    "word": "以后（yǐ hòu）、以为（yǐ wéi）"
   },
   {
     "grade": "二年级上",
@@ -7607,11 +7601,11 @@
     "type": "写字",
     "hanzi": "次",
     "pinyin": "cì",
-    "radical": "冫",
+    "radical": "冫（两点水）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、提、撇、横钩、撇、捺",
-    "word": "次数、一次"
+    "word": "次数（cì shù）、一次（yī cì）"
   },
   {
     "grade": "二年级上",
@@ -7619,11 +7613,11 @@
     "type": "写字",
     "hanzi": "想",
     "pinyin": "xiǎng",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 13,
     "structure": "上下",
     "strokeOrder": "横、竖、撇、点、竖、横折、横、横、横、点、斜钩、点、点",
-    "word": "想念、想法"
+    "word": "想念（xiǎng niàn）、想法（xiǎng fǎ）"
   },
   {
     "grade": "二年级上",
@@ -7631,11 +7625,11 @@
     "type": "写字",
     "hanzi": "邻",
     "pinyin": "lín",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、捺、点、横撇、点、横折折折钩、竖",
-    "word": "邻居、邻近"
+    "word": "邻居（lín jū）、邻近（lín jìn）"
   },
   {
     "grade": "二年级上",
@@ -7643,11 +7637,11 @@
     "type": "写字",
     "hanzi": "居",
     "pinyin": "jū",
-    "radical": "尸",
+    "radical": "尸（尸字头）",
     "strokes": 8,
     "structure": "半包围",
     "strokeOrder": "横折、横、撇、横、竖、竖、横折、横",
-    "word": "居住、居民"
+    "word": "居住（jū zhù）、居民（jū mín）"
   },
   {
     "grade": "二年级上",
@@ -7655,11 +7649,11 @@
     "type": "写字",
     "hanzi": "吧",
     "pinyin": "ba",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横折、竖、横、竖弯钩",
-    "word": "好吧、走吧"
+    "word": "好吧（hǎo ba）、走吧（zǒu ba）"
   },
   {
     "grade": "二年级上",
@@ -7667,11 +7661,11 @@
     "type": "写字",
     "hanzi": "奇",
     "pinyin": "qí",
-    "radical": "大",
+    "radical": "大（大字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "横、撇、点、横、竖、横折、横、竖钩",
-    "word": "奇怪、奇妙"
+    "word": "奇怪（qí guài）、奇妙（qí miào）"
   },
   {
     "grade": "二年级上",
@@ -7679,26 +7673,23 @@
     "type": "写字",
     "hanzi": "怪",
     "pinyin": "guài",
-    "radical": "忄",
+    "radical": "忄（竖心旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、点、竖、横撇、捺、横、竖、横",
-    "word": "古怪、怪物"
+    "word": "古怪（gǔ guài）、怪物（guài wù）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "语文园地五",
     "type": "写字",
     "hanzi": "货",
     "pinyin": "huò",
-    "radical": "贝",
+    "radical": "贝（贝字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、竖、撇、横、竖、横折、撇、点",
-    "word": "货物、百货"
+    "word": "货物（huò wù）、百货（bǎi huò）"
   },
   {
     "grade": "二年级上",
@@ -7706,26 +7697,23 @@
     "type": "写字",
     "hanzi": "科",
     "pinyin": "kē",
-    "radical": "禾",
+    "radical": "禾（禾木旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、捺、点、点、横、竖",
-    "word": "科学、科目"
+    "word": "科学（kē xué）、科目（kē mù）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "六单元14课",
     "type": "写字",
     "hanzi": "楼",
     "pinyin": "lóu",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、点、撇、横、竖、撇、捺、撇点、撇、横",
-    "word": "楼房、高楼"
+    "word": "楼房（lóu fáng）、高楼（gāo lóu）"
   },
   {
     "grade": "二年级上",
@@ -7733,11 +7721,11 @@
     "type": "写字",
     "hanzi": "代",
     "pinyin": "dài",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇、竖、横、斜钩、点",
-    "word": "时代、代表"
+    "word": "时代（shí dài）、代表（dài biǎo）"
   },
   {
     "grade": "二年级上",
@@ -7745,11 +7733,11 @@
     "type": "写字",
     "hanzi": "穿",
     "pinyin": "chuān",
-    "radical": "穴",
+    "radical": "穴（穴宝盖）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、撇、点、横、撇、竖弯钩、撇",
-    "word": "穿衣、穿过"
+    "word": "穿衣（chuān yī）、穿过（chuān guò）"
   },
   {
     "grade": "二年级上",
@@ -7757,11 +7745,11 @@
     "type": "写字",
     "hanzi": "视",
     "pinyin": "shì",
-    "radical": "见",
+    "radical": "见（见字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、横钩、竖、撇、竖、横折、撇、竖弯钩",
-    "word": "电视、视力"
+    "word": "电视（diàn shì）、视力（shì lì）"
   },
   {
     "grade": "二年级上",
@@ -7769,11 +7757,11 @@
     "type": "写字",
     "hanzi": "利",
     "pinyin": "lì",
-    "radical": "刂",
+    "radical": "刂（立刀旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、撇、点、竖、竖钩",
-    "word": "利用、有利"
+    "word": "利用（lì yòng）、有利（yǒu lì）"
   },
   {
     "grade": "二年级上",
@@ -7781,26 +7769,23 @@
     "type": "写字",
     "hanzi": "路",
     "pinyin": "lù",
-    "radical": "足",
+    "radical": "足（足字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、竖、提、撇、横撇、捺、竖、横折、横",
-    "word": "道路、马路"
+    "word": "道路（dào lù）、马路（mǎ lù）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "六单元15课",
     "type": "写字",
     "hanzi": "同",
     "pinyin": "tóng",
-    "radical": "冂",
+    "radical": "冂（同字框）",
     "strokes": 6,
     "structure": "半包围",
     "strokeOrder": "竖、横折钩、横、竖、横折、横",
-    "word": "同学、相同"
+    "word": "同学（tóng xué）、相同（xiāng tóng）"
   },
   {
     "grade": "二年级上",
@@ -7808,11 +7793,11 @@
     "type": "写字",
     "hanzi": "志",
     "pinyin": "zhì",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、横、点、斜钩、点、点",
-    "word": "同志、志向"
+    "word": "同志（tóng zhì）、志向（zhì xiàng）"
   },
   {
     "grade": "二年级上",
@@ -7820,11 +7805,11 @@
     "type": "写字",
     "hanzi": "军",
     "pinyin": "jūn",
-    "radical": "冖",
+    "radical": "冖（秃宝盖）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "点、横钩、横、撇折、横、竖",
-    "word": "军队、军人"
+    "word": "军队（jūn duì）、军人（jūn rén）"
   },
   {
     "grade": "二年级上",
@@ -7832,11 +7817,11 @@
     "type": "写字",
     "hanzi": "敌",
     "pinyin": "dí",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横、竖、竖、横折、横、撇、横、撇、捺",
-    "word": "敌人、敌对"
+    "word": "敌人（dí rén）、敌对（dí duì）"
   },
   {
     "grade": "二年级上",
@@ -7844,11 +7829,11 @@
     "type": "写字",
     "hanzi": "常",
     "pinyin": "cháng",
-    "radical": "巾",
+    "radical": "巾（巾字旁）",
     "strokes": 11,
     "structure": "上下",
     "strokeOrder": "竖、点、撇、点、横钩、竖、横折、横、竖、横折钩、竖",
-    "word": "经常、平常"
+    "word": "经常（jīng cháng）、平常（píng cháng）"
   },
   {
     "grade": "二年级上",
@@ -7856,11 +7841,11 @@
     "type": "写字",
     "hanzi": "非",
     "pinyin": "fēi",
-    "radical": "非",
+    "radical": "非（非字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "竖、横、横、横、竖、横、横、横",
-    "word": "非常、是非"
+    "word": "非常（fēi cháng）、是非（shì fēi）"
   },
   {
     "grade": "二年级上",
@@ -7868,11 +7853,11 @@
     "type": "写字",
     "hanzi": "每",
     "pinyin": "měi",
-    "radical": "母",
+    "radical": "母（母字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "撇、横、竖、横、横折钩、点、横",
-    "word": "每天、每个"
+    "word": "每天（měi tiān）、每个（měi gè）"
   },
   {
     "grade": "二年级上",
@@ -7880,11 +7865,11 @@
     "type": "写字",
     "hanzi": "战",
     "pinyin": "zhàn",
-    "radical": "戈",
+    "radical": "戈（戈字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "竖、横、竖、横折、横、横、斜钩、撇、点",
-    "word": "战士、战斗"
+    "word": "战士（zhàn shì）、战斗（zhàn dòu）"
   },
   {
     "grade": "二年级上",
@@ -7892,11 +7877,11 @@
     "type": "写字",
     "hanzi": "士",
     "pinyin": "shì",
-    "radical": "士",
+    "radical": "士（士字旁）",
     "strokes": 3,
     "structure": "独体",
     "strokeOrder": "横、竖、横",
-    "word": "士兵、士气"
+    "word": "士兵（shì bīng）、士气（shì qì）"
   },
   {
     "grade": "二年级上",
@@ -7904,26 +7889,23 @@
     "type": "写字",
     "hanzi": "戴",
     "pinyin": "dài",
-    "radical": "戈",
+    "radical": "戈（戈字旁）",
     "strokes": 17,
     "structure": "半包围",
     "strokeOrder": "横、竖、横、竖、横折、横、竖、横、横、竖、竖、横、撇、点、斜钩、撇、点",
-    "word": "爱戴、穿戴"
+    "word": "爱戴（ài dài）、穿戴（chuān dài）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "六单元16课",
     "type": "写字",
     "hanzi": "难",
     "pinyin": "nán",
-    "radical": "隹",
+    "radical": "隹（隹字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "横撇、点、撇、竖、点、横、横、横、竖、横",
-    "word": "困难、难过"
+    "word": "困难（kùn nan）、难过（nán guò）"
   },
   {
     "grade": "二年级上",
@@ -7931,11 +7913,11 @@
     "type": "写字",
     "hanzi": "忘",
     "pinyin": "wàng",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "点、横、竖提、点、斜钩、点、点",
-    "word": "忘记、难忘"
+    "word": "忘记（wàng jì）、难忘（nán wàng）"
   },
   {
     "grade": "二年级上",
@@ -7943,11 +7925,11 @@
     "type": "写字",
     "hanzi": "民",
     "pinyin": "mín",
-    "radical": "乙",
+    "radical": "乙（横折弯钩）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "横折、横、竖提、横、斜钩",
-    "word": "人民、农民"
+    "word": "人民（rén mín）、农民（nóng mín）"
   },
   {
     "grade": "二年级上",
@@ -7955,11 +7937,11 @@
     "type": "写字",
     "hanzi": "因",
     "pinyin": "yīn",
-    "radical": "囗",
+    "radical": "囗（国字框）",
     "strokes": 6,
     "structure": "全包围",
     "strokeOrder": "竖、横折、横、撇、点、横",
-    "word": "因为、原因"
+    "word": "因为（yīn wèi）、原因（yuán yīn）"
   },
   {
     "grade": "二年级上",
@@ -7967,11 +7949,11 @@
     "type": "写字",
     "hanzi": "理",
     "pinyin": "lǐ",
-    "radical": "王",
+    "radical": "王（王字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、横、竖、提、竖、横折、横、横、竖、横、横",
-    "word": "道理、理解"
+    "word": "道理（dào lǐ）、理解（lǐ jiě）"
   },
   {
     "grade": "二年级上",
@@ -7979,11 +7961,11 @@
     "type": "写字",
     "hanzi": "串",
     "pinyin": "chuàn",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 7,
     "structure": "独体",
     "strokeOrder": "竖、横折、横、竖、横折、横、竖",
-    "word": "一串、串联"
+    "word": "一串（yī chuàn）、串联（chuàn lián）"
   },
   {
     "grade": "二年级上",
@@ -7991,11 +7973,11 @@
     "type": "写字",
     "hanzi": "裤",
     "pinyin": "kù",
-    "radical": "衤",
+    "radical": "衤（衣字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "点、横钩、竖、撇、点、点、横、撇、横、撇、横、竖",
-    "word": "裤子、长裤"
+    "word": "裤子（kù zi）、长裤（cháng kù）"
   },
   {
     "grade": "二年级上",
@@ -8003,26 +7985,23 @@
     "type": "写字",
     "hanzi": "令",
     "pinyin": "lìng",
-    "radical": "人",
+    "radical": "人（人字头）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "撇、捺、点、横钩、点",
-    "word": "命令、口令"
+    "word": "命令（mìng lìng）、口令（kǒu lìng）"
   },
-
-
-
   {
     "grade": "二年级上",
     "lesson": "六单元17课",
     "type": "写字",
     "hanzi": "反",
     "pinyin": "fǎn",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 4,
     "structure": "独体",
     "strokeOrder": "撇、撇、横撇、捺",
-    "word": "相反、反对"
+    "word": "相反（xiāng fǎn）、反对（fǎn duì）"
   },
   {
     "grade": "二年级上",
@@ -8030,11 +8009,11 @@
     "type": "写字",
     "hanzi": "村",
     "pinyin": "cūn",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、竖钩、点",
-    "word": "村庄、农村"
+    "word": "村庄（cūn zhuāng）、农村（nóng cūn）"
   },
   {
     "grade": "二年级上",
@@ -8042,11 +8021,11 @@
     "type": "写字",
     "hanzi": "由",
     "pinyin": "yóu",
-    "radical": "丨",
+    "radical": "丨（竖）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "竖、横折、横、竖、横",
-    "word": "由于、自由"
+    "word": "由于（yóu yú）、自由（zì yóu）"
   },
   {
     "grade": "二年级上",
@@ -8054,11 +8033,11 @@
     "type": "写字",
     "hanzi": "于",
     "pinyin": "yú",
-    "radical": "二",
+    "radical": "二（二字旁）",
     "strokes": 3,
     "structure": "独体",
     "strokeOrder": "横、横、竖钩",
-    "word": "于是、对于"
+    "word": "于是（yú shì）、对于（duì yú）"
   },
   {
     "grade": "二年级上",
@@ -8066,11 +8045,11 @@
     "type": "写字",
     "hanzi": "员",
     "pinyin": "yuán",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、竖、横折、撇、点",
-    "word": "队员、员工"
+    "word": "队员（duì yuán）、员工（yuán gōng）"
   },
   {
     "grade": "二年级上",
@@ -8078,11 +8057,11 @@
     "type": "写字",
     "hanzi": "被",
     "pinyin": "bèi",
-    "radical": "衤",
+    "radical": "衤（衣字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、横钩、竖、撇、点、横撇、撇、竖、横撇、捺",
-    "word": "被子、被动"
+    "word": "被子（bèi zi）、被动（bèi dòng）"
   },
   {
     "grade": "二年级上",
@@ -8090,11 +8069,11 @@
     "type": "写字",
     "hanzi": "声",
     "pinyin": "shēng",
-    "radical": "士",
+    "radical": "士（士字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "横、竖、横、横折、竖、横、撇",
-    "word": "声音、笑声"
+    "word": "声音（shēng yīn）、笑声（xiào shēng）"
   },
   {
     "grade": "二年级上",
@@ -8102,11 +8081,11 @@
     "type": "写字",
     "hanzi": "岁",
     "pinyin": "suì",
-    "radical": "山",
+    "radical": "山（山字旁）",
     "strokes": 6,
     "structure": "上下",
     "strokeOrder": "竖、竖折、竖、撇、横撇、点",
-    "word": "岁月、几岁"
+    "word": "岁月（suì yuè）、几岁（jǐ suì）"
   },
   {
     "grade": "二年级上",
@@ -8114,11 +8093,11 @@
     "type": "写字",
     "hanzi": "消",
     "pinyin": "xiāo",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、点、提、竖、点、撇、竖、横折、横、横",
-    "word": "消失、消灭"
+    "word": "消失（xiāo shī）、消灭（xiāo miè）"
   },
   {
     "grade": "二年级上",
@@ -8126,11 +8105,11 @@
     "type": "写字",
     "hanzi": "息",
     "pinyin": "xī",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "撇、竖、横折、横、横、横、点、斜钩、点、点",
-    "word": "休息、信息"
+    "word": "休息（xiū xi）、信息（xìn xī）"
   },
   {
     "grade": "二年级上",
@@ -8138,11 +8117,11 @@
     "type": "写字",
     "hanzi": "抄",
     "pinyin": "chāo",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、竖、撇、点、撇",
-    "word": "抄写、抄书"
+    "word": "抄写（chāo xiě）、抄书（chāo shū）"
   },
   {
     "grade": "二年级上",
@@ -8150,11 +8129,11 @@
     "type": "写字",
     "hanzi": "炒",
     "pinyin": "chǎo",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、撇、撇、捺、竖、撇、点、撇",
-    "word": "炒菜、炒饭"
+    "word": "炒菜（chǎo cài）、炒饭（chǎo fàn）"
   },
   {
     "grade": "二年级上",
@@ -8162,11 +8141,11 @@
     "type": "写字",
     "hanzi": "绝",
     "pinyin": "jué",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、撇、横撇、横折、竖、横、竖弯钩",
-    "word": "绝对、绝望"
+    "word": "绝对（jué duì）、绝望（jué wàng）"
   },
   {
     "grade": "二年级上",
@@ -8174,11 +8153,11 @@
     "type": "写字",
     "hanzi": "灭",
     "pinyin": "miè",
-    "radical": "火",
+    "radical": "火（火字旁）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "横、点、撇、撇、捺",
-    "word": "消灭、灭火"
+    "word": "消灭（xiāo miè）、灭火（miè huǒ）"
   },
   {
     "grade": "二年级上",
@@ -8186,11 +8165,11 @@
     "type": "写字",
     "hanzi": "舟",
     "pinyin": "zhōu",
-    "radical": "舟",
+    "radical": "舟（舟字旁）",
     "strokes": 6,
     "structure": "独体",
     "strokeOrder": "撇、撇、横折钩、点、横、点",
-    "word": "小舟、龙舟"
+    "word": "小舟（xiǎo zhōu）、龙舟（lóng zhōu）"
   },
   {
     "grade": "二年级上",
@@ -8198,11 +8177,11 @@
     "type": "写字",
     "hanzi": "独",
     "pinyin": "dú",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、竖、横折、横、竖、横、点",
-    "word": "独自、独立"
+    "word": "独自（dú zì）、独立（dú lì）"
   },
   {
     "grade": "二年级上",
@@ -8210,11 +8189,11 @@
     "type": "写字",
     "hanzi": "阴",
     "pinyin": "yīn",
-    "radical": "阝",
+    "radical": "阝（左耳旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横折折折钩、竖、撇、横折钩、横、横",
-    "word": "阴天、阴暗"
+    "word": "阴天（yīn tiān）、阴暗（yīn àn）"
   },
   {
     "grade": "二年级上",
@@ -8222,11 +8201,11 @@
     "type": "写字",
     "hanzi": "似",
     "pinyin": "sì",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、竖提、撇、点",
-    "word": "似乎、相似"
+    "word": "似乎（sì hū）、相似（xiāng sì）"
   },
   {
     "grade": "二年级上",
@@ -8234,11 +8213,11 @@
     "type": "写字",
     "hanzi": "野",
     "pinyin": "yě",
-    "radical": "里",
+    "radical": "里（里字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "竖、横、提、竖、横折、横、横、竖、横、撇、捺",
-    "word": "野外、田野"
+    "word": "野外（yě wài）、田野（tián yě）"
   },
   {
     "grade": "二年级上",
@@ -8246,24 +8225,23 @@
     "type": "写字",
     "hanzi": "低",
     "pinyin": "dī",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、撇、竖提、横、斜钩、点",
-    "word": "低头、高低"
+    "word": "低头（dī tóu）、高低（gāo dī）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "七单元19课",
     "type": "写字",
     "hanzi": "论",
     "pinyin": "lùn",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、捺、撇、竖弯钩",
-    "word": "议论、论文"
+    "word": "议论（yì lùn）、论文（lùn wén）"
   },
   {
     "grade": "二年级上",
@@ -8271,11 +8249,11 @@
     "type": "写字",
     "hanzi": "船",
     "pinyin": "chuán",
-    "radical": "舟",
+    "radical": "舟（舟字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、撇、横折钩、点、横、点、撇、横折弯、撇、横折钩、竖",
-    "word": "小船、船只"
+    "word": "小船（xiǎo chuán）、船只（chuán zhī）"
   },
   {
     "grade": "二年级上",
@@ -8283,11 +8261,11 @@
     "type": "写字",
     "hanzi": "猫",
     "pinyin": "māo",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、横、竖、竖、竖、横折、横、竖、横",
-    "word": "小猫、猫咪"
+    "word": "小猫（xiǎo māo）、猫咪（māo mi）"
   },
   {
     "grade": "二年级上",
@@ -8295,11 +8273,11 @@
     "type": "写字",
     "hanzi": "切",
     "pinyin": "qiē",
-    "radical": "刀",
+    "radical": "刀（刀字旁）",
     "strokes": 4,
     "structure": "左右",
     "strokeOrder": "横、竖提、横折钩、撇",
-    "word": "切开、一切"
+    "word": "切开（qiē kāi）、一切（yī qiè）"
   },
   {
     "grade": "二年级上",
@@ -8307,11 +8285,11 @@
     "type": "写字",
     "hanzi": "该",
     "pinyin": "gāi",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "点、横折提、点、横、撇折、撇、撇、点",
-    "word": "应该、活该"
+    "word": "应该（yīng gāi）、活该（huó gāi）"
   },
   {
     "grade": "二年级上",
@@ -8319,11 +8297,11 @@
     "type": "写字",
     "hanzi": "散",
     "pinyin": "sàn",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖、竖、横、竖、横折、横、撇、横、撇、捺、撇",
-    "word": "散步、分散"
+    "word": "散步（sàn bù）、分散（fēn sàn）"
   },
   {
     "grade": "二年级上",
@@ -8331,11 +8309,11 @@
     "type": "写字",
     "hanzi": "步",
     "pinyin": "bù",
-    "radical": "止",
+    "radical": "止（止字旁）",
     "strokes": 7,
     "structure": "上下",
     "strokeOrder": "竖、横、竖、横、竖、撇、撇",
-    "word": "步子、跑步"
+    "word": "步子（bù zi）、跑步（pǎo bù）"
   },
   {
     "grade": "二年级上",
@@ -8343,24 +8321,23 @@
     "type": "写字",
     "hanzi": "失",
     "pinyin": "shī",
-    "radical": "大",
+    "radical": "大（大字旁）",
     "strokes": 5,
     "structure": "独体",
     "strokeOrder": "撇、横、横、撇、捺",
-    "word": "失去、丢失"
+    "word": "失去（shī qù）、丢失（diū shī）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "七单元20课",
     "type": "写字",
     "hanzi": "要",
     "pinyin": "yào",
-    "radical": "覀",
+    "radical": "覀（西字头）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "横、竖、横折、竖、竖、横、撇点、撇、横",
-    "word": "要求、需要"
+    "word": "要求（yāo qiú）、需要（xū yào）"
   },
   {
     "grade": "二年级上",
@@ -8368,11 +8345,11 @@
     "type": "写字",
     "hanzi": "伙",
     "pinyin": "huǒ",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "撇、竖、点、撇、撇、捺",
-    "word": "伙伴、大伙"
+    "word": "伙伴（huǒ bàn）、大伙（dà huǒ）"
   },
   {
     "grade": "二年级上",
@@ -8380,11 +8357,11 @@
     "type": "写字",
     "hanzi": "伴",
     "pinyin": "bàn",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、点、撇、横、横、竖",
-    "word": "同伴、陪伴"
+    "word": "同伴（tóng bàn）、陪伴（péi bàn）"
   },
   {
     "grade": "二年级上",
@@ -8392,11 +8369,11 @@
     "type": "写字",
     "hanzi": "歌",
     "pinyin": "gē",
-    "radical": "欠",
+    "radical": "欠（欠字旁）",
     "strokes": 14,
     "structure": "左右",
     "strokeOrder": "横、竖、横、竖、横折、横、竖、横、竖、横折、撇、横钩、撇、捺",
-    "word": "歌曲、唱歌"
+    "word": "歌曲（gē qǔ）、唱歌（chàng gē）"
   },
   {
     "grade": "二年级上",
@@ -8404,11 +8381,11 @@
     "type": "写字",
     "hanzi": "得",
     "pinyin": "de",
-    "radical": "彳",
+    "radical": "彳（双人旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "撇、撇、竖、竖、横折、横、横、横、竖钩、点、点",
-    "word": "得到、觉得"
+    "word": "得到（dé dào）、觉得（jué de）"
   },
   {
     "grade": "二年级上",
@@ -8416,11 +8393,11 @@
     "type": "写字",
     "hanzi": "闭",
     "pinyin": "bì",
-    "radical": "门",
+    "radical": "门（门字框）",
     "strokes": 6,
     "structure": "半包围",
     "strokeOrder": "点、竖、横折钩、横、竖钩、撇",
-    "word": "关闭、闭眼"
+    "word": "关闭（guān bì）、闭眼（bì yǎn）"
   },
   {
     "grade": "二年级上",
@@ -8428,11 +8405,11 @@
     "type": "写字",
     "hanzi": "忙",
     "pinyin": "máng",
-    "radical": "忄",
+    "radical": "忄（竖心旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "点、点、竖、点、横、竖折",
-    "word": "忙碌、急忙"
+    "word": "忙碌（máng lù）、急忙（jí máng）"
   },
   {
     "grade": "二年级上",
@@ -8440,11 +8417,11 @@
     "type": "写字",
     "hanzi": "谁",
     "pinyin": "shuí",
-    "radical": "讠",
+    "radical": "讠（言字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "点、横折提、撇、竖、点、横、横、横、竖、横",
-    "word": "谁的、谁人"
+    "word": "谁的（shuí de）、谁人（shuí rén）"
   },
   {
     "grade": "二年级上",
@@ -8452,24 +8429,23 @@
     "type": "写字",
     "hanzi": "汽",
     "pinyin": "qì",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "点、点、提、撇、横、横、横弯钩",
-    "word": "汽车、汽水"
+    "word": "汽车（qì chē）、汽水（qì shuǐ）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "语文园地七",
     "type": "写字",
     "hanzi": "饥",
     "pinyin": "jī",
-    "radical": "饣",
+    "radical": "饣（食字旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇、横钩、竖提、撇、横折弯钩",
-    "word": "饥饿、饥渴"
+    "word": "饥饿（jī è）、饥渴（jī kě）"
   },
   {
     "grade": "二年级上",
@@ -8477,11 +8453,11 @@
     "type": "写字",
     "hanzi": "饿",
     "pinyin": "è",
-    "radical": "饣",
+    "radical": "饣（食字旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、横钩、竖提、撇、横、竖钩、提、撇、横折弯钩、点",
-    "word": "饿了、挨饿"
+    "word": "饿了（è le）、挨饿（ái è）"
   },
   {
     "grade": "二年级上",
@@ -8489,11 +8465,11 @@
     "type": "写字",
     "hanzi": "宁",
     "pinyin": "níng",
-    "radical": "宀",
+    "radical": "宀（宝盖头）",
     "strokes": 5,
     "structure": "上下",
     "strokeOrder": "点、点、横钩、横、竖钩",
-    "word": "安宁、宁静"
+    "word": "安宁（ān níng）、宁静（níng jìng）"
   },
   {
     "grade": "二年级上",
@@ -8501,24 +8477,23 @@
     "type": "写字",
     "hanzi": "库",
     "pinyin": "kù",
-    "radical": "广",
+    "radical": "广（广字头）",
     "strokes": 7,
     "structure": "半包围",
     "strokeOrder": "点、横、撇、横、撇折、横、竖",
-    "word": "仓库、车库"
+    "word": "仓库（cāng kù）、车库（chē kù）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "八单元21课",
     "type": "写字",
     "hanzi": "拿",
     "pinyin": "ná",
-    "radical": "手",
+    "radical": "手（手字旁）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "撇、捺、横、竖、横折、横、撇、横、横、竖钩",
-    "word": "拿着、拿手"
+    "word": "拿着（ná zhe）、拿手（ná shǒu）"
   },
   {
     "grade": "二年级上",
@@ -8526,11 +8501,11 @@
     "type": "写字",
     "hanzi": "仔",
     "pinyin": "zǐ",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 5,
     "structure": "左右",
     "strokeOrder": "撇、竖、横撇、竖钩、横",
-    "word": "仔细、仔鸡"
+    "word": "仔细（zǐ xì）、仔鸡（zǐ jī）"
   },
   {
     "grade": "二年级上",
@@ -8538,11 +8513,11 @@
     "type": "写字",
     "hanzi": "极",
     "pinyin": "jí",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、撇、横折折撇、捺",
-    "word": "北极、极好"
+    "word": "北极（běi jí）、极好（jí hǎo）"
   },
   {
     "grade": "二年级上",
@@ -8550,11 +8525,11 @@
     "type": "写字",
     "hanzi": "送",
     "pinyin": "sòng",
-    "radical": "辶",
+    "radical": "辶（走之底）",
     "strokes": 9,
     "structure": "半包围",
     "strokeOrder": "点、撇、横、横、撇、点、点、横折折撇、捺",
-    "word": "送给、送别"
+    "word": "送给（sòng gěi）、送别（sòng bié）"
   },
   {
     "grade": "二年级上",
@@ -8562,11 +8537,11 @@
     "type": "写字",
     "hanzi": "椅",
     "pinyin": "yǐ",
-    "radical": "木",
+    "radical": "木（木字旁）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "横、竖、撇、点、横、撇、点、横、竖、横折、横、竖钩",
-    "word": "椅子、桌椅"
+    "word": "椅子（yǐ zi）、桌椅（zhuō yǐ）"
   },
   {
     "grade": "二年级上",
@@ -8574,11 +8549,11 @@
     "type": "写字",
     "hanzi": "怎",
     "pinyin": "zěn",
-    "radical": "心",
+    "radical": "心（心字底）",
     "strokes": 9,
     "structure": "上下",
     "strokeOrder": "撇、横、竖、横、横、点、斜钩、点、点",
-    "word": "怎么、怎样"
+    "word": "怎么（zěn me）、怎样（zěn yàng）"
   },
   {
     "grade": "二年级上",
@@ -8586,11 +8561,11 @@
     "type": "写字",
     "hanzi": "拉",
     "pinyin": "lā",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、横、点、撇、横",
-    "word": "拉手、拉开"
+    "word": "拉手（lā shǒu）、拉开（lā kāi）"
   },
   {
     "grade": "二年级上",
@@ -8598,11 +8573,11 @@
     "type": "写字",
     "hanzi": "收",
     "pinyin": "shōu",
-    "radical": "攵",
+    "radical": "攵（反文旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "竖提、撇、横、撇、捺、横",
-    "word": "收入、收到"
+    "word": "收入（shōu rù）、收到（shōu dào）"
   },
   {
     "grade": "二年级上",
@@ -8610,24 +8585,23 @@
     "type": "写字",
     "hanzi": "接",
     "pinyin": "jiē",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、点、横、点、撇、横、撇、捺、横",
-    "word": "接受、接力"
+    "word": "接受（jiē shòu）、接力（jiē lì）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "八单元22课",
     "type": "写字",
     "hanzi": "纸",
     "pinyin": "zhǐ",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、撇、竖提、横、斜钩",
-    "word": "纸张、纸巾"
+    "word": "纸张（zhǐ zhāng）、纸巾（zhǐ jīn）"
   },
   {
     "grade": "二年级上",
@@ -8635,11 +8609,11 @@
     "type": "写字",
     "hanzi": "抓",
     "pinyin": "zhuā",
-    "radical": "扌",
+    "radical": "扌（提手旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "横、竖钩、提、撇、撇、竖、捺",
-    "word": "抓住、抓紧"
+    "word": "抓住（zhuā zhù）、抓紧（zhuā jǐn）"
   },
   {
     "grade": "二年级上",
@@ -8647,11 +8621,11 @@
     "type": "写字",
     "hanzi": "线",
     "pinyin": "xiàn",
-    "radical": "纟",
+    "radical": "纟（绞丝旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "撇折、撇折、提、横、横、斜钩、撇、点",
-    "word": "线条、毛线"
+    "word": "线条（xiàn tiáo）、毛线（máo xiàn）"
   },
   {
     "grade": "二年级上",
@@ -8659,11 +8633,11 @@
     "type": "写字",
     "hanzi": "吵",
     "pinyin": "chǎo",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、撇、点、撇",
-    "word": "吵架、吵闹"
+    "word": "吵架（chǎo jià）、吵闹（chǎo nào）"
   },
   {
     "grade": "二年级上",
@@ -8671,11 +8645,11 @@
     "type": "写字",
     "hanzi": "但",
     "pinyin": "dàn",
-    "radical": "亻",
+    "radical": "亻（单人旁）",
     "strokes": 7,
     "structure": "左右",
     "strokeOrder": "撇、竖、竖、横折、横、横、横",
-    "word": "但是、不但"
+    "word": "但是（dàn shì）、不但（bù dàn）"
   },
   {
     "grade": "二年级上",
@@ -8683,11 +8657,11 @@
     "type": "写字",
     "hanzi": "受",
     "pinyin": "shòu",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 8,
     "structure": "上下",
     "strokeOrder": "撇、点、点、撇、点、横撇、横钩、捺",
-    "word": "接受、受伤"
+    "word": "接受（jiē shòu）、受伤（shòu shāng）"
   },
   {
     "grade": "二年级上",
@@ -8695,11 +8669,11 @@
     "type": "写字",
     "hanzi": "句",
     "pinyin": "jù",
-    "radical": "勹",
+    "radical": "勹（包字头）",
     "strokes": 5,
     "structure": "半包围",
     "strokeOrder": "撇、横折钩、竖、横折、横",
-    "word": "句子、句号"
+    "word": "句子（jù zi）、句号（jù hào）"
   },
   {
     "grade": "二年级上",
@@ -8707,24 +8681,23 @@
     "type": "写字",
     "hanzi": "哭",
     "pinyin": "kū",
-    "radical": "犬",
+    "radical": "犬（犬字旁）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "竖、横折、横、竖、横折、横、横、撇、捺、点",
-    "word": "哭泣、哭声"
+    "word": "哭泣（kū qì）、哭声（kū shēng）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "八单元23课",
     "type": "写字",
     "hanzi": "游",
     "pinyin": "yóu",
-    "radical": "氵",
+    "radical": "氵（三点水）",
     "strokes": 12,
     "structure": "左右",
     "strokeOrder": "点、点、提、点、横、横折钩、撇、撇、横、横撇、竖钩、横",
-    "word": "游泳、游戏"
+    "word": "游泳（yóu yǒng）、游戏（yóu xì）"
   },
   {
     "grade": "二年级上",
@@ -8732,11 +8705,11 @@
     "type": "写字",
     "hanzi": "戏",
     "pinyin": "xì",
-    "radical": "又",
+    "radical": "又（又字旁）",
     "strokes": 6,
     "structure": "左右",
     "strokeOrder": "横撇、点、横、斜钩、撇、点",
-    "word": "戏曲、戏剧"
+    "word": "戏曲（xì qǔ）、戏剧（xì jù）"
   },
   {
     "grade": "二年级上",
@@ -8744,11 +8717,11 @@
     "type": "写字",
     "hanzi": "爱",
     "pinyin": "ài",
-    "radical": "爫",
+    "radical": "爫（爪字头）",
     "strokes": 10,
     "structure": "上下",
     "strokeOrder": "撇、点、点、撇、点、横撇、横、撇、横撇、捺",
-    "word": "爱心、可爱"
+    "word": "爱心（ài xīn）、可爱（kě ài）"
   },
   {
     "grade": "二年级上",
@@ -8756,11 +8729,11 @@
     "type": "写字",
     "hanzi": "呢",
     "pinyin": "ne",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 8,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、横折、横、撇、撇、竖弯钩",
-    "word": "呢绒、人呢"
+    "word": "呢绒（ní róng）、人呢（rén ne）"
   },
   {
     "grade": "二年级上",
@@ -8768,11 +8741,11 @@
     "type": "写字",
     "hanzi": "跳",
     "pinyin": "tiào",
-    "radical": "足",
+    "radical": "足（足字旁）",
     "strokes": 13,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、竖、提、撇、点、提、竖弯钩、撇、点",
-    "word": "跳高、跳舞"
+    "word": "跳高（tiào gāo）、跳舞（tiào wǔ）"
   },
   {
     "grade": "二年级上",
@@ -8780,24 +8753,23 @@
     "type": "写字",
     "hanzi": "咱",
     "pinyin": "zán",
-    "radical": "口",
+    "radical": "口（口字旁）",
     "strokes": 9,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、撇、竖、横折、横、横、横",
-    "word": "咱们、咱家"
+    "word": "咱们（zán men）、咱家（zán jiā）"
   },
-
   {
     "grade": "二年级上",
     "lesson": "语文园地八",
     "type": "写字",
     "hanzi": "狼",
     "pinyin": "láng",
-    "radical": "犭",
+    "radical": "犭（反犬旁）",
     "strokes": 10,
     "structure": "左右",
     "strokeOrder": "撇、弯钩、撇、点、横折、横、横、竖提、撇、捺",
-    "word": "狼狗、野狼"
+    "word": "狼狗（láng gǒu）、野狼（yě láng）"
   },
   {
     "grade": "二年级上",
@@ -8805,10 +8777,10 @@
     "type": "写字",
     "hanzi": "蛇",
     "pinyin": "shé",
-    "radical": "虫",
+    "radical": "虫（虫字旁）",
     "strokes": 11,
     "structure": "左右",
     "strokeOrder": "竖、横折、横、竖、横、点、点、点、横撇、撇、竖弯钩",
-    "word": "毒蛇、蛇皮"
+    "word": "毒蛇（dú shé）、蛇皮（shé pí）"
   }
 ]
