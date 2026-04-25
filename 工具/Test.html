@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>汉字笔顺动画 - 故</title>
+<style>
+  body{
+    display:flex; flex-direction:column; align-items:center;
+    margin-top:50px; background:#f8f9fa;
+  }
+  .word-title{
+    font-size:28px; margin-bottom:20px;
+  }
+  .grid{
+    width: 260px;
+    height: 260px;
+    border: 2px solid #444;
+    background: white;
+    position: relative;
+  }
+  .grid::before{
+    content:''; position:absolute;
+    left:50%; top:0; bottom:0;
+    width:1px; background:#ccc;
+    transform:translateX(-50%);
+  }
+  .grid::after{
+    content:''; position:absolute;
+    top:50%; left:0; right:0;
+    height:1px; background:#ccc;
+    transform:translateY(-50%);
+  }
+  svg{
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+  }
+  .stroke{
+    fill:none;
+    stroke:#007bff;
+    stroke-width:5.5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: write 2.2s linear forwards;
+  }
+  @keyframes write {
+    to { stroke-dashoffset: 0; }
+  }
+  button{
+    margin-top:20px;
+    padding:10px 22px;
+    font-size:16px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+  }
+</style>
+</head>
+
+<body>
+  <div class="word-title">汉字：故（gù）</div>
+  <div class="grid">
+    <svg viewBox="0 0 100 100">
+      <!-- 横 -->
+      <path class="stroke" d="M30 25 L42 25"></path>
+      <!-- 竖 -->
+      <path class="stroke" d="M36 20 L36 50"></path>
+      <!-- 竖 -->
+      <path class="stroke" d="M36 50 L36 80"></path>
+      <!-- 横折 -->
+      <path class="stroke" d="M30 55 L36 55 L33 65 L25 65"></path>
+      <!-- 横 -->
+      <path class="stroke" d="M22 60 L34 60"></path>
+
+      <!-- 反文旁 -->
+      <path class="stroke" d="M55 25 L75 25"></path>
+      <path class="stroke" d="M70 20 L70 50"></path>
+      <path class="stroke" d="M60 40 L80 60"></path>
+      <path class="stroke" d="M60 60 L80 80"></path>
+    </svg>
+  </div>
+
+  <button onclick="play()">重播笔顺</button>
+
+  <script>
+    function play() {
+      document.querySelectorAll('.stroke').forEach((s, i) => {
+        setTimeout(() => {
+          s.style.animation = 'none';
+          s.offsetHeight;
+          s.style.animation = 'write 2.2s linear forwards';
+        }, i * 700);
+      });
+    }
+    window.onload = play;
+  </script>
+</body>
+</html>

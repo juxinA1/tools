@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学生词语表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #f7f9fc;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1400px;
+            height: calc(100vh - 20px);
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 26px;
+            color: #2c3e50;
+            flex-shrink: 0;
+        }
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+        }
+        .export-btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            background: #e74c3c;
+        }
+        .btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+        .btn-blue { background: #3498db; }
+        .btn-green { background: #28a745; }
+        .btn-orange { background: #f39c12; }
+        .btn-gray { background: #95a5a6; }
+        .btn-purple { background: #9b59b6; }
+
+        .table-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            table-layout: fixed;
+        }
+        .word-table thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .word-table th {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: #e8f5e9;
+            color: #27ae60;
+        }
+        .word-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .word-table tr:hover {
+            background: #e3f2fd;
+        }
+        .word-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            word-break: break-all;
+        }
+
+        .col-index    { width: 60px;  }
+        .col-word     { width: 120px; }
+        .col-pinyin   { width: 150px; }
+        .col-meaning  { width: 250px; }
+        .col-example  { width: 300px; }
+        .col-status   { width: 90px;  }
+
+        .word-click {
+            color: #3498db;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal, .query-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .modal.show, .query-modal.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-content, .query-content {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px; right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+        .close:hover {
+            color: #333;
+        }
+
+        .query-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .query-item label {
+            width: 80px;
+            font-weight: 600;
+            color: #333;
+        }
+        .query-item input,
+        .query-item select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .grade-checks {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            align-items: center;
+        }
+        .grade-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .grade-btn {
+            cursor: pointer;
+            color: #3498db;
+            font-weight: 600;
+            text-align: center;
+        }
+        .grade-btn:hover {
+            text-decoration: underline;
+        }
+
+        .tianzige {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-family: "SimSun", serif;
+        }
+        .hanzi-show {
+            font-size: 60px;
+            font-family: "SimSun", serif;
+        }
+        .pinyin-show {
+            font-size: 24px;
+            color: #666;
+        }
+        .stroke-show {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .word-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .word-tianzige {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-family: "SimSun", serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">📚 小学生词语表</div>
+        
+        <div class="top-bar">
+            <button class="btn btn-blue" onclick="openQueryModal()">🔍 查询</button>
+            <button class="btn btn-green" onclick="triggerImport()">📁 导入</button>
+            <button class="export-btn" onclick="exportJson()">📤 导出</button>
+            <button class="btn btn-purple" onclick="generatePrintableDictation()">🖨️ 练习</button>
+            <button class="btn btn-orange" onclick="startDictation()">✏️ 默写</button>
+            <input type="file" id="fileInput" accept=".json" style="display:none;">
+        </div>
+
+        <div class="table-wrapper">
+            <table class="word-table">
+                <thead>
+                    <tr>
+                        <th class="col-index">编号</th>
+                        <th class="col-word" onclick="sortTable('word')">词语</th>
+                        <th class="col-pinyin" onclick="sortTable('pinyin')">拼音</th>
+                        <th class="col-meaning" onclick="sortTable('meaning')">解释</th>
+                        <th class="col-example" onclick="sortTable('example')">例句</th>
+                        <th class="col-status">掌握状态</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 词语详情弹窗 -->
+    <div class="modal" id="modal">
+        <div class="modal-content" style="width: 800px; padding: 40px; position: relative;">
+            <!-- 关闭按钮 -->
+            <span class="close" onclick="closeModal()" style="position: absolute; top: 15px; right: 20px;">&times;</span>
+            
+            <!-- 拼音和掌握情况 -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <div style="font-size: 24px; color: #27ae60; display: flex; align-items: center; gap: 10px;">
+                    已掌握：
+                    <button onclick="adjustMasteredCount(-1)" style="width: 24px; height: 24px; font-size: 16px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">-</button>
+                    <span id="modalMastered">0</span>
+                    <button onclick="adjustMasteredCount(1)" style="width: 24px; height: 24px; font-size: 16px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">+</button>
+                </div>
+                <div class="pinyin-show" id="modalPinyin" style="text-align: center;"></div>
+                <div style="font-size: 24px; color: #e74c3c; display: flex; align-items: center; gap: 10px;">
+                    未掌握：
+                    <button onclick="adjustNotMasteredCount(-1)" style="width: 24px; height: 24px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">-</button>
+                    <span id="modalNotMastered">0</span>
+                    <button onclick="adjustNotMasteredCount(1)" style="width: 24px; height: 24px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; opacity: 0.3; transition: opacity 0.3s;">+</button>
+                </div>
+            </div>
+            
+            <!-- 主要内容区域 -->
+            <div style="display: flex; gap: 40px; align-items: flex-start; margin-bottom: 10px;">
+                <!-- 左侧信息 -->
+                <div style="flex: 1; font-size: 24px; color: #333; line-height: 1.8; text-align: left;">
+                    <div style="margin-bottom: 5px;">解释：<span id="modalMeaning">--</span></div>
+                </div>
+                
+                <!-- 中间词语 -->
+                <div style="flex-shrink: 0;">
+                    <div class="tianzige"><div class="hanzi-show" id="modalWord"></div></div>
+                </div>
+                
+                <!-- 右侧例句 -->
+                <div style="flex: 1;">
+                    <div style="font-size: 18px; color: #666; margin-bottom: 10px;">例句：</div>
+                    <div id="modalExample" style="font-size: 16px; color: #333; line-height: 1.6;"></div>
+                </div>
+            </div>
+            
+            <!-- 导航按钮 -->
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button onclick="prevWord()" style="padding: 10px 20px; font-size: 16px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;">上一个</button>
+                <button onclick="randomWord()" style="padding: 10px 20px; font-size: 16px; background: #f39c12; color: white; border: none; border-radius: 6px; cursor: pointer;">随机</button>
+                <button onclick="nextWord()" style="padding: 10px 20px; font-size: 16px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer;">下一个</button>
+                <button onclick="toggleAll()" style="padding: 10px 20px; font-size: 16px; background: #95a5a6; color: white; border: none; border-radius: 6px; cursor: pointer;">隐藏全部</button>
+                <button onclick="closeModal()" style="padding: 10px 20px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 编辑弹窗 -->
+    <div class="query-modal" id="editModal">
+        <div class="query-content" style="width: 700px;">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <div style="text-align:center; margin-bottom:25px;">
+                <h3 style="margin:0; color:#2c3e50; font-size:20px; font-weight:600; font-family: 'SimHei', '黑体', sans-serif;">✏️ 编辑词语<span id="editWordTitle" style="color: #3498db; font-weight: normal;"></span></h3>
+            </div>
+
+            <input type="hidden" id="editIndex">
+            <input type="hidden" id="editWordId">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                <div class="query-item">
+                    <label>词语：</label>
+                    <input type="text" id="editWord">
+                </div>
+                <div class="query-item">
+                    <label>拼音：</label>
+                    <input type="text" id="editPinyin">
+                </div>
+            </div>
+
+            <div class="query-item" style="margin-top: 15px;">
+                <label>解释：</label>
+                <input type="text" id="editMeaning" style="width: 100%;">
+            </div>
+
+            <div class="query-item" style="margin-top: 15px;">
+                <label>例句：</label>
+                <input type="text" id="editExample" style="width: 100%;">
+            </div>
+
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 25px;">
+                <button class="btn btn-green" onclick="saveEdit()">💾 保存</button>
+                <button class="btn btn-gray" onclick="closeEditModal()">❌ 取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 查询弹窗 -->
+    <div class="query-modal" id="queryModal">
+        <div class="query-content">
+            <span class="close" onclick="closeQueryModal()">&times;</span>
+            <div style="text-align:center; margin-bottom:25px;">
+                <h3 style="margin:0; color:#2c3e50; font-size:20px; font-weight:600;">🔍 词语查询</h3>
+                <p style="margin:8px 0 0 0; color:#666; font-size:14px;">快速找到你需要的词语</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:15px;">
+                <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                    <label>词语：</label>
+                    <input type="text" id="qWord" placeholder="输入词语">
+                </div>
+                
+                <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                    <label>拼音：</label>
+                    <input type="text" id="qPinyin" placeholder="输入拼音">
+                </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr; gap:20px; margin-top:15px;">
+                <div class="query-item" style="margin-bottom:0; display:flex; align-items:center; gap:0;">
+                    <label>解释：</label>
+                    <input type="text" id="qMeaning" placeholder="输入解释" style="flex:1;">
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 25px;">
+                <button class="btn btn-blue" onclick="doQuery()">🔍 查询</button>
+                <button class="btn btn-gray" onclick="closeQueryModal()">❌ 取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 默写功能弹窗 -->
+    <div class="modal" id="dictationModal">
+        <div class="modal-content" style="width: 900px;">
+            <span class="close" onclick="closeDictationModal">&times;</span>
+            <h3 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">✏️ 词语默写</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- 顶部信息栏 -->
+                <div style="display: grid; grid-template-columns: 100px 1fr 1fr 1fr 1fr 200px; gap: 10px; padding: 10px; border: 1px solid #e0e6ed; border-radius: 8px; background: #f8fafc;">
+                    <div style="font-weight: 600; color: #2c3e50;">当前：</div>
+                    <div id="dictationCurrent" style="color: #3498db; font-weight: 600;">1</div>
+                    <div style="font-weight: 600; color: #2c3e50;">/</div>
+                    <div id="dictationTotal" style="color: #3498db; font-weight: 600;">0</div>
+                    <div style="font-weight: 600; color: #2c3e50;">正确：</div>
+                    <div id="dictationCorrect" style="color: #27ae60; font-weight: 600;">0</div>
+                </div>
+                
+                <!-- 默写区域 -->
+                <div style="display: flex; gap: 40px; align-items: flex-start;">
+                    <!-- 左侧提示 -->
+                    <div style="flex: 1; font-size: 20px; color: #333; line-height: 1.8;">
+                        <div style="margin-bottom: 10px;"><strong>拼音：</strong><span id="dictationPinyin" style="color: #3498db;">--</span></div>
+                        <div style="margin-bottom: 10px;"><strong>解释：</strong><span id="dictationMeaning" style="color: #666;">--</span></div>
+                        <div><strong>例句：</strong><span id="dictationExample" style="color: #666;">--</span></div>
+                    </div>
+                    
+                    <!-- 右侧输入 -->
+                    <div style="flex-shrink: 0;">
+                        <div style="font-size: 18px; font-weight: 600; margin-bottom: 10px; color: #2c3e50;">请写出词语：</div>
+                        <input type="text" id="dictationInput" style="width: 300px; padding: 15px; font-size: 24px; border: 2px solid #ddd; border-radius: 8px; text-align: center;">
+                    </div>
+                </div>
+                
+                <!-- 操作按钮 -->
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button onclick="checkDictation()" style="padding: 12px 24px; font-size: 16px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer;">✅ 检查</button>
+                    <button onclick="skipDictation()" style="padding: 12px 24px; font-size: 16px; background: #f39c12; color: white; border: none; border-radius: 6px; cursor: pointer;">⏭️ 跳过</button>
+                    <button onclick="closeDictationModal()" style="padding: 12px 24px; font-size: 16px; background: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">❌ 结束</button>
+                </div>
+                
+                <!-- 结果反馈 -->
+                <div id="dictationResult" style="padding: 15px; border-radius: 8px; text-align: center; font-size: 16px; display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let defaultData = [
+            { word: "人口", pinyin: "rén kǒu", meaning: "居住在一定地区内的人的总数", example: "我国是世界上人口最多的国家之一。" },
+            { word: "天空", pinyin: "tiān kōng", meaning: "地球周围的广大空间", example: "蓝天上飘着几朵白云。" },
+            { word: "土地", pinyin: "tǔ dì", meaning: "田地；土壤", example: "农民在土地上种植庄稼。" },
+            { word: "人们", pinyin: "rén men", meaning: "许多人", example: "人们都喜欢在公园里散步。" },
+            { word: "一心一意", pinyin: "yī xīn yī yì", meaning: "心思、意念专一", example: "他一心一意地学习，终于取得了好成绩。" },
+            { word: "美丽", pinyin: "měi lì", meaning: "使人看了产生快感的；好看", example: "公园里的花真美丽。" }
+        ];
+
+        let originalData = JSON.parse(localStorage.getItem("wordDB")) || [...defaultData];
+        let currentData = [...originalData];
+        const $ = id => document.getElementById(id);
+
+        let hasImported = false;
+        let currentWordIndex = -1; // 跟踪当前显示的词语索引
+
+        function saveToLocal() {
+            localStorage.setItem("wordDB", JSON.stringify(originalData));
+        }
+
+        function renderTable(data) {
+            let html = '';
+            const renderData = data || currentData;
+            renderData.forEach((item, index) => {
+                html += `
+                <tr>
+                    <td style="color:#27ae60" onclick="openEditModal(${index})"><strong>${index + 1}</strong></td>
+                    <td class="word-click" onclick="openModal(${index}, '${item.word}','${item.pinyin}','${item.meaning}','${item.example}')">${item.word}</td>
+                    <td>${item.pinyin}</td>
+                    <td style="text-align:left">${item.meaning}</td>
+                    <td style="text-align:left">${item.example}</td>
+                    <td><span style="color: #27ae60;">${item.masteredCount || 0}</span> - <span style="color: #e74c3c;">${item.notMasteredCount || 0}</span></td>
+                </tr>`;
+            });
+            $ ("tableBody").innerHTML = html;
+        }
+
+        // 排序表格
+        function sortTable(column) {
+            currentData.sort((a, b) => {
+                const valA = a[column] || '';
+                const valB = b[column] || '';
+                return valA.localeCompare(valB);
+            });
+            renderTable();
+        }
+
+        // 打开词语详情弹窗
+        function openModal(index, word, pinyin, meaning, example) {
+            currentWordIndex = index;
+            
+            $ ("modalWord").textContent = word;
+            $ ("modalPinyin").textContent = pinyin;
+            $ ("modalMeaning").textContent = meaning || '--';
+            $ ("modalExample").textContent = example || '--';
+            
+            // 显示当前词语的掌握情况
+            let masteredCount, notMasteredCount;
+            if (currentData[index] && currentData[index].masteredCount !== undefined) {
+                masteredCount = currentData[index].masteredCount;
+            } else {
+                masteredCount = 0;
+            }
+            
+            if (currentData[index] && currentData[index].notMasteredCount !== undefined) {
+                notMasteredCount = currentData[index].notMasteredCount;
+            } else {
+                notMasteredCount = 0;
+            }
+            
+            document.getElementById('modalMastered').textContent = masteredCount;
+            document.getElementById('modalNotMastered').textContent = notMasteredCount;
+            
+            $ ("modal").classList.add("show");
+        }
+
+        // 关闭词语详情弹窗
+        function closeModal() {
+            $ ("modal").classList.remove("show");
+        }
+
+        // 上一个词语
+        function prevWord() {
+            if (currentData.length === 0) return;
+            currentWordIndex = currentWordIndex - 1;
+            if (currentWordIndex < 0) {
+                currentWordIndex = currentData.length - 1;
+            }
+            const item = currentData[currentWordIndex];
+            openModal(currentWordIndex, item.word, item.pinyin, item.meaning, item.example);
+        }
+
+        // 下一个词语
+        function nextWord() {
+            if (currentData.length === 0) return;
+            currentWordIndex = currentWordIndex + 1;
+            if (currentWordIndex >= currentData.length) {
+                currentWordIndex = 0;
+            }
+            const item = currentData[currentWordIndex];
+            openModal(currentWordIndex, item.word, item.pinyin, item.meaning, item.example);
+        }
+
+        // 随机词语
+        function randomWord() {
+            if (currentData.length === 0) return;
+            currentWordIndex = Math.floor(Math.random() * currentData.length);
+            const item = currentData[currentWordIndex];
+            openModal(currentWordIndex, item.word, item.pinyin, item.meaning, item.example);
+        }
+
+        // 调整已掌握数量
+        function adjustMasteredCount(adjustment) {
+            const currentCount = parseInt(document.getElementById('modalMastered').textContent) || 0;
+            const newCount = Math.max(0, currentCount + adjustment);
+            document.getElementById('modalMastered').textContent = newCount;
+            
+            // 实时更新到数据中
+            if (currentWordIndex >= 0 && currentData[currentWordIndex]) {
+                currentData[currentWordIndex].masteredCount = newCount;
+                originalData[currentWordIndex].masteredCount = newCount;
+                saveToLocal();
+                renderTable(currentData);
+            }
+        }
+
+        // 调整未掌握数量
+        function adjustNotMasteredCount(adjustment) {
+            const currentCount = parseInt(document.getElementById('modalNotMastered').textContent) || 0;
+            const newCount = Math.max(0, currentCount + adjustment);
+            document.getElementById('modalNotMastered').textContent = newCount;
+            
+            // 实时更新到数据中
+            if (currentWordIndex >= 0 && currentData[currentWordIndex]) {
+                currentData[currentWordIndex].notMasteredCount = newCount;
+                originalData[currentWordIndex].notMasteredCount = newCount;
+                saveToLocal();
+                renderTable(currentData);
+            }
+        }
+
+        // 打开编辑弹窗
+        function openEditModal(index) {
+            const item = currentData[index];
+            if (!item) return;
+
+            document.getElementById('editIndex').value = index;
+            document.getElementById('editWordId').value = item.word;
+            document.getElementById('editWordTitle').textContent = `（${item.word || ''}）`;
+            document.getElementById('editWord').value = item.word || '';
+            document.getElementById('editPinyin').value = item.pinyin || '';
+            document.getElementById('editMeaning').value = item.meaning || '';
+            document.getElementById('editExample').value = item.example || '';
+
+            document.getElementById('editModal').classList.add('show');
+        }
+
+        // 关闭编辑弹窗
+        function closeEditModal() {
+            document.getElementById('editModal').classList.remove('show');
+        }
+
+        // 保存编辑
+        function saveEdit() {
+            const index = parseInt(document.getElementById('editIndex').value);
+            if (isNaN(index) || !currentData[index]) return;
+
+            const currentItem = currentData[index];
+            
+            // 更新 currentData 中的数据
+            currentItem.word = document.getElementById('editWord').value;
+            currentItem.pinyin = document.getElementById('editPinyin').value;
+            currentItem.meaning = document.getElementById('editMeaning').value;
+            currentItem.example = document.getElementById('editExample').value;
+
+            // 在 originalData 中找到对应的元素并更新
+            const wordId = document.getElementById('editWordId').value;
+            const originalIndex = originalData.findIndex(item => {
+                return item.word === wordId;
+            });
+            
+            if (originalIndex !== -1) {
+                originalData[originalIndex] = { ...currentItem };
+            }
+
+            saveToLocal();
+            renderTable(currentData);
+            closeEditModal();
+        }
+
+        // 打开查询弹窗
+        function openQueryModal() {
+            $ ("queryModal").classList.add("show");
+        }
+
+        // 关闭查询弹窗
+        function closeQueryModal() {
+            $ ("queryModal").classList.remove("show");
+        }
+
+        // 执行查询
+        function doQuery() {
+            let cond = {
+                word: $ ("qWord").value.trim(),
+                pinyin: $ ("qPinyin").value.trim(),
+                meaning: $ ("qMeaning").value.trim()
+            };
+
+            let result = originalData.filter(item => {
+                if (cond.word && !item.word?.includes(cond.word)) return false;
+                if (cond.pinyin && !item.pinyin?.includes(cond.pinyin)) return false;
+                if (cond.meaning && !item.meaning?.includes(cond.meaning)) return false;
+
+                return true;
+            });
+
+            if (result.length === 0) {
+                alert("未找到匹配数据");
+                return;
+            }
+
+            currentData = result;
+            renderTable();
+            closeQueryModal();
+        }
+
+        // 导入功能
+        function triggerImport() {
+            if (hasImported) {
+                alert("已导入过数据，请刷新页面后再重新导入！");
+                return;
+            }
+            $ ("fileInput").click();
+        }
+
+        $ ("fileInput").addEventListener("change", e => {
+            let file = e.target.files[0];
+            if (!file) return;
+
+            hasImported = true;
+
+            let reader = new FileReader();
+            reader.onload = ev => {
+                try {
+                    let json = JSON.parse(ev.target.result);
+                    if (Array.isArray(json)) {
+                        originalData = json;
+                        currentData = [...originalData];
+                        saveToLocal();
+                        renderTable();
+                        alert("导入成功！");
+                    } else {
+                        alert("导入数据格式错误！");
+                    }
+                } catch (error) {
+                    alert("导入失败：" + error.message);
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        // 导出功能
+        function exportJson() {
+            const dataStr = JSON.stringify(originalData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = '词语表_' + new Date().toISOString().slice(0,10) + '.json';
+            link.click();
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        }
+
+        // 默写功能相关变量
+        let dictationData = [];
+        let currentDictationIndex = 0;
+        let dictationCorrectCount = 0;
+
+        // 开始默写功能
+        function startDictation() {
+            dictationData = [...currentData];
+            if (dictationData.length === 0) {
+                alert("没有词语数据");
+                return;
+            }
+            
+            // 打乱顺序
+            dictationData.sort(() => Math.random() - 0.5);
+            currentDictationIndex = 0;
+            dictationCorrectCount = 0;
+            
+            // 更新UI
+            $ ("dictationCurrent").textContent = currentDictationIndex + 1;
+            $ ("dictationTotal").textContent = dictationData.length;
+            $ ("dictationCorrect").textContent = dictationCorrectCount;
+            $ ("dictationResult").style.display = 'none';
+            
+            // 显示第一个词语
+            showDictationWord();
+            $ ("dictationModal").classList.add("show");
+        }
+
+        // 显示当前默写词语
+        function showDictationWord() {
+            if (currentDictationIndex >= dictationData.length) {
+                closeDictationModal();
+                alert(`默写完成！共${dictationData.length}个词语，正确${dictationCorrectCount}个。`);
+                return;
+            }
+            
+            const item = dictationData[currentDictationIndex];
+            $ ("dictationPinyin").textContent = item.pinyin;
+            $ ("dictationMeaning").textContent = item.meaning;
+            $ ("dictationExample").textContent = item.example;
+            $ ("dictationInput").value = '';
+            $ ("dictationInput").focus();
+            $ ("dictationCurrent").textContent = currentDictationIndex + 1;
+            $ ("dictationResult").style.display = 'none';
+        }
+
+        // 检查默写
+        function checkDictation() {
+            const input = $ ("dictationInput").value.trim();
+            const item = dictationData[currentDictationIndex];
+            
+            if (input === item.word) {
+                // 正确
+                dictationCorrectCount++;
+                $ ("dictationCorrect").textContent = dictationCorrectCount;
+                $ ("dictationResult").textContent = '✅ 正确！';
+                $ ("dictationResult").style.backgroundColor = '#d4edda';
+                $ ("dictationResult").style.color = '#155724';
+                $ ("dictationResult").style.display = 'block';
+                
+                // 更新掌握状态
+                if (item.masteredCount === undefined) item.masteredCount = 0;
+                item.masteredCount++;
+                saveToLocal();
+            } else {
+                // 错误
+                $ ("dictationResult").textContent = `❌ 错误！正确答案：${item.word}`;
+                $ ("dictationResult").style.backgroundColor = '#f8d7da';
+                $ ("dictationResult").style.color = '#721c24';
+                $ ("dictationResult").style.display = 'block';
+                
+                // 更新未掌握状态
+                if (item.notMasteredCount === undefined) item.notMasteredCount = 0;
+                item.notMasteredCount++;
+                saveToLocal();
+            }
+            
+            // 延迟显示下一个
+            setTimeout(() => {
+                currentDictationIndex++;
+                showDictationWord();
+            }, 1500);
+        }
+
+        // 跳过默写
+        function skipDictation() {
+            currentDictationIndex++;
+            showDictationWord();
+        }
+
+        // 关闭默写弹窗
+        function closeDictationModal() {
+            $ ("dictationModal").classList.remove("show");
+        }
+
+        // 生成可打印的练习纸
+        function generatePrintableDictation() {
+            if (currentData.length === 0) {
+                alert("没有词语数据");
+                return;
+            }
+            
+            let html = `
+            <!DOCTYPE html>
+            <html lang="zh-CN">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>词语练习纸</title>
+                <style>
+                    * { margin: 0; padding: 0; box-sizing: border-box; }
+                    body { font-family: "Microsoft YaHei", sans-serif; padding: 20px; }
+                    .header { text-align: center; margin-bottom: 30px; }
+                    .header h1 { font-size: 24px; color: #2c3e50; }
+                    .header p { font-size: 14px; color: #666; margin-top: 10px; }
+                    .word-list { display: flex; flex-direction: column; gap: 20px; }
+                    .word-item { display: flex; align-items: center; gap: 20px; }
+                    .word-info { flex: 1; }
+                    .word-pinyin { font-size: 16px; color: #3498db; margin-bottom: 5px; }
+                    .word-meaning { font-size: 14px; color: #666; }
+                    .word-example { font-size: 12px; color: #999; margin-top: 5px; }
+                    .tianzige-container { display: flex; gap: 10px; }
+                    .tianzige { width: 40px; height: 40px; border: 1px solid #333; }
+                    @media print { body { padding: 0; } }
+                </style>
+            </head>
+            <body>
+                <div class="header">
+                    <h1>词语练习纸</h1>
+                    <p>日期：${new Date().toLocaleDateString()}</p>
+                </div>
+                <div class="word-list">
+            `;
+            
+            currentData.forEach((item, index) => {
+                html += `
+                    <div class="word-item">
+                        <div class="word-info">
+                            <div class="word-pinyin">${item.pinyin}</div>
+                            <div class="word-meaning">${item.meaning}</div>
+                            <div class="word-example">${item.example}</div>
+                        </div>
+                        <div class="tianzige-container">
+                `;
+                
+                // 根据词语长度生成田字格
+                for (let i = 0; i < item.word.length; i++) {
+                    html += `<div class="tianzige"></div>`;
+                }
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += `
+                </div>
+            </body>
+            </html>
+            `;
+            
+            const blob = new Blob([html], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');
+        }
+
+        renderTable();
+    </script>
+</body>
+</html>

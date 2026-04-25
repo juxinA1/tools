@@ -164,7 +164,7 @@ const poems = [
   { grade:"一年级（下）", title:"赠汪伦", author:"唐·李白", content:"李白乘舟将欲行，忽闻岸上踏歌声。|桃花潭水深千尺，不及汪伦送我情。" },
   { grade:"一年级（下）", title:"静夜思", author:"唐·李白", content:"床前明月光，疑是地上霜。|举头望明月，低头思故乡。" },
   { grade:"一年级（下）", title:"寻隐者不遇", author:"唐·贾岛", content:"松下问童子，言师采药去。|只在此山中，云深不知处。" },
-  { grade:"一年级（下）", title:"人之初", author:"宋·王应麟《三字经》", content:"人之初，性本善。|性相近，习相远。|苟不教，性乃迁。|教之道，贵以专。" },
+  { grade:"一年级（下）", title:"人之初", author:"宋·王应麟《三字经》", content:"人之初，性本善。性相近，习相远。|苟不教，性乃迁。教之道，贵以专。|子不学，非所宜。幼不学，老何为。|玉不琢，不成器。人不学，不知义。" },
   { grade:"一年级（下）", title:"池上", author:"唐·白居易", content:"小娃撑小艇，偷采白莲回。|不解藏踪迹，浮萍一道开。" },
   { grade:"一年级（下）", title:"小池", author:"宋·杨万里", content:"泉眼无声惜细流，树阴照水爱晴柔。|小荷才露尖尖角，早有蜻蜓立上头。" },
   { grade:"一年级（下）", title:"画鸡", author:"明·唐寅", content:"头上红冠不用裁，满身雪白走将来。|平生不敢轻言语，一叫千门万户开。" },
@@ -200,7 +200,7 @@ const poems = [
   { grade:"三年级（上）", title:"司马光", author:"元·脱脱《宋史》", content:"群儿戏于庭，一儿登瓮，足跌没水中。|众皆弃去，光持石击瓮破之，水迸，儿得活。" },
 
   // 三年级下册
-  { grade:"三年级（下）", title:"绝句", author:"唐·杜甫", content:"迟日江山丽，春风花草香。|泥融飞燕子，沙暖睡鸳鸯。" },
+  { grade:"三年级（下）", title:"绝 句", author:"唐·杜甫", content:"迟日江山丽，春风花草香。|泥融飞燕子，沙暖睡鸳鸯。" },
   { grade:"三年级（下）", title:"惠崇春江晚景", author:"宋·苏轼", content:"竹外桃花三两枝，春江水暖鸭先知。|蒌蒿满地芦芽短，正是河豚欲上时。" },
   { grade:"三年级（下）", title:"三衢道中", author:"宋·曾几", content:"梅子黄时日日晴，小溪泛尽却山行。|绿阴不减来时路，添得黄鹂四五声。" },
   { grade:"三年级（下）", title:"守株待兔", author:"《韩非子·五蠹》", content:"宋人有耕者。田中有株，兔走触株，折颈而死。|因释其耒而守株，冀复得兔。|兔不可复得，而身为宋国笑。" },
@@ -464,12 +464,12 @@ $('#nextBtn').onclick = () => {
   updateStats()
 }
 
-// 随机背诵：成功 ≥5 且 <20
+// 随机背诵：成功 ≥1 且 <20
 $('#randomBtn').onclick = () => {
   let eligible = [];
   poems.forEach((poem, idx) => {
     const stat = poemStats[poem.title] || { success: 0 };
-    if (stat.success >= 5 && stat.success < 20) {
+    if (stat.success >= 1 && stat.success < 20) {
       eligible.push(idx);
     }
   });

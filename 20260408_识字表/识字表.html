@@ -97,7 +97,7 @@
 
         .col-index    { width: 60px;  }
         .col-grade    { width: 90px;  }
-        .col-lesson   { width: 100px; }
+        .col-lesson   { width: 110px; }
         .col-type     { width: 60px;  }
         .col-char     { width: 60px;  }
         .col-pinyin   { width: 80px;  }
@@ -105,7 +105,7 @@
         .col-stroke   { width: 60px;  }
         .col-struct   { width: 80px;  }
         .col-word     { width: 300px; }
-        .col-status   { width: 100px; }
+        .col-status   { width: 90px; }
 
         .char-click {
             color: #3498db;
@@ -595,6 +595,7 @@
         </div>
 
         <input type="hidden" id="editIndex">
+        <input type="hidden" id="editHanziId">
 
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
             <div class="query-item">
@@ -761,7 +762,7 @@ function renderTable(data) {
     renderData.forEach((item, index) => {
         html += `
         <tr>
-            <td class="char-click" onclick="openEditModal(${index})">${index + 1}</td>
+            <td style="color:#27ae60" onclick="openEditModal(${index})">${index + 1}</td>
             <td>${item.grade || ''}</td>
             <td>${item.lesson || ''}</td>
             <td>${item.type || ''}</td>
@@ -1319,8 +1320,9 @@ function openModal(index, hanzi, pinyin, strokeOrder, radical, strokes, structur
         document.getElementById('modalPinyin').style.visibility = 'hidden';
         const wordPinyinElements = document.querySelectorAll('#modalWords > div > div:first-child');
         wordPinyinElements.forEach(el => el.style.visibility = 'hidden');
-        document.getElementById('modalGrade').style.visibility = 'hidden';
-        document.getElementById('modalType').style.visibility = 'hidden';
+        // 年级和类别始终不隐藏
+        // document.getElementById('modalGrade').style.visibility = 'hidden';
+        // document.getElementById('modalType').style.visibility = 'hidden';
         document.getElementById('modalStrokes').style.visibility = 'hidden';
         document.getElementById('modalStructure').style.visibility = 'hidden';
         document.getElementById('modalRadical').style.visibility = 'hidden';
@@ -1420,6 +1422,17 @@ function adjustMasteredCount(adjustment) {
     const currentCount = parseInt(document.getElementById('modalMastered').textContent) || 0;
     const newCount = Math.max(0, currentCount + adjustment);
     document.getElementById('modalMastered').textContent = newCount;
+    
+    // 实时更新到数据中
+    if (currentCharIndex >= 0 && currentData[currentCharIndex]) {
+        currentData[currentCharIndex].masteredCount = newCount;
+        originalData[currentCharIndex].masteredCount = newCount;
+        
+        // 保存到本地存储
+        saveToLocal();
+        // 重新渲染表格
+        renderTable(currentData);
+    }
 }
 
 // 调整未掌握数量
@@ -1428,6 +1441,17 @@ function adjustNotMasteredCount(adjustment) {
     const currentCount = parseInt(document.getElementById('modalNotMastered').textContent) || 0;
     const newCount = Math.max(0, currentCount + adjustment);
     document.getElementById('modalNotMastered').textContent = newCount;
+    
+    // 实时更新到数据中
+    if (currentCharIndex >= 0 && currentData[currentCharIndex]) {
+        currentData[currentCharIndex].notMasteredCount = newCount;
+        originalData[currentCharIndex].notMasteredCount = newCount;
+        
+        // 保存到本地存储
+        saveToLocal();
+        // 重新渲染表格
+        renderTable(currentData);
+    }
 }
 
 // 切换汉字掌握状态
@@ -1458,20 +1482,8 @@ function toggleMastered(index) {
     }
 }
 function closeModal() {
-    // 保存当前汉字的掌握情况
-    if (currentData[currentCharIndex]) {
-        const masteredCount = parseInt(document.getElementById('modalMastered').textContent) || 0;
-        const notMasteredCount = parseInt(document.getElementById('modalNotMastered').textContent) || 0;
-        
-        currentData[currentCharIndex].masteredCount = masteredCount;
-        originalData[currentCharIndex].masteredCount = masteredCount;
-        currentData[currentCharIndex].notMasteredCount = notMasteredCount;
-        originalData[currentCharIndex].notMasteredCount = notMasteredCount;
-        
-        saveToLocal();
-        renderTable(currentData);
-    }
-    $("modal").classList.remove("show");
+    // 由于已经实现了实时更新，这里只需要关闭模态框
+    $ ("modal").classList.remove("show");
 }
 
 function openQueryModal() {
@@ -1996,6 +2008,8 @@ function openEditModal(index) {
     if (!item) return;
 
     document.getElementById('editIndex').value = index;
+    // 保存汉字的唯一标识（用于在originalData中查找）
+    document.getElementById('editHanziId').value = item.hanzi + (item.grade || '') + (item.lesson || '');
     document.getElementById('editHanziTitle').textContent = `（${item.hanzi || ''}）`;
     document.getElementById('editGrade').value = item.grade || '';
     document.getElementById('editLesson').value = item.lesson || '';
@@ -2020,18 +2034,29 @@ function saveEdit() {
     const index = parseInt(document.getElementById('editIndex').value);
     if (isNaN(index) || !currentData[index]) return;
 
-    currentData[index].grade = document.getElementById('editGrade').value;
-    currentData[index].lesson = document.getElementById('editLesson').value;
-    currentData[index].type = document.getElementById('editType').value;
-    currentData[index].pinyin = document.getElementById('editPinyin').value;
-    currentData[index].radical = document.getElementById('editRadical').value;
-    currentData[index].strokes = document.getElementById('editStrokes').value;
-    currentData[index].structure = document.getElementById('editStructure').value;
-    currentData[index].strokeOrder = document.getElementById('editStrokeOrder').value;
-    currentData[index].word = document.getElementById('editWord').value;
+    const currentItem = currentData[index];
+    
+    // 更新 currentData 中的数据
+    currentItem.grade = document.getElementById('editGrade').value;
+    currentItem.lesson = document.getElementById('editLesson').value;
+    currentItem.type = document.getElementById('editType').value;
+    currentItem.pinyin = document.getElementById('editPinyin').value;
+    currentItem.radical = document.getElementById('editRadical').value;
+    currentItem.strokes = document.getElementById('editStrokes').value;
+    currentItem.structure = document.getElementById('editStructure').value;
+    currentItem.strokeOrder = document.getElementById('editStrokeOrder').value;
+    currentItem.word = document.getElementById('editWord').value;
 
-    // 同步更新 originalData
-    originalData[index] = { ...currentData[index] };
+    // 在 originalData 中找到对应的元素并更新
+    // 使用汉字+年级+课号作为唯一标识来查找
+    const hanziId = document.getElementById('editHanziId').value;
+    const originalIndex = originalData.findIndex(item => {
+        return item.hanzi + (item.grade || '') + (item.lesson || '') === hanziId;
+    });
+    
+    if (originalIndex !== -1) {
+        originalData[originalIndex] = { ...currentItem };
+    }
 
     saveToLocal();
     renderTable(currentData);
