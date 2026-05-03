@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON格式检查器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", Arial, sans-serif; background: #f5f5f5; min-height: 100vh; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { text-align: center; color: #333; margin-bottom: 20px; }
+        .upload-area { background: #fff; border: 2px dashed #ccc; border-radius: 8px; padding: 40px; text-align: center; margin-bottom: 20px; cursor: pointer; transition: border-color 0.3s; }
+        .upload-area:hover { border-color: #4a90d9; }
+        .upload-area input { display: none; }
+        .btn { display: inline-block; background: #4a90d9; color: #fff; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px; transition: background 0.3s; }
+        .btn:hover { background: #357abd; }
+        .result { background: #fff; border-radius: 8px; padding: 20px; margin-top: 20px; }
+        .result h3 { margin-bottom: 10px; color: #333; }
+        .success { color: #52c41a; }
+        .error { color: #f5222d; }
+        .error-detail { background: #fff2f0; border: 1px solid #ffccc7; border-radius: 5px; padding: 15px; margin-top: 10px; }
+        .error-line { font-weight: bold; color: #f5222d; }
+        textarea { width: 100%; height: 300px; font-family: "Consolas", "Monaco", monospace; font-size: 14px; border: 1px solid #ddd; border-radius: 5px; padding: 10px; resize: vertical; margin-bottom: 10px; }
+        .preview { background: #fafafa; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-top: 10px; max-height: 400px; overflow: auto; white-space: pre-wrap; font-family: "Consolas", "Monaco", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON格式检查器</h1>
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="fileInput" accept=".json">
+            <p style="color:#666;font-size:16px;">点击选择JSON文件或将文件拖拽到此处</p>
+            <span class="btn">选择文件</span>
+        </div>
+        <div id="manualInput" style="display:none;">
+            <h3>或粘贴JSON内容：</h3>
+            <textarea id="jsonText" placeholder="在此粘贴JSON内容..."></textarea>
+            <button class="btn" onclick="checkManualInput()">检查JSON</button>
+        </div>
+        <div class="result" id="result" style="display:none;"></div>
+    </div>
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const resultDiv = document.getElementById('result');
+        const manualInputDiv = document.getElementById('manualInput');
+
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', (e) => { e.preventDefault(); uploadArea.style.borderColor = '#4a90d9'; });
+        uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor = '#ccc'; });
+        uploadArea.addEventListener('drop', (e) => { e.preventDefault(); uploadArea.style.borderColor = '#ccc'; if (e.dataTransfer.files.length > 0) readFile(e.dataTransfer.files[0]); });
+        fileInput.addEventListener('change', (e) => { if (e.target.files.length > 0) readFile(e.target.files[0]); });
+
+        function readFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                document.getElementById('jsonText').value = e.target.result;
+                manualInputDiv.style.display = 'block';
+                validateJson(e.target.result, file.name);
+            };
+            reader.readAsText(file);
+        }
+
+        function checkManualInput() {
+            validateJson(document.getElementById('jsonText').value, '粘贴内容');
+        }
+
+        function validateJson(jsonString, sourceName) {
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = '<h3>检查中...</h3>';
+            try {
+                JSON.parse(jsonString);
+                resultDiv.innerHTML = `<h3 class="success">✓ JSON格式正确</h3><p>文件: ${sourceName}</p><h3 style="margin-top:15px;">内容预览:</h3><div class="preview">${escapeHtml(jsonString)}</div>`;
+            } catch (e) {
+                const errorInfo = parseJsonError(jsonString, e);
+                resultDiv.innerHTML = `<h3 class="error">✗ JSON格式错误</h3><div class="error-detail"><p><strong>错误信息:</strong> ${escapeHtml(e.message)}</p><p class="error-line"><strong>错误行数:</strong> 第 ${errorInfo.line} 行</p><p><strong>错误列数:</strong> 第 ${errorInfo.column} 列</p><p><strong>问题代码:</strong></p><pre style="background:#fff;padding:10px;border-radius:5px;overflow-x:auto;margin-top:5px;">${escapeHtml(errorInfo.errorLine)}</pre>${errorInfo.suggestion ? `<p><strong>可能原因:</strong> ${escapeHtml(errorInfo.suggestion)}</p>` : ''}</div>`;
+            }
+        }
+
+        function parseJsonError(jsonString, error) {
+            const lines = jsonString.split('\n');
+            let line = 1, column = 1;
+            const match = error.message.match(/position\s+(\d+)/i);
+            let position = match ? parseInt(match[1]) : 0;
+            let charCount = 0;
+            for (let i = 0; i < lines.length; i++) {
+                if (charCount + lines[i].length + 1 > position) { column = position - charCount + 1; line = i + 1; break; }
+                charCount += lines[i].length + 1;
+            }
+            let suggestion = '';
+            const errorLine = lines[line - 1] || '';
+            const trimmedLine = errorLine.trim();
+            if (error.message.includes('Unexpected token')) {
+                if (trimmedLine.endsWith(',') && (trimmedLine.includes('}') || trimmedLine.includes(']'))) suggestion = '可能是多余逗号导致的';
+                else if (trimmedLine.endsWith("'") && !trimmedLine.includes('"')) suggestion = '可能使用了单引号，应该使用双引号';
+                else if (trimmedLine.includes('：') || trimmedLine.includes('，')) suggestion = '可能使用了中文冒号或逗号';
+                else suggestion = '可能是缺少引号、逗号、分号，或有非法字符';
+            } else if (error.message.includes('Unexpected end')) suggestion = '可能是缺少闭合的括号、花括号或方括号';
+            return { line, column, errorLine: errorLine.substring(0, 100) + (errorLine.length > 100 ? '...' : ''), suggestion };
+        }
+
+        function escapeHtml(text) { const div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
+    </script>
+</body>
+</html>
